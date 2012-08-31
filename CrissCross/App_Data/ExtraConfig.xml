@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CrcExtraConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>2</Version>
+  <!-- these control how the interface interprets values that correspond to 'all' or 'none' in select lists -->
+  <!-- empty equivalent values affect how CrissCross displays parameters, but does not affect how the report run-->
+  <DefaultEmptyEquivalentValues>
+    <DefaultEmptyEquivalentValue></DefaultEmptyEquivalentValue>
+    <DefaultEmptyEquivalentValue>%%</DefaultEmptyEquivalentValue>
+    <DefaultEmptyEquivalentValue xsi:nil="true" />
+  </DefaultEmptyEquivalentValues>
+  <IgnoreSsrsParameterDependencies>true</IgnoreSsrsParameterDependencies>
+  <CrcReportConfigs>
+    <CrcReportConfig>
+      <Path>/Example Folder/Example Report</Path>
+      <ReportHint>Notes about the report</ReportHint>
+      <IsFeatured>true</IsFeatured>
+      <CrcParamConfigs>
+        <CrcParamConfig>
+          <ParamName>ExampleParam1</ParamName>
+          <ShowByDefault>true</ShowByDefault>
+          <DependantParams>
+            <DependantParam>ExampleParam2</DependantParam>
+          </DependantParams>
+        </CrcParamConfig>
+        <CrcParamConfig>
+          <ParamName>ExampleParam2</ParamName>
+          <ShowByDefault>true</ShowByDefault>
+        </CrcParamConfig>
+      </CrcParamConfigs>
+    </CrcReportConfig>
+  </CrcReportConfigs>
+</CrcExtraConfiguration>

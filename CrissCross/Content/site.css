@@ -1,0 +1,447 @@
+﻿body
+{
+	font: 14px normal Verdana, sans-serif;
+	background-color: #dfeffc;
+}
+
+.pagemiddle
+{
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+.viewerWrapper
+{
+	margin-right: 12px;
+	margin-left: 12px;
+	background-color: White;
+	border: solid 3px #C0C0C0;
+	/*padding: 12px 12px 12px 12px;*/
+	width: auto;	
+}
+
+.nice
+{
+	border: solid 3px #C0C0C0;
+	/* curvycorners js will deal with this
+	border-radius: 12px; 
+	-webkit-border-radius: 12px; 
+	-moz-border-radius: 12px;
+	*/
+	background-color: #FFFFFF;
+	width: 100%;
+	padding: 10px 10px 10px 10px;
+	margin-bottom: 20px;
+}
+
+a
+{
+	text-decoration: none;
+	color: 	#2e6e9e;
+}
+
+.inner
+{
+	padding: 17px 17px 17px 17px;	
+	
+}
+
+.menuLink
+{
+	float:right;
+	padding: 0 10px 0 10px;	
+}
+
+.inlineHint
+{
+	background-color: #FFF7AD;	
+	border: solid 5px #FFEB8C;
+	color: #A57D31;
+	padding: 5px 5px 5px 5px;
+	margin: 5px 5px 5px 5px;
+}
+
+.inlineHint button
+{
+	margin-left:20px;
+	margin-right:20px;	
+}
+
+.crcTooltip
+{
+	background-color: #FFF7AD;	
+	border: solid 5px #FFEB8C;
+	color: #A57D31;
+	font-size: 1em;
+	
+}
+
+.hintLink
+{
+	margin: 5px 5px 5px 5px;
+	padding: 0 5px 0 0;
+}
+
+.hintLink a
+{
+	float:right;
+	display:block;
+}
+
+.reportRow
+{
+	padding: 3px 0px 3px 0px;
+}
+
+.reportLink
+{
+	display: block;
+	float:left;
+	font-size: 1.2em;
+	font-weight: bold;	
+	text-decoration: none;
+	color: #2e6e9e;
+	padding: 2px 3px 2px 3px;
+}
+
+.vanillaHover
+{
+	border: solid 1px white;
+}
+
+.reportPath
+{
+	display: block;
+	float:left;
+	font-size: 0.8em;	
+	padding: 0 10px 0 20px;
+}
+
+.reportInfo
+{
+	display: block;
+	float:left;
+	font-size: 0.8em;	
+	padding: 0 10px 0 20px;
+}
+
+.smallFolderRow
+{
+	padding: 3px 3px 3px 3px;
+}
+
+.smallFolderName
+{
+	border: solid 2px silver;
+	padding: 3px 10px 3px 10px;
+	width: 500px;
+	float:left;
+	display: block;
+	
+	font-size: 1.1em;
+	font-weight: bold;
+	cursor: pointer;
+	cursor: hand;
+	color: Black;
+}
+
+.hierarchicalCatalog
+{
+}
+
+.hierarchicalCatalog .folderBox
+{
+	padding-bottom: 5px;	
+	padding-top: 5px;
+}
+
+.hierarchicalCatalog .reportLink
+{
+	width: 480px;
+}
+
+.hierarchicalCatalog .reportInfo
+{
+	padding-left: 40px;
+	width: 650px;
+}
+
+.hierarchicalCatalog .folderName
+{
+	border: solid 2px silver;
+	padding: 3px 10px 3px 20px;
+	width: 500px;
+	
+	font-size: 1.5em;
+	font-weight: bolder;
+	cursor: pointer;
+	cursor: hand;
+	
+}
+
+.hierarchicalCatalog .folderChildren
+{
+	padding-left: 40px;
+}
+
+#clientParamDiv
+{
+	
+}
+
+.reportHeader
+{
+}
+
+.reportHeader .reportTitle
+{
+	float:left;
+	font-size: 1.5em;
+	font-weight: bolder;
+	padding: 10px 10px 10px 0px;
+}
+
+.reportHeader .reportFolder
+{
+	float:right;
+	font-size: 0.8em;	
+	padding: 8px 10px 10px 10px;
+}
+
+
+.reportDescription
+{
+	margin: 3px 100px 3px 40px;
+	border: solid 1px #C0C0C0;
+	padding: 10px 10px 10px 10px;
+}
+
+.reportDescription .ui-icon
+{
+	float:left;	
+}
+
+.reportDescription .reportDescriptionText
+{
+	float:left;	
+	padding-left: 10px;
+	width: 700px;
+	overflow:hidden;
+
+}
+
+.reportDescription #repDescEllipsis
+{
+	float:left;
+}
+
+
+.paramBlock
+{
+	display: inline-block;
+	/* begin IE7 inline-block hack */
+	zoom: 1;
+	*display:inline;
+	/* begin IE7 inline-block hack */
+	vertical-align: top;
+	border: solid 2px #C0C0C0;
+	background-color: #eeeeee;
+	width: 400px;
+	padding: 10px 10px 10px 10px;
+	margin: 5px 5px 5px 5px;
+}
+
+.paramBlock .paramName
+{
+	float:left;
+	width: 130px;
+	padding-top: 5px;	
+}
+
+.paramBlock .paramControl
+{
+	width: 250px;
+	float:left;
+}
+
+.singlePickLight
+{
+	width: 265px;
+	font-size: 0.8em;
+}
+
+.multiPickLight
+{
+	width: 265px;
+}
+
+.multiPickLarge
+{
+	width: 265px;
+}
+
+.multiPickSubtitle
+{
+	width: 260px;
+	font-size: 0.8em;
+	padding: 1px 0 0 0;
+	margin: 0 0 0 0;
+}
+
+.extendParamBlock
+{
+	display: inline-block;
+	/* begin IE7 inline-block hack */
+	zoom: 1;
+	*display:inline;
+	/* begin IE7 inline-block hack */
+	vertical-align: top;
+	border: dashed 2px #C0C0C0;
+	width: 400px;
+	padding: 8px 10px 10px 10px;
+	margin: 5px 5px 5px 5px;
+}
+
+.spaceBlock
+{
+	display: inline-block;
+	/* begin IE7 inline-block hack */
+	zoom: 1;
+	*display:inline;
+	/* begin IE7 inline-block hack */
+	border: solid 2px white;
+	
+	width: 400px;
+	height: 25px;
+	padding: 10px 10px 10px 10px;
+	margin: 5px 5px 5px 5px;
+}
+
+#waitBlock
+{
+	display: inline-block;
+	/* begin IE7 inline-block hack */
+	zoom: 1;
+	*display:inline;
+	/* begin IE7 inline-block hack */
+	border: solid 2px white;
+	
+}
+
+#waitBlock img
+{
+	width:32;
+	height:32;
+	padding-left: 184px;	
+}
+
+#addParam
+{
+	height: 22px;	
+}
+
+#addParam .ui-button-text
+{
+	padding-top: 2px;	
+}
+
+.multiPick {
+		width: 210px;
+	}
+
+
+.multiselect_ui {
+		width: 460px;
+		height: 120px;
+	}
+
+.twocolumn
+{
+	padding: 0 10px 0 10px;
+	width:400px;
+	float:left;
+}
+
+.paramSummaryWrapper
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.paramLeftCol
+{
+	float:left;	
+	width: 150px;
+}
+
+.paramRightCol
+{
+	float:left;
+	width: 750px;
+	padding-bottom: 5px;
+}
+
+.changeParams
+{
+	margin-top: 10px;	
+}
+
+.runButton
+{
+	width: 100px;
+	height: 35px;
+	font-size: 1.4em;
+	margin: 5px 0px 5px 0px;
+}
+
+
+.multiPickDialog
+{
+	font: 14px normal Verdana, sans-serif;
+}
+
+#clientLog
+{
+	font-size: 0.8em;
+	padding-top: 50px;	
+}
+
+.warningtext
+{
+	color: Orange;
+	font-weight: bold;	
+}
+
+.clear
+{
+	clear:both;
+}
+
+.spacer
+{
+	height: 10px;	
+	background-color: #dfeffc;
+}
+
+.hidden
+{
+	display: none;	
+}
+
+
+/* simple rounded corners (fixed width) */
+
+.cornertop 
+{
+	background: url(images/topcurvylong.png) no-repeat top left;
+}
+.cornerbackground
+{
+	background: url(images/middlecurvylong.png) repeat-y;
+}
+.cornerbottom
+{
+	background: url(images/bottomcurvylong.png) no-repeat bottom left;
+}
+

@@ -1,0 +1,25 @@
+﻿.ui-oxbowstilt-container 
+{
+}
+.ui-oxbowstilt-listwrap
+{
+	float:left;	
+}
+.ui-oxbowstilt-list 
+{
+}
+.ui-oxbowstilt-listheader
+{
+	display:block;
+	padding: 0 0 3px 0;	
+}
+.ui-oxbowstilt-middle
+{
+	float:left;
+	padding: 0 5px 0 5px;	
+}
+.ui-oxbowstilt-button
+{
+	margin-top: 10px;
+	display: block;	
+}

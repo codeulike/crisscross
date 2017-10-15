@@ -1,12 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrissCross", "CrissCross\CrissCross.csproj", "{7ACE6932-78EA-4EE2-A85E-991AFD55718F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrissCrossLib", "CrissCrossLib\CrissCrossLib.csproj", "{7A3F498D-DFAB-4EAC-B5E2-ED43624A71BE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrissCrossTests", "CrissCrossTests\CrissCrossTests.csproj", "{148B0441-B5EB-4B0D-A038-642E465D45D7}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{44D26AB0-379F-4F9F-AF2B-AD9697F1434C}"
 	ProjectSection(SolutionItems) = preProject
 		CrissCrossSol.vsmdi = CrissCrossSol.vsmdi
@@ -15,10 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ReadMe.txt = ReadMe.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrissCross", "CrissCross\CrissCross.csproj", "{7ACE6932-78EA-4EE2-A85E-991AFD55718F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrissCrossLib", "CrissCrossLib\CrissCrossLib.csproj", "{7A3F498D-DFAB-4EAC-B5E2-ED43624A71BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrissCrossTests", "CrissCrossTests\CrissCrossTests.csproj", "{148B0441-B5EB-4B0D-A038-642E465D45D7}"
+EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = CrissCrossSol.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -39,5 +38,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = CrissCrossSol.vsmdi
 	EndGlobalSection
 EndGlobal

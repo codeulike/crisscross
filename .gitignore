@@ -177,6 +177,10 @@ $RECYCLE.BIN/
 *.vc.vc.opendb
 *.vc.db
 
+#CrissCross logs
+CrissCross/App_Data/Log.txt
+CrissCross/App_Data/ErrorLog
+
 
 #specific
 localnotes.txt

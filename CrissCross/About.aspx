@@ -41,8 +41,8 @@
 <p>Elmah Error log: <a href="Elmah.axd">Elmah.axd</a></p>
 </asp:Panel>
 <h2>Credits</h2>
-<p>CrissCross is an Open-Source app. Documentation, downloads and source code are available from the project homepage on CodePlex:</p>
-<p><a href="http://crisscross.codeplex.com/">http://crisscross.codeplex.com/</a></p>
+<p>CrissCross is an Open-Source app. Documentation, downloads and source code are available from the project homepage on GitHub:</p>
+<p><a href="https://github.com/codeulike/crisscross">https://github.com/codeulike/crisscross</a></p>
 <p>CrissCross is licensed under the <a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2</a>.</p>
 <p>CrissCross is built with the following Open-Source components:</p>
 <ul>

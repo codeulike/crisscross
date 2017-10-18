@@ -50,7 +50,7 @@ namespace CrissCross
             uxVersionNo.Text = current.GetName().Version.ToString();
             uxReportViewerUrl.Text = ConfigurationManager.AppSettings["crisscross.ReportServerRootUrl"];
             uxReportWebServiceUrl.Text = ConfigurationManager.AppSettings["crisscross.ReportServerWebServiceUrl"];
-            uxReportManagerUrl.Text = uxReportViewerUrl.Text.Replace("reportserver", "reports");
+            uxReportManagerUrl.Text = uxReportViewerUrl.Text.ToLower().Replace("reportserver", "reports");
             uxReportManagerUrl.NavigateUrl = uxReportManagerUrl.Text;
             bool crcimpersonate = bool.Parse(ConfigurationManager.AppSettings["crisscross.ImpersonateLoggedOnUser"]);
             if (crcimpersonate)

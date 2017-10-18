@@ -1,10 +1,11 @@
 <%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Report.aspx.cs" Inherits="CrissCross.Report" %>
 
-<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-    Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
+<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-<script type="text/javascript">    var crissCross = new CrissCrossClient();
+    <script type="text/javascript">
+    var crissCross = new CrissCrossClient();
     crissCross.reportPath = "<%=ReportPath %>";
     <% if (ShowClientDebugLog) { %>
     crissCross.showLog = "#clientLog";
@@ -21,7 +22,9 @@
             $(this).hide();
         });
         crissCross.initClient();
-    });    </script>
+    });
+    
+</script>
 
     
     <script src="Scripts/jquery.multiselect.js" type="text/javascript"></script>
@@ -36,10 +39,13 @@
     <link href="Content/token-input.css" rel="stylesheet" type="text/css" />
     <link href="Content/token-input-crisscross.css" rel="stylesheet" type="text/css" />
     <link href="Content/jquery.oxbowstilt.css" rel="stylesheet" type="text/css" />
+
+    
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-<div class="cornerbackground">
+    <div class="cornerbackground">
             <div class="cornertop">
                 <div class="cornerbottom">
                 
@@ -101,11 +107,12 @@
     </asp:Content>
     <asp:Content ID="Content3" ContentPlaceHolderID="FullWidthPlaceHolder" runat="server">
     
-    <asp:Panel ID="uxResultsPanel" runat="server" CssClass="">
+        <asp:Panel ID="uxResultsPanel" runat="server" CssClass="">
     <div class="viewerWrapper">
     <rsweb:ReportViewer ID="uxReportViewer" runat="server"  
         Width="100%">
     </rsweb:ReportViewer>
+    <asp:ScriptManager runat="server"></asp:ScriptManager>
     </div>
     </asp:Panel>
     <div style="height:300px;"></div>

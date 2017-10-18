@@ -110,7 +110,8 @@
         <asp:Panel ID="uxResultsPanel" runat="server" CssClass="">
     <div class="viewerWrapper">
     <rsweb:ReportViewer ID="uxReportViewer" runat="server"  
-        Width="100%">
+        Width="100%" AsyncRendering="true" ProcessingMode="Remote" 
+        CssClass="repViewer">
     </rsweb:ReportViewer>
     <asp:ScriptManager runat="server"></asp:ScriptManager>
     </div>

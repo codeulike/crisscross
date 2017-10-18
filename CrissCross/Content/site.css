@@ -430,6 +430,11 @@ a
 }
 
 
+/* this fixes bug in IE 11 that renders reportViewer with wrong height*/
+.repViewer{
+    overflow-y:auto !important;
+}
+
 /* simple rounded corners (fixed width) */
 
 .cornertop 

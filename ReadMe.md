@@ -17,6 +17,7 @@ For more screenshots/features see the [Screenshots](https://github.com/codeulike
 ## Compatibility
 
 (its quite old, this is how things were last time I checked)
+(currently adjusting to be compatible with SQL 2012 SSRS)
 
 CrissCross is designed to connect to SQL 2008 SSRS. SQL 2005 SSRS and SQL 2008 R2 SSRS also work.
 

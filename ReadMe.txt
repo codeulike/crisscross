@@ -2,7 +2,7 @@ CrissCross
 ----------
 
 CrissCross - alternative user interface for running SSRS reports
-Project homepage: http://crisscross.codeplex.com/
+Project homepage: https://github.com/codeulike/crisscross
 
 Copyright (C) 2011 - 2017 Ian Finch 
 Contact: www.codeulike.com ian@codeulike.com
@@ -118,4 +118,4 @@ Elmah is used for error logging, so check Elmah if you are having problems:
 - On the local server, browse to (your virtual folder)/elmah.axd to see the error log.
 - Or see the XML files in the App_Data\ErrorLog folder.
 
-For documentation, discussions and to log bugs to the Issue Tracker, please go to http://crisscross.codeplex.com/
+For documentation, discussions and to log bugs to the Issue Tracker, please go to https://github.com/codeulike/crisscross

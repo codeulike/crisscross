@@ -16,13 +16,13 @@ For more screenshots/features see the [Screenshots](https://github.com/codeulike
 
 ## Compatibility
 
-(its quite old, this is how things were last time I checked)
-(currently adjusting to be compatible with SQL 2012 SSRS)
+The latest version of CrissCross is designed to connect to SQL 2014 SSRS.
+It should also work with older (and possibly newer) versions of SSRS with little or no adjustment.
 
-CrissCross is designed to connect to SQL 2008 SSRS. SQL 2005 SSRS and SQL 2008 R2 SSRS also work.
+It is written in ASP.NET 4.5 and can run on most recent versions of IIS and hence most Windows Servers.
+Works with all the main browsers.
 
-It is written in ASP.NET 3.5 and can run on most recent versions of IIS and hence most Windows Servers.
-Works with all the main browsers, but because it uses the Microsoft ReportViewer ASP.NET component, some features work better in IE (7,8 or 9)
+For compatibiltiy info for older versions of CrissCross, see [Changelog](https://github.com/codeulike/crisscross/wiki/Changelog)
 
 ## Latest Version
 

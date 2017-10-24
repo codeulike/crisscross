@@ -1,7 +1,7 @@
 ﻿/*
 * jQuery Oxbowstilt Widget 0.8
 * A low-fi dual-listbox multiselect widget
-* Copyright (c) 2012 Ian Richardson
+* Copyright (c) 2012-2017 Ian Finch
 *
 * http://www.codeulike.com
 *

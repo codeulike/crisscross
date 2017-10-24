@@ -1,5 +1,5 @@
 ﻿// CrissCross - alternative user interface for running SSRS reports
-// Copyright (C) 2011 Ian Richardson
+// Copyright (C) 2011-2017 Ian Finch
 //
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License

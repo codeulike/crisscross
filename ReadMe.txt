@@ -2,9 +2,9 @@ CrissCross
 ----------
 
 CrissCross - alternative user interface for running SSRS reports
-Project homepage: http://crisscross.codeplex.com/
+Project homepage: https://github.com/codeulike/crisscross
 
-Copyright (C) 2011 Ian Richardson
+Copyright (C) 2011 - 2017 Ian Finch 
 Contact: www.codeulike.com ian@codeulike.com
 
 Licensed under the GPLv2 - see License_Gpl2.txt
@@ -19,15 +19,16 @@ and more customisable. It is built using the standard ASP.NET ReportViewer compo
 Compatibility
 -------------
 
-CrissCross is designed to connect to SQL 2008 SSRS. But it may also work with SQL 2005 SSRS and SQL 2008 R2 SSRS.
-(if you find out, let me know).
-It is written in ASP.NET 3.5 and can run on most recent versions of IIS and hence most Windows Servers.
+The latest version of CrissCross is designed to connect to SQL 2014 SSRS.
+It should also work with older (and possibly newer) versions of SSRS with little or no adjustment.
+
+It is written in ASP.NET 4.5 and can run on most recent versions of IIS and hence most Windows Servers.
+Works with all the main browsers.
 
 This Version
 ------------
 
-This is an Alpha version of the software - most of the core features are working and stable, but there are some
-features that have not been developed yet (see documentation at codeplex site)
+Current version is a Beta version of the software - most of the core features are working and stable, but there may be occasional bugs (see documentation). It is however being used in production in at least two sites that I know of.
 
 Getting Started
 ---------------
@@ -39,14 +40,12 @@ CrissCross is designed to work with a minimum of configuration - basically you j
 server is and then off it goes. However there is additional optional configuration that can be peformed to 
 control how it behaves.
 
-1a) If you are building from source, open the solution in VS2008 and build.
-   Then publish the CrissCross Web App project to a temp folder from where you can deploy it.
-    - choose a folder to publish to 
-    - choose 'Only files needed to run this application'
-    - check the 'Include files from the App_Data folder' box.
+1a) If you are building from source, open the solution in Visual Studio and build.
+    Then publish the CrissCross Web App project to a temp folder from where you can deploy it.
+    - there is a Publishing Profile defined within the project that publishes to a folder
+    - or create your own profile to publish to a folder (or maybe straight to an IIS virtual folder)
 
-1b) If you downloaded the zipped codeplex download, there is already a built/published version 
-in the 'PublishedWebApp' folder
+1b) If you downloaded the 'PublishedWebApp' zip from github releases, it is already built/published. See below for details of copying it to IIS
 
 2) Find an IIS server and create a CrissCross Virtual Directory on it.
 If you use the IIS server on your SSRS server you've got more chance of getting impersonation working (see below)
@@ -55,12 +54,12 @@ but apart from that, any IIS server will do.
 3) Copy the published CrissCross web app into your virtual directory
 
 4) Make sure Windows Authentication is available.
-On IIS 6 its always an option, but in IIS 7 you might have to install it as an extra windows feature
+In IIS 7 or later you might have to install it as an extra windows feature
 http://www.iis.net/ConfigReference/system.webServer/security/authentication/windowsAuthentication
 
 5) Make sure the ReportViewer component is installed on the server
 If you're on the SSRS server, it'll be installed already, but if not you can install it using the
-ReportViewer 2008 SP1 redistributable installer - which is in Resources/ReportViewerSP1.exe
+ ReportViewer 2012 Runtime at https://www.microsoft.com/en-gb/download/details.aspx?id=35747
   
 6) Edit some web.config settings:
 
@@ -80,7 +79,7 @@ crisscross.ImpersonateLoggedOnUser
  - CrissCross can either run the reports as the logged in user, or run as a fixed user. Turning off
    Impersonation and using a Fixed User is easier to get started with, but turning Impersonation on makes
    CrissCross more useful. Note that Impersonation works best when CrissCross is running on the SSRS
-   server itself. See the documentation at http://crisscross.codeplex.com/wikipage?title=Impersonation%20Mode for more details.
+   server itself. See the documentation at https://github.com/codeulike/crisscross/wiki/Impersonation-Mode for more details.
    
 crisscross.FixedSsrsUsername
 crisscross.FixedSsrsDomain
@@ -107,7 +106,7 @@ ReportServerDb
    report log - hence only the datareader role in necessary for the SQL user.
  
 7) If using Impersonation Mode, make sure Integreated Windows Authentication is turned on in IIS.
-See: http://crisscross.codeplex.com/wikipage?title=Impersonation%20Mode 
+See: https://github.com/codeulike/crisscross/wiki/Impersonation-Mode
  
 8) That should be it; use a browser to navigate to the virtual directory and CrissCross should start running.
 
@@ -119,4 +118,4 @@ Elmah is used for error logging, so check Elmah if you are having problems:
 - On the local server, browse to (your virtual folder)/elmah.axd to see the error log.
 - Or see the XML files in the App_Data\ErrorLog folder.
 
-For documentation, discussions and to log bugs to the Issue Tracker, please go to http://crisscross.codeplex.com/
+For documentation, discussions and to log bugs to the Issue Tracker, please go to https://github.com/codeulike/crisscross

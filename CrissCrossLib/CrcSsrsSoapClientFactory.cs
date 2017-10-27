@@ -33,7 +33,9 @@ namespace CrissCrossLib
 
         public virtual rws.ReportingService2010Soap MakeSsrsSoapClient()
         {
-            rws.ReportingService2010SoapClient rService = new rws.ReportingService2010SoapClient("ReportingService2010Soap", GetWebServiceUrl());
+            var url = GetWebServiceUrl();
+            CheckWebServiceUrl(url);
+            rws.ReportingService2010SoapClient rService = new rws.ReportingService2010SoapClient("ReportingService2010Soap", url);
             if (GetImpersonateLoggedOnUser())
             {
                 logger.DebugFormat("Making Ssrs Soap client with impersonation of logged in user");
@@ -49,6 +51,14 @@ namespace CrissCrossLib
             }
 
             return (rws.ReportingService2010Soap) rService;
+        }
+
+        // upgraded CrissCross to use new 2010 endpoint
+        // better check for the old endpoint and throw friendly error to help people upgrading
+        private void CheckWebServiceUrl(String url)
+        {
+            if (url.ToLower().Contains("reportservice2005.asmx"))
+                throw new ApplicationException("Cannot connect to ReportService2005.asmx endpoint; please adjust crisscross.ReportServerWebServiceUrl in web.config to point to ReportService2010.asmx instead");
         }
 
         private bool GetImpersonateLoggedOnUser()

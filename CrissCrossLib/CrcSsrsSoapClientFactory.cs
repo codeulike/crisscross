@@ -31,9 +31,9 @@ namespace CrissCrossLib
         private static readonly ILog logger = LogManager.GetLogger(typeof(CrcSsrsSoapClientFactory));
         
 
-        public virtual rws.ReportingService2005Soap MakeSsrsSoapClient()
+        public virtual rws.ReportingService2010Soap MakeSsrsSoapClient()
         {
-            rws.ReportingService2005SoapClient rService = new rws.ReportingService2005SoapClient("ReportingService2005Soap", GetWebServiceUrl());
+            rws.ReportingService2010SoapClient rService = new rws.ReportingService2010SoapClient("ReportingService2010Soap", GetWebServiceUrl());
             if (GetImpersonateLoggedOnUser())
             {
                 logger.DebugFormat("Making Ssrs Soap client with impersonation of logged in user");
@@ -48,7 +48,7 @@ namespace CrissCrossLib
                 rService.ChannelFactory.Credentials.Windows.ClientCredential = CredentialCache.DefaultNetworkCredentials;
             }
 
-            return (rws.ReportingService2005Soap) rService;
+            return (rws.ReportingService2010Soap) rService;
         }
 
         private bool GetImpersonateLoggedOnUser()

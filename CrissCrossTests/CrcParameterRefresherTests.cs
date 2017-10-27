@@ -135,7 +135,7 @@ namespace CrissCrossTests
             pd.ParameterChoice.Values.Add("Value2");
             pd.ParameterChoice.Values.Add("Value3");
 
-            var latestParam = new rws.ReportParameter();
+            var latestParam = new rws.ItemParameter();
             latestParam.Name = "TestParam";
             latestParam.ValidValues = null;
             latestParam.DefaultValues = null;

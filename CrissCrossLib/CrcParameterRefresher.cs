@@ -32,7 +32,7 @@ namespace CrissCrossLib
     {
         private static readonly ILog logger = LogManager.GetLogger(typeof(CrcParameterRefresher));
         
-        public void RefreshParameter(CrcParameterDefinition paramDefn, rws.ReportParameter latestParamDetails)
+        public void RefreshParameter(CrcParameterDefinition paramDefn, rws.ItemParameter latestParamDetails)
         {
             logger.DebugFormat("Updating {0} with {1} valid values", paramDefn.Name, 
                 (latestParamDetails.ValidValues != null) ? latestParamDetails.ValidValues.Count().ToString() : "null");

@@ -69,13 +69,14 @@ namespace CrissCrossTests
         {
 
             var mf = new TestDoubles.MockSsrsWebServiceFactory();
-            var serviceMock = mf.MakeMockReportingService2005Soap(
+            var serviceMock = mf.MakeMockReportingService2010Soap(
                                     mf.MakeSimpleTestParameters());
             mf.SetListChildrenExpectation(serviceMock, @"/", new CatalogItem[] { new CatalogItem() {
                 Path = "TestReport",
                 Name = "TestReportName",
                 Description = "TestReportDescription",
-                Type = ItemTypeEnum.Report}});
+                TypeName = CrissCrossLib.Hierarchical.CrcReportFolderFactory.ReportServiceItemTypes.Report
+                }});
             var soapClientFactory = mf.MakeMockSoapClientFactory(serviceMock);
                                 
 
@@ -134,24 +135,24 @@ namespace CrissCrossTests
             choiceCollection.ParameterChoiceList.Add( paramChoice);
 
             // make server side params to return
-            ReportParameter p1 = new ReportParameter();
+            ItemParameter p1 = new ItemParameter();
             p1.Name = "ParamOne";
             p1.ValidValues = new ValidValue[]{ new ValidValue(){Label = "Label1", Value = "Value1"},
                                     new ValidValue(){Label = "Label2", Value = "Value2"},
                                     new ValidValue(){Label = "Label3", Value = "Value3"}};
             p1.DefaultValues = new string[] { };
-            ReportParameter p2 = new ReportParameter();
+            ItemParameter p2 = new ItemParameter();
             p2.Name = "ParamTwo";
             p2.ValidValues = new ValidValue[]{ new ValidValue(){Label = "SubLabel2_1", Value = "SubValue2_1"},
                                     new ValidValue(){Label = "SubLabel2_2", Value = "SubValue2_2"}};
             p2.DefaultValues = new string[] { };
-            ReportParameter[] paramArrayToReturn = new ReportParameter[] { p1, p2 };
+            ItemParameter[] paramArrayToReturn = new ItemParameter[] { p1, p2 };
 
 
             // make mocks for ccs
             var mf = new TestDoubles.MockSsrsWebServiceFactory();
             var soapClientFactory = mf.MakeMockSoapClientFactory(
-                        mf.MakeMockReportingService2005Soap("Value2", paramArrayToReturn));
+                        mf.MakeMockReportingService2010Soap("Value2", paramArrayToReturn));
                                 
             var cacheMock = MockRepository.GenerateMock<CrcCacheManager>();
             var configMock = MockRepository.GenerateMock<CrcExtraConfiguration>();

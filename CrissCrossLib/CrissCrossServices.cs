@@ -67,18 +67,19 @@ namespace CrissCrossLib
         
         public CatalogItem[] GetAllReportsNoCache(string username)
         {
-            ReportingService2005Soap rService = m_ssrsSoapClientFactory.MakeSsrsSoapClient();
+            ReportingService2010Soap rService = m_ssrsSoapClientFactory.MakeSsrsSoapClient();
 
             var lcRequest = new ListChildrenRequest()
             {
-                Item = "/",
+                //TrustedUserHeader = new TrustedUserHeader(),
+                ItemPath = "/",
                 Recursive = true
             };
             //CatalogItem[] catalogItems = null;
             var lcResponse = rService.ListChildren(lcRequest);
 
-            var reportsOnly = lcResponse.CatalogItems.Where(c => c.Type == ItemTypeEnum.Report).ToArray();
-            //var foldersOnly = lcResponse.CatalogItems.Where(c => c.Type == ItemTypeEnum.Folder).ToArray();
+            var reportsOnly = lcResponse.CatalogItems.Where(c => c.TypeName != null && c.TypeName.Equals(Hierarchical.CrcReportFolderFactory.ReportServiceItemTypes.Report)).ToArray();
+            
             return reportsOnly;
         }
 
@@ -95,7 +96,7 @@ namespace CrissCrossLib
 
         public CrissCrossLib.Hierarchical.CrcReportFolder GetAllReportsHierarchicalNoCache(string username)
         {
-            ReportingService2005Soap rService = m_ssrsSoapClientFactory.MakeSsrsSoapClient();
+            ReportingService2010Soap rService = m_ssrsSoapClientFactory.MakeSsrsSoapClient();
             var fac = new CrissCrossLib.Hierarchical.CrcReportFolderFactory();
             return fac.Create(rService);
         }
@@ -226,13 +227,14 @@ namespace CrissCrossLib
             // first, use the username to get description
             var reportCat = this.GetReportCatalogItem(reportPath, username);
 
-            ReportingService2005Soap rService = m_ssrsSoapClientFactory.MakeSsrsSoapClient();
-            GetReportParametersRequest req = new GetReportParametersRequest()
+            ReportingService2010Soap rService = m_ssrsSoapClientFactory.MakeSsrsSoapClient();
+
+            GetItemParametersRequest req = new GetItemParametersRequest()
             {
-                Report = reportPath,
+                ItemPath = reportPath,
                 ForRendering = true
             };
-            var resp = rService.GetReportParameters(req);
+            var resp = rService.GetItemParameters(req);
 
             var factory = new CrcReportDefinitionFactory();
             return factory.Create(reportPath, reportCat, resp.Parameters, m_extraConfiguration);
@@ -255,11 +257,11 @@ namespace CrissCrossLib
             var conv = new CrcParameterConverter();
             List<ParameterValue> valueList = conv.GetParametersValuesForSsrsWebService(repDefn);
             // get new params from web service
-            ReportingService2005Soap rService = m_ssrsSoapClientFactory.MakeSsrsSoapClient();
+            ReportingService2010Soap rService = m_ssrsSoapClientFactory.MakeSsrsSoapClient();
             logger.DebugFormat("RefreshDependantParameters: rep {0} calling WS to get new validvalid. Passing {1} values", repDefn.DisplayName, valueList.Count());
             
-            var grpRequest = new GetReportParametersRequest(repDefn.ReportPath, null, true, valueList.ToArray(), null);
-            var grpResponse = rService.GetReportParameters(grpRequest);
+            var grpRequest = new GetItemParametersRequest(new TrustedUserHeader(), repDefn.ReportPath, null, true, valueList.ToArray(), null);
+            var grpResponse = rService.GetItemParameters(grpRequest);
 
             // work out which params to refresh
             List<string> paramsToRefresh = new List<string>();

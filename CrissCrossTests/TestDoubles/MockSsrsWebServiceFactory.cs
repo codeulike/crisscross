@@ -15,7 +15,7 @@ namespace CrissCrossTests.TestDoubles
     public class MockSsrsWebServiceFactory
     {
 
-        public CrcSsrsSoapClientFactory MakeMockSoapClientFactory(ReportingService2005Soap serviceClient)
+        public CrcSsrsSoapClientFactory MakeMockSoapClientFactory(ReportingService2010Soap serviceClient)
         {
             // mock the factory
             var soapClientFactory = MockRepository.GenerateMock<CrcSsrsSoapClientFactory>();
@@ -24,25 +24,25 @@ namespace CrissCrossTests.TestDoubles
         }
 
 
-        public ReportingService2005Soap MakeMockReportingService2005Soap(ReportParameter[] paramsToReturn)
+        public ReportingService2010Soap MakeMockReportingService2010Soap(ItemParameter[] paramsToReturn)
         {
             // mock the web service
-            var soapClientMock = MockRepository.GenerateStub<ReportingService2005Soap>();
+            var soapClientMock = MockRepository.GenerateStub<ReportingService2010Soap>();
 
-            var grpResponse = new GetReportParametersResponse(null, paramsToReturn);
-            soapClientMock.Expect(s => s.GetReportParameters(null)).IgnoreArguments()
+            var grpResponse = new GetItemParametersResponse(null, paramsToReturn);
+            soapClientMock.Expect(s => s.GetItemParameters(null)).IgnoreArguments()
                 .Return(grpResponse);
             
             return soapClientMock;
         }
 
-        public ReportingService2005Soap MakeMockReportingService2005Soap(string singleSpecificValue, ReportParameter[] paramsToReturn)
+        public ReportingService2010Soap MakeMockReportingService2010Soap(string singleSpecificValue, ItemParameter[] paramsToReturn)
         {
-            var soapClientMock = MockRepository.GenerateStub<ReportingService2005Soap>();
+            var soapClientMock = MockRepository.GenerateStub<ReportingService2010Soap>();
 
-            var grpResponse = new GetReportParametersResponse(null, paramsToReturn);
-            soapClientMock.Expect(s => s.GetReportParameters(
-                Arg<GetReportParametersRequest>.Matches(
+            var grpResponse = new GetItemParametersResponse(null, paramsToReturn);
+            soapClientMock.Expect(s => s.GetItemParameters(
+                Arg<GetItemParametersRequest>.Matches(
                 grp =>  grp.Values.Count() == 1 && grp.Values[0].Value == singleSpecificValue)
                 )).Return(grpResponse);
 
@@ -50,64 +50,64 @@ namespace CrissCrossTests.TestDoubles
 
         }
 
-        public void SetListChildrenExpectation(ReportingService2005Soap mockService, string path, CatalogItem[] returnItems)
+        public void SetListChildrenExpectation(ReportingService2010Soap mockService, string path, CatalogItem[] returnItems)
         {
             var lcResponse = new ListChildrenResponse(null, returnItems);
             mockService.Expect(m => m.ListChildren(
                 Arg<ListChildrenRequest>.Matches(
-                lcr => lcr.Item == path)
+                lcr => lcr.ItemPath == path)
                 )).Return(lcResponse);
         }
 
-        public ReportParameter[] MakeSimpleTestParameters()
+        public ItemParameter[] MakeSimpleTestParameters()
         {
             
-            ReportParameter p1 = new ReportParameter();
+            ItemParameter p1 = new ItemParameter();
             p1.Name = "ParamOne";
             p1.ValidValues = new ValidValue[]{ new ValidValue(){Label = "Label1", Value = "Value1"},
                                     new ValidValue(){Label = "Label2", Value = "Value2"}};
             p1.DefaultValues = new string[] { };
-            ReportParameter p2 = new ReportParameter();
+            ItemParameter p2 = new ItemParameter();
             p2.Name = "ParamTwo";
             p2.ValidValues = new ValidValue[]{ new ValidValue(){Label = "Label3", Value = "Value3"},
                                     new ValidValue(){Label = "Label4", Value = "Value4"}};
             p2.DefaultValues = new string[] { };
 
-            ReportParameter[] paramArray = new ReportParameter[] { p1, p2 };
+            ItemParameter[] paramArray = new ItemParameter[] { p1, p2 };
             return paramArray;
         }
 
-        public ReportParameter[] MakeDateTestParameters()
+        public ItemParameter[] MakeDateTestParameters()
         {
 
-            ReportParameter p1 = new ReportParameter();
+            ItemParameter p1 = new ItemParameter();
             p1.Name = "ParamOne";
-            p1.Type = ParameterTypeEnum.DateTime;
+            p1.ParameterTypeName = CrcReportDefinitionFactory.ReportServiceParameterTypes.DateTime;
             p1.DefaultValues = new string[] { };
-            ReportParameter p2 = new ReportParameter();
+            ItemParameter p2 = new ItemParameter();
             p2.Name = "ParamTwo";
-            p2.Type = ParameterTypeEnum.DateTime;
+            p2.ParameterTypeName = CrcReportDefinitionFactory.ReportServiceParameterTypes.DateTime; 
             p2.DefaultValues = new string[] { };
 
-            ReportParameter[] paramArray = new ReportParameter[] { p1, p2 };
+            ItemParameter[] paramArray = new ItemParameter[] { p1, p2 };
             return paramArray;
         }
 
-        public ReportParameter[] MakeDependantTestParameters()
+        public ItemParameter[] MakeDependantTestParameters()
         {
 
-            ReportParameter p1 = new ReportParameter();
+            ItemParameter p1 = new ItemParameter();
             p1.Name = "ParamOne";
             p1.ValidValues = new ValidValue[]{ new ValidValue(){Label = "Label1", Value = "Value1"},
                                     new ValidValue(){Label = "Label2", Value = "Value2"}};
             p1.DefaultValues = new string[] { };
-            ReportParameter p2 = new ReportParameter();
+            ItemParameter p2 = new ItemParameter();
             p2.Name = "ParamTwo";
             p2.ValidValues = new ValidValue[]{ new ValidValue(){Label = "Label3", Value = "Value3"},
                                     new ValidValue(){Label = "Label4", Value = "Value4"}};
             p2.DefaultValues = new string[] { };
             p2.Dependencies = new string[] { "ParamOne" };
-            ReportParameter p3 = new ReportParameter();
+            ItemParameter p3 = new ItemParameter();
             p3.Name = "ParamThree";
             p3.ValidValues = new ValidValue[]{ new ValidValue(){Label = "Label5", Value = "Value5"},
                                     new ValidValue(){Label = "Label6", Value = "Value6"}};
@@ -115,7 +115,7 @@ namespace CrissCrossTests.TestDoubles
             p3.Dependencies = new string[] { "ParamOne" };
 
 
-            ReportParameter[] paramArray = new ReportParameter[] { p1, p2, p3 };
+            ItemParameter[] paramArray = new ItemParameter[] { p1, p2, p3 };
             return paramArray;
         }
 

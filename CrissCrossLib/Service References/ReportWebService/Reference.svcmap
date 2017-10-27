@@ -17,10 +17,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://your-ssrs-server/reportserver/ReportService2005.asmx?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost/reportserver_SQLEXPRESS/ReportService2010.asmx?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ReportService2005.wsdl" MetadataType="Wsdl" ID="ae3746a8-5548-4e80-a0a2-0fb750b7b69a" SourceId="1" SourceUrl="http://your-ssrs-server/reportserver/ReportService2005.asmx?wsdl" />
+    <MetadataFile FileName="ReportService2010.wsdl" MetadataType="Wsdl" ID="0682c63c-6e34-45bb-901a-483cdfa4e0f5" SourceId="1" SourceUrl="http://localhost/reportserver_SQLEXPRESS/ReportService2010.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

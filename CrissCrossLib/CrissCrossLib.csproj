@@ -130,7 +130,139 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Service References\ReportWebService\ReportService2005.wsdl" />
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ChangeSubscriptionOwnerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CreateCacheRefreshPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CreateCatalogItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CreateItemHistorySnapshotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CreateLinkedItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CreateReportEditSessionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.DeleteCacheRefreshPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.DeleteItemHistorySnapshotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetCacheRefreshPlanPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetItemDefinitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetItemHistoryLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetItemHistoryOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetItemLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetItemParametersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetItemReferencesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetReportServerConfigInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.IsSSLRequiredResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListCacheRefreshPlansResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListDatabaseCredentialRetrievalOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListExecutionSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListExtensionTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListItemHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListItemTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListJobActionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListJobStatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListJobTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListModelItemTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListMySubscriptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListParameterStatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListParameterTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListParentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListScheduledItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListScheduleStatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListSecurityScopesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetCacheRefreshPlanPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetItemDefinitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetItemHistoryLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetItemHistoryOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetItemLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetItemParametersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetItemReferencesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.TestConnectForDataSourceDefinitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.TestConnectForItemDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.UpdateItemExecutionSnapshotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportWebService\ReportService2010.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ReportWebService\" />
@@ -142,13 +274,7 @@
     <None Include="Service References\ReportWebService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CancelBatchResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CancelJobResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CreateBatchResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CreateDataDrivenSubscriptionResponse.datasource">
@@ -158,21 +284,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CreateFolderResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CreateLinkedReportResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CreateModelResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CreateReportHistorySnapshotResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CreateReportResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CreateResourceResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.CreateRoleResponse.datasource">
@@ -185,9 +296,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.DeleteItemResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.DeleteReportHistorySnapshotResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.DeleteRoleResponse.datasource">
@@ -203,9 +311,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.EnableDataSourceResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ExecuteBatchResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.FindItemsResponse.datasource">
@@ -244,9 +349,6 @@
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetItemTypeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetModelDefinitionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetModelItemPermissionsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -260,27 +362,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetPropertiesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetRenderResourceResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetReportDefinitionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetReportHistoryLimitResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetReportHistoryOptionsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetReportLinkResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetReportParametersResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetResourceContentsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.GetRolePropertiesResponse.datasource">
@@ -334,19 +415,10 @@
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListModelPerspectivesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListReportHistoryResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListRolesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListScheduledReportsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListSchedulesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListSecureMethodsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ListSubscriptionsResponse.datasource">
@@ -397,9 +469,6 @@
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetItemDataSourcesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetModelDefinitionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetModelDrillthroughReportsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -410,24 +479,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetPropertiesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetReportDefinitionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetReportHistoryLimitResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetReportHistoryOptionsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetReportLinkResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetReportParametersResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetResourceContentsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetRolePropertiesResponse.datasource">
@@ -443,9 +494,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.SetSystemPropertiesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.UpdateReportExecutionSnapshotResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ReportWebService\CrissCrossLib.ReportWebService.ValidateExtensionSettingsResponse.datasource">

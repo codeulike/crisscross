@@ -25,29 +25,56 @@ namespace CrissCrossLib.Hierarchical
 {
     public class CrcReportFolderFactory
     {
-        public CrcReportFolder Create(ReportingService2005Soap rService)
+
+        // In ReportService2005 endpoint, Catalog ItemTypes were an enum
+        // In ReportService2010 endpoint, ItemTypes are represented by strings
+        // the ws method ListItemTypes() is supposed to return these types
+        // but in practice they appear to be fixed anyway.
+        // see https://msdn.microsoft.com/en-us/library/reportservice2010.reportingservice2010.listitemtypes.aspx
+        // Hence this static class operates somwhat like an Enum,
+        // but with String values
+        public static class ReportServiceItemTypes
+        {
+            public static readonly String Component = "Component"; // a report part
+            public static readonly String DataSource = "DataSource";
+            public static readonly String Folder = "Folder";
+            public static readonly String Model = "Model"; // model for report builder
+            public static readonly String LinkedReport = "LinkedReport";
+            public static readonly String Report = "Report";
+            public static readonly String Resource = "Resource";
+            public static readonly String DataSet = "DataSet";
+            public static readonly String Site = "Site"; // a sharepoint site
+            public static readonly String Unknown = "Unknown"; // An item not associated with any known type.
+            
+
+        }
+
+        public CrcReportFolder Create(ReportingService2010Soap rService)
         {
             return Create(rService, @"/");
         }
 
-        public CrcReportFolder Create(ReportingService2005Soap rService, string path)
+        public CrcReportFolder Create(ReportingService2010Soap rService, string path)
         {
             var ret = new CrcReportFolder();
             ret.Path = path;
             ret.FolderName = CrcReportDefinition.ReportNameFromPath(path);
 
-            var lcRequest = new ListChildrenRequest(path, false);
+            
+            var lcRequest = new ListChildrenRequest(new TrustedUserHeader(), path, false);
+            
             
             var lcResponse = rService.ListChildren(lcRequest);
             foreach (CatalogItem itemLoop in lcResponse.CatalogItems)
             {
-                if (itemLoop.Type == ItemTypeEnum.Folder)
+                
+                if (itemLoop.TypeName != null && itemLoop.TypeName.Equals(ReportServiceItemTypes.Folder))
                 {
                     var sf = Create(rService, itemLoop.Path);
                     if (sf.Reports.Count() > 0 || sf.SubFolders.Count() > 0)
                         ret.SubFolders.Add(sf);
                 }
-                else if (itemLoop.Type == ItemTypeEnum.Report)
+                else if (itemLoop.TypeName != null && itemLoop.TypeName.Equals(ReportServiceItemTypes.Report))
                 {
                     if (!itemLoop.Hidden)
                     {

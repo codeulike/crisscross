@@ -30,17 +30,33 @@ namespace CrissCrossLib
     {
         private static readonly ILog logger = LogManager.GetLogger(typeof(CrcReportDefinitionFactory));
 
-        public CrcReportDefinition Create(string reportPath, rws.ReportParameter[] wsReportParameters)
+        // In ReportService2005 endpoint, parameter types were an enum
+        // In ReportService2010 endpoint, types are represented by strings
+        // the ws method ListParameterTypes() is supposed to return these types
+        // but in practice they appear to be fixed anyway.
+        // see https://msdn.microsoft.com/en-us/library/reportservice2010.reportingservice2010.listparametertypes.aspx
+        // Hence this static class operates somwhat like an Enum,
+        // but with String values
+        public static class ReportServiceParameterTypes
+        {
+            public static readonly String Boolean = "Boolean";
+            public static readonly String DateTime = "DateTime";
+            public static readonly String Float = "Float";
+            public static readonly String Integer = "Integer";
+            public static readonly String String = "String";
+        }
+
+        public CrcReportDefinition Create(string reportPath, rws.ItemParameter[] wsReportParameters)
         {
             return Create(reportPath, null, wsReportParameters, null);
         }
 
-        public CrcReportDefinition Create(string reportPath, rws.ReportParameter[] wsReportParameters, CrcExtraConfiguration extraConfig)
+        public CrcReportDefinition Create(string reportPath, rws.ItemParameter[] wsReportParameters, CrcExtraConfiguration extraConfig)
         {
             return Create(reportPath, null, wsReportParameters, extraConfig);
         }
 
-        public CrcReportDefinition Create(string reportPath, rws.CatalogItem reportCatItem, rws.ReportParameter[] wsReportParameters, CrcExtraConfiguration extraConfig)
+        public CrcReportDefinition Create(string reportPath, rws.CatalogItem reportCatItem, rws.ItemParameter[] wsReportParameters, CrcExtraConfiguration extraConfig)
         {
             var repDef = new CrcReportDefinition();
             repDef.ReportPath = reportPath;
@@ -78,7 +94,7 @@ namespace CrissCrossLib
             return repDef;
         }
 
-        public void AddParameterDefinitions(rws.ReportParameter[] wsReportParameters, CrcReportDefinition repDef, CrcExtraConfiguration extraConfig, CrcReportConfig reportConfig)
+        public void AddParameterDefinitions(rws.ItemParameter[] wsReportParameters, CrcReportDefinition repDef, CrcExtraConfiguration extraConfig, CrcReportConfig reportConfig)
         {
             List<string> showByDefault = new List<string>();
             if (reportConfig != null)
@@ -115,7 +131,9 @@ namespace CrissCrossLib
                 // if PromptUser is false then Parameter is 'Internal' in SSRS
                 if (!paramLoop.PromptUser)
                     crcParam.Hidden = true;
-                if (paramLoop.Type == rws.ParameterTypeEnum.DateTime)
+                var a = new rws.ItemParameter();
+               
+                if (paramLoop.ParameterTypeName != null && paramLoop.ParameterTypeName.Equals(ReportServiceParameterTypes.DateTime))
                     crcParam.ParameterType = CrcParameterType.Date;
                 else if ((paramLoop.ValidValues != null && paramLoop.ValidValues.Count() > 0)
                     || paramLoop.ValidValuesQueryBased)
@@ -125,7 +143,7 @@ namespace CrissCrossLib
                     else
                         crcParam.ParameterType = CrcParameterType.Select;
                 }
-                else if (paramLoop.Type == rws.ParameterTypeEnum.Boolean)
+                else if (paramLoop.ParameterTypeName != null && paramLoop.ParameterTypeName.Equals(ReportServiceParameterTypes.Boolean))
                     crcParam.ParameterType = CrcParameterType.Boolean;
                 else
                     crcParam.ParameterType = CrcParameterType.Text;
@@ -194,7 +212,7 @@ namespace CrissCrossLib
         /// Reads the dependent param info from the ssrs web service params and
         /// converts into dependAnt params (i.e. opposite way round)
         /// </summary>
-        public void AddSsrsDependentParams(CrissCrossLib.ReportWebService.ReportParameter[] wsReportParameters, CrcReportDefinition repDef)
+        public void AddSsrsDependentParams(rws.ItemParameter[] wsReportParameters, CrcReportDefinition repDef)
         {
             foreach (var paramLoop in wsReportParameters)
             {
@@ -234,7 +252,7 @@ namespace CrissCrossLib
             }
         }
 
-        public void ApplyParameterDefaults(rws.ReportParameter[] wsReportParameters, CrcReportDefinition repDef)
+        public void ApplyParameterDefaults(rws.ItemParameter[] wsReportParameters, CrcReportDefinition repDef)
         {
             // first build up a choicecollection from the defaults
             var choiceCol = new CrcParameterChoiceCollection();

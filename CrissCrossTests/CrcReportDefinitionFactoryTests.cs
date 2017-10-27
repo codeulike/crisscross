@@ -165,13 +165,13 @@ namespace CrissCrossTests
         public void CanMakeReportWithNoReportConfigButIncludeDefaultEmptyEquivalents()
         {
 
-            rws.ReportParameter p1 = new rws.ReportParameter();
+            rws.ItemParameter p1 = new rws.ItemParameter();
             p1.Name = "ParamOne";
             p1.ValidValues = new rws.ValidValue[]{ new rws.ValidValue(){Label = "--All--", Value = "%%"},
                                     new rws.ValidValue(){Label = "Label1", Value = "Value1"},
                                     new rws.ValidValue(){Label = "Label2", Value = "Value2"}};
             p1.DefaultValues = new string[] { };
-            rws.ReportParameter[] paramArray = new rws.ReportParameter[] { p1};
+            rws.ItemParameter[] paramArray = new rws.ItemParameter[] { p1 };
 
             var configMock = MockRepository.GenerateMock<CrcExtraConfiguration>();
             configMock.Expect(m => m.DefaultEmptyEquivalentValues).Return(new List<string>() { "", "%%" });
@@ -348,21 +348,21 @@ namespace CrissCrossTests
         {
 
 
-            rws.ReportParameter p1 = new rws.ReportParameter();
+            rws.ItemParameter p1 = new rws.ItemParameter();
             p1.Name = "ParamWithDefault";
             p1.ValidValues = new rws.ValidValue[]{ new rws.ValidValue(){Label = "--All--", Value = "%%"},
                                     new rws.ValidValue(){Label = "Label1", Value = "Value1"},
                                     new rws.ValidValue(){Label = "Label2", Value = "Value2"}};
             p1.DefaultValues = new string[] {"%%"};
             p1.Nullable = false;
-            rws.ReportParameter p2 = new rws.ReportParameter();
+            rws.ItemParameter p2 = new rws.ItemParameter();
             p2.Name = "ParamWithoutDefault";
             p2.ValidValues = new rws.ValidValue[]{ 
                                     new rws.ValidValue(){Label = "Label3", Value = "Value3"},
                                     new rws.ValidValue(){Label = "Label4", Value = "Value4"}};
             p2.DefaultValues = new string[] { };
             p2.Nullable = false;
-            rws.ReportParameter[] paramArray = new rws.ReportParameter[] { p1, p2 };
+            rws.ItemParameter[] paramArray = new rws.ItemParameter[] { p1, p2 };
 
             var configMock = MockRepository.GenerateMock<CrcExtraConfiguration>();
 
@@ -390,17 +390,17 @@ namespace CrissCrossTests
         {
 
 
-            rws.ReportParameter p1 = new rws.ReportParameter();
+            rws.ItemParameter p1 = new rws.ItemParameter();
             p1.Name = "ParamWithDefault";
-            p1.Type = rws.ParameterTypeEnum.DateTime;
+            p1.ParameterTypeName = CrcReportDefinitionFactory.ReportServiceParameterTypes.DateTime;
             p1.DefaultValues = new string[] { "01/Jan/2011" };
             p1.Nullable = false;
-            rws.ReportParameter p2 = new rws.ReportParameter();
+            rws.ItemParameter p2 = new rws.ItemParameter();
             p2.Name = "ParamWithoutDefault";
-            p2.Type = rws.ParameterTypeEnum.DateTime;
+            p2.ParameterTypeName = CrcReportDefinitionFactory.ReportServiceParameterTypes.DateTime;
             p2.DefaultValues = new string[] { };
             p2.Nullable = false;
-            rws.ReportParameter[] paramArray = new rws.ReportParameter[] { p1, p2 };
+            rws.ItemParameter[] paramArray = new rws.ItemParameter[] { p1, p2 };
 
             var configMock = MockRepository.GenerateMock<CrcExtraConfiguration>();
 
@@ -426,13 +426,13 @@ namespace CrissCrossTests
         [TestMethod]
         public void CanMakeReportAndDetectFreeTextField()
         {
-            rws.ReportParameter p1 = new rws.ReportParameter();
+            rws.ItemParameter p1 = new rws.ItemParameter();
             p1.Name = "ParamFreeText";
             p1.Nullable = false;
-            p1.Type = rws.ParameterTypeEnum.String;
+            p1.ParameterTypeName = CrcReportDefinitionFactory.ReportServiceParameterTypes.String;
             p1.ValidValuesQueryBased = false;
             p1.ValidValues = null;
-            rws.ReportParameter[] paramArray = new rws.ReportParameter[] { p1};
+            rws.ItemParameter[] paramArray = new rws.ItemParameter[] { p1 };
 
             var configMock = MockRepository.GenerateMock<CrcExtraConfiguration>();
 
@@ -452,15 +452,15 @@ namespace CrissCrossTests
         [TestMethod]
         public void CanMakeReportAndDetectNormalSelect()
         {
-            rws.ReportParameter p1 = new rws.ReportParameter();
+            rws.ItemParameter p1 = new rws.ItemParameter();
             p1.Name = "ParamSelect";
             p1.Nullable = false;
-            p1.Type = rws.ParameterTypeEnum.String;
+            p1.ParameterTypeName = CrcReportDefinitionFactory.ReportServiceParameterTypes.String;
             p1.ValidValuesQueryBased = false;
             p1.ValidValues = new rws.ValidValue[]{ new rws.ValidValue(){Label = "--All--", Value = "%%"},
                                     new rws.ValidValue(){Label = "Label1", Value = "Value1"},
-                                    new rws.ValidValue(){Label = "Label2", Value = "Value2"}}; 
-            rws.ReportParameter[] paramArray = new rws.ReportParameter[] { p1 };
+                                    new rws.ValidValue(){Label = "Label2", Value = "Value2"}};
+            rws.ItemParameter[] paramArray = new rws.ItemParameter[] { p1 };
 
             var configMock = MockRepository.GenerateMock<CrcExtraConfiguration>();
 
@@ -480,16 +480,16 @@ namespace CrissCrossTests
         [TestMethod]
         public void CanMakeReportAndDetectMultipickSelect()
         {
-            rws.ReportParameter p1 = new rws.ReportParameter();
+            rws.ItemParameter p1 = new rws.ItemParameter();
             p1.Name = "ParamSelect";
             p1.Nullable = false;
-            p1.Type = rws.ParameterTypeEnum.String;
+            p1.ParameterTypeName = CrcReportDefinitionFactory.ReportServiceParameterTypes.String;
             p1.ValidValuesQueryBased = false;
             p1.ValidValues = new rws.ValidValue[]{ new rws.ValidValue(){Label = "--All--", Value = "%%"},
                                     new rws.ValidValue(){Label = "Label1", Value = "Value1"},
                                     new rws.ValidValue(){Label = "Label2", Value = "Value2"}};
             p1.MultiValue = true;
-            rws.ReportParameter[] paramArray = new rws.ReportParameter[] { p1 };
+            rws.ItemParameter[] paramArray = new rws.ItemParameter[] { p1 };
 
             var configMock = MockRepository.GenerateMock<CrcExtraConfiguration>();
 
@@ -511,13 +511,13 @@ namespace CrissCrossTests
         {
             // sometimes dependant selects can be empty at first
             // they are always query based though
-            rws.ReportParameter p1 = new rws.ReportParameter();
+            rws.ItemParameter p1 = new rws.ItemParameter();
             p1.Name = "ParamSelect";
             p1.Nullable = false;
-            p1.Type = rws.ParameterTypeEnum.String;
+            p1.ParameterTypeName = CrcReportDefinitionFactory.ReportServiceParameterTypes.String;
             p1.ValidValuesQueryBased = true;
             p1.ValidValues = null;
-            rws.ReportParameter[] paramArray = new rws.ReportParameter[] { p1 };
+            rws.ItemParameter[] paramArray = new rws.ItemParameter[] { p1 };
 
             var configMock = MockRepository.GenerateMock<CrcExtraConfiguration>();
 
@@ -564,13 +564,13 @@ namespace CrissCrossTests
         [TestMethod]
         public void CanMakeReportAndDetectNormalBoolField()
         {
-            rws.ReportParameter p1 = new rws.ReportParameter();
+            rws.ItemParameter p1 = new rws.ItemParameter();
             p1.Name = "ParamBool";
             p1.Nullable = false;
-            p1.Type = rws.ParameterTypeEnum.Boolean;
+            p1.ParameterTypeName = CrcReportDefinitionFactory.ReportServiceParameterTypes.Boolean;
             p1.ValidValuesQueryBased = false;
             p1.ValidValues = null;
-            rws.ReportParameter[] paramArray = new rws.ReportParameter[] { p1 };
+            rws.ItemParameter[] paramArray = new rws.ItemParameter[] { p1 };
 
             var configMock = MockRepository.GenerateMock<CrcExtraConfiguration>();
 
@@ -590,15 +590,15 @@ namespace CrissCrossTests
         [TestMethod]
         public void CanMakeReportAndDetectBoolFieldWithYesNoValues()
         {
-            rws.ReportParameter p1 = new rws.ReportParameter();
+            rws.ItemParameter p1 = new rws.ItemParameter();
             p1.Name = "ParamBool";
             p1.Nullable = false;
-            p1.Type = rws.ParameterTypeEnum.Boolean;
+            p1.ParameterTypeName = CrcReportDefinitionFactory.ReportServiceParameterTypes.Boolean;
             p1.ValidValuesQueryBased = false;
             p1.ValidValues = new rws.ValidValue[] {
                 new rws.ValidValue() { Label = "Yes", Value="true" },
                 new rws.ValidValue() { Label = "No", Value="false" }};
-            rws.ReportParameter[] paramArray = new rws.ReportParameter[] { p1 };
+            rws.ItemParameter[] paramArray = new rws.ItemParameter[] { p1 };
 
             var configMock = MockRepository.GenerateMock<CrcExtraConfiguration>();
 

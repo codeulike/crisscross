@@ -12,935 +12,1078 @@ namespace CrissCrossLib.ReportWebService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", ConfigurationName="ReportWebService.ReportingService2005Soap")]
-    public interface ReportingService2005Soap {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", ConfigurationName="ReportWebService.ReportingService2010Soap")]
+    public interface ReportingService2010Soap {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tSecureMethods", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateCa" +
+            "talogItem", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListSecureMethodsResponse ListSecureMethods(CrissCrossLib.ReportWebService.ListSecureMethodsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Cre" +
-            "ateBatch", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.CreateCatalogItemResponse CreateCatalogItem(CrissCrossLib.ReportWebService.CreateCatalogItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetItemD" +
+            "efinition", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.CreateBatchResponse CreateBatch(CrissCrossLib.ReportWebService.CreateBatchRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Can" +
-            "celBatch", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetItemDefinitionResponse SetItemDefinition(CrissCrossLib.ReportWebService.SetItemDefinitionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemD" +
+            "efinition", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.CancelBatchResponse CancelBatch(CrissCrossLib.ReportWebService.CancelBatchRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Exe" +
-            "cuteBatch", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetItemDefinitionResponse GetItemDefinition(CrissCrossLib.ReportWebService.GetItemDefinitionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemT" +
+            "ype", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ExecuteBatchResponse ExecuteBatch(CrissCrossLib.ReportWebService.ExecuteBatchRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "SystemProperties", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetSystemPropertiesResponse GetSystemProperties(CrissCrossLib.ReportWebService.GetSystemPropertiesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "SystemProperties", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetSystemPropertiesResponse SetSystemProperties(CrissCrossLib.ReportWebService.SetSystemPropertiesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Del" +
-            "eteItem", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.DeleteItemResponse DeleteItem(CrissCrossLib.ReportWebService.DeleteItemRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Mov" +
-            "eItem", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.MoveItemResponse MoveItem(CrissCrossLib.ReportWebService.MoveItemRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tChildren", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListChildrenResponse ListChildren(CrissCrossLib.ReportWebService.ListChildrenRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tDependentItems", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListDependentItemsResponse ListDependentItems(CrissCrossLib.ReportWebService.ListDependentItemsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "Properties", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetPropertiesResponse GetProperties(CrissCrossLib.ReportWebService.GetPropertiesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "Properties", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetPropertiesResponse SetProperties(CrissCrossLib.ReportWebService.SetPropertiesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "ItemType", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         CrissCrossLib.ReportWebService.GetItemTypeResponse GetItemType(CrissCrossLib.ReportWebService.GetItemTypeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Cre" +
-            "ateFolder", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/DeleteIt" +
+            "em", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.CreateFolderResponse CreateFolder(CrissCrossLib.ReportWebService.CreateFolderRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Cre" +
-            "ateReport", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.CreateReportResponse CreateReport(CrissCrossLib.ReportWebService.CreateReportRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "ReportDefinition", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetReportDefinitionResponse GetReportDefinition(CrissCrossLib.ReportWebService.GetReportDefinitionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "ReportDefinition", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetReportDefinitionResponse SetReportDefinition(CrissCrossLib.ReportWebService.SetReportDefinitionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Cre" +
-            "ateResource", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.CreateResourceResponse CreateResource(CrissCrossLib.ReportWebService.CreateResourceRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "ResourceContents", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetResourceContentsResponse SetResourceContents(CrissCrossLib.ReportWebService.SetResourceContentsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "ResourceContents", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetResourceContentsResponse GetResourceContents(CrissCrossLib.ReportWebService.GetResourceContentsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "ReportParameters", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetReportParametersResponse GetReportParameters(CrissCrossLib.ReportWebService.GetReportParametersRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "ReportParameters", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetReportParametersResponse SetReportParameters(CrissCrossLib.ReportWebService.SetReportParametersRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Cre" +
-            "ateLinkedReport", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.CreateLinkedReportResponse CreateLinkedReport(CrissCrossLib.ReportWebService.CreateLinkedReportRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "ReportLink", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetReportLinkResponse GetReportLink(CrissCrossLib.ReportWebService.GetReportLinkRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "ReportLink", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetReportLinkResponse SetReportLink(CrissCrossLib.ReportWebService.SetReportLinkRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "RenderResource", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetRenderResourceResponse GetRenderResource(CrissCrossLib.ReportWebService.GetRenderResourceRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "ExecutionOptions", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetExecutionOptionsResponse SetExecutionOptions(CrissCrossLib.ReportWebService.SetExecutionOptionsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "ExecutionOptions", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetExecutionOptionsResponse GetExecutionOptions(CrissCrossLib.ReportWebService.GetExecutionOptionsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "CacheOptions", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetCacheOptionsResponse SetCacheOptions(CrissCrossLib.ReportWebService.SetCacheOptionsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "CacheOptions", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetCacheOptionsResponse GetCacheOptions(CrissCrossLib.ReportWebService.GetCacheOptionsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Upd" +
-            "ateReportExecutionSnapshot", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.UpdateReportExecutionSnapshotResponse UpdateReportExecutionSnapshot(CrissCrossLib.ReportWebService.UpdateReportExecutionSnapshotRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Flu" +
-            "shCache", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.FlushCacheResponse FlushCache(CrissCrossLib.ReportWebService.FlushCacheRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tJobs", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListJobsResponse ListJobs(CrissCrossLib.ReportWebService.ListJobsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Can" +
-            "celJob", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.CancelJobResponse CancelJob(CrissCrossLib.ReportWebService.CancelJobRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Cre" +
-            "ateDataSource", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.CreateDataSourceResponse CreateDataSource(CrissCrossLib.ReportWebService.CreateDataSourceRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "DataSourceContents", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetDataSourceContentsResponse GetDataSourceContents(CrissCrossLib.ReportWebService.GetDataSourceContentsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "DataSourceContents", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetDataSourceContentsResponse SetDataSourceContents(CrissCrossLib.ReportWebService.SetDataSourceContentsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Ena" +
-            "bleDataSource", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.EnableDataSourceResponse EnableDataSource(CrissCrossLib.ReportWebService.EnableDataSourceRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Dis" +
-            "ableDataSource", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.DisableDataSourceResponse DisableDataSource(CrissCrossLib.ReportWebService.DisableDataSourceRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "ItemDataSources", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetItemDataSourcesResponse SetItemDataSources(CrissCrossLib.ReportWebService.SetItemDataSourcesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "ItemDataSources", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetItemDataSourcesResponse GetItemDataSources(CrissCrossLib.ReportWebService.GetItemDataSourcesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "ItemDataSourcePrompts", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetItemDataSourcePromptsResponse GetItemDataSourcePrompts(CrissCrossLib.ReportWebService.GetItemDataSourcePromptsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Cre" +
-            "ateReportHistorySnapshot", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.CreateReportHistorySnapshotResponse CreateReportHistorySnapshot(CrissCrossLib.ReportWebService.CreateReportHistorySnapshotRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "ReportHistoryOptions", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetReportHistoryOptionsResponse SetReportHistoryOptions(CrissCrossLib.ReportWebService.SetReportHistoryOptionsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "ReportHistoryOptions", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetReportHistoryOptionsResponse GetReportHistoryOptions(CrissCrossLib.ReportWebService.GetReportHistoryOptionsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "ReportHistoryLimit", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetReportHistoryLimitResponse SetReportHistoryLimit(CrissCrossLib.ReportWebService.SetReportHistoryLimitRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "ReportHistoryLimit", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetReportHistoryLimitResponse GetReportHistoryLimit(CrissCrossLib.ReportWebService.GetReportHistoryLimitRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tReportHistory", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListReportHistoryResponse ListReportHistory(CrissCrossLib.ReportWebService.ListReportHistoryRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Del" +
-            "eteReportHistorySnapshot", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.DeleteReportHistorySnapshotResponse DeleteReportHistorySnapshot(CrissCrossLib.ReportWebService.DeleteReportHistorySnapshotRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Fin" +
-            "dItems", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.FindItemsResponse FindItems(CrissCrossLib.ReportWebService.FindItemsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Cre" +
-            "ateSchedule", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.CreateScheduleResponse CreateSchedule(CrissCrossLib.ReportWebService.CreateScheduleRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Del" +
-            "eteSchedule", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.DeleteScheduleResponse DeleteSchedule(CrissCrossLib.ReportWebService.DeleteScheduleRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "ScheduleProperties", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetSchedulePropertiesResponse SetScheduleProperties(CrissCrossLib.ReportWebService.SetSchedulePropertiesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "ScheduleProperties", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetSchedulePropertiesResponse GetScheduleProperties(CrissCrossLib.ReportWebService.GetSchedulePropertiesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tScheduledReports", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListScheduledReportsResponse ListScheduledReports(CrissCrossLib.ReportWebService.ListScheduledReportsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tSchedules", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListSchedulesResponse ListSchedules(CrissCrossLib.ReportWebService.ListSchedulesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Pau" +
-            "seSchedule", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.PauseScheduleResponse PauseSchedule(CrissCrossLib.ReportWebService.PauseScheduleRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Res" +
-            "umeSchedule", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ResumeScheduleResponse ResumeSchedule(CrissCrossLib.ReportWebService.ResumeScheduleRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Cre" +
-            "ateSubscription", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.CreateSubscriptionResponse CreateSubscription(CrissCrossLib.ReportWebService.CreateSubscriptionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Cre" +
-            "ateDataDrivenSubscription", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.CreateDataDrivenSubscriptionResponse CreateDataDrivenSubscription(CrissCrossLib.ReportWebService.CreateDataDrivenSubscriptionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "SubscriptionProperties", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetSubscriptionPropertiesResponse SetSubscriptionProperties(CrissCrossLib.ReportWebService.SetSubscriptionPropertiesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "DataDrivenSubscriptionProperties", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetDataDrivenSubscriptionPropertiesResponse SetDataDrivenSubscriptionProperties(CrissCrossLib.ReportWebService.SetDataDrivenSubscriptionPropertiesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "SubscriptionProperties", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetSubscriptionPropertiesResponse GetSubscriptionProperties(CrissCrossLib.ReportWebService.GetSubscriptionPropertiesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "DataDrivenSubscriptionProperties", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetDataDrivenSubscriptionPropertiesResponse GetDataDrivenSubscriptionProperties(CrissCrossLib.ReportWebService.GetDataDrivenSubscriptionPropertiesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Del" +
-            "eteSubscription", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.DeleteSubscriptionResponse DeleteSubscription(CrissCrossLib.ReportWebService.DeleteSubscriptionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Pre" +
-            "pareQuery", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.PrepareQueryResponse PrepareQuery(CrissCrossLib.ReportWebService.PrepareQueryRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "ExtensionSettings", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetExtensionSettingsResponse GetExtensionSettings(CrissCrossLib.ReportWebService.GetExtensionSettingsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Val" +
-            "idateExtensionSettings", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ValidateExtensionSettingsResponse ValidateExtensionSettings(CrissCrossLib.ReportWebService.ValidateExtensionSettingsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tSubscriptions", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListSubscriptionsResponse ListSubscriptions(CrissCrossLib.ReportWebService.ListSubscriptionsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tSubscriptionsUsingDataSource", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListSubscriptionsUsingDataSourceResponse ListSubscriptionsUsingDataSource(CrissCrossLib.ReportWebService.ListSubscriptionsUsingDataSourceRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tExtensions", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListExtensionsResponse ListExtensions(CrissCrossLib.ReportWebService.ListExtensionsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tEvents", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListEventsResponse ListEvents(CrissCrossLib.ReportWebService.ListEventsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Fir" +
-            "eEvent", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.FireEventResponse FireEvent(CrissCrossLib.ReportWebService.FireEventRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tTasks", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListTasksResponse ListTasks(CrissCrossLib.ReportWebService.ListTasksRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tRoles", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListRolesResponse ListRoles(CrissCrossLib.ReportWebService.ListRolesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Cre" +
-            "ateRole", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.CreateRoleResponse CreateRole(CrissCrossLib.ReportWebService.CreateRoleRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Del" +
-            "eteRole", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.DeleteRoleResponse DeleteRole(CrissCrossLib.ReportWebService.DeleteRoleRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "RoleProperties", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetRolePropertiesResponse GetRoleProperties(CrissCrossLib.ReportWebService.GetRolePropertiesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "RoleProperties", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetRolePropertiesResponse SetRoleProperties(CrissCrossLib.ReportWebService.SetRolePropertiesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "SystemPolicies", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetSystemPoliciesResponse GetSystemPolicies(CrissCrossLib.ReportWebService.GetSystemPoliciesRequest request);
+        CrissCrossLib.ReportWebService.DeleteItemResponse DeleteItem(CrissCrossLib.ReportWebService.DeleteItemRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "SystemPolicies", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/MoveItem" +
+            "", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetSystemPoliciesResponse SetSystemPolicies(CrissCrossLib.ReportWebService.SetSystemPoliciesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "Policies", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetPoliciesResponse GetPolicies(CrissCrossLib.ReportWebService.GetPoliciesRequest request);
+        CrissCrossLib.ReportWebService.MoveItemResponse MoveItem(CrissCrossLib.ReportWebService.MoveItemRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "Policies", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/InheritP" +
+            "arentSecurity", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetPoliciesResponse SetPolicies(CrissCrossLib.ReportWebService.SetPoliciesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Inh" +
-            "eritParentSecurity", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         CrissCrossLib.ReportWebService.InheritParentSecurityResponse InheritParentSecurity(CrissCrossLib.ReportWebService.InheritParentSecurityRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "SystemPermissions", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListItem" +
+            "History", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetSystemPermissionsResponse GetSystemPermissions(CrissCrossLib.ReportWebService.GetSystemPermissionsRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListItemHistoryResponse ListItemHistory(CrissCrossLib.ReportWebService.ListItemHistoryRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "Permissions", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListChil" +
+            "dren", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetPermissionsResponse GetPermissions(CrissCrossLib.ReportWebService.GetPermissionsRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListChildrenResponse ListChildren(CrissCrossLib.ReportWebService.ListChildrenRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Log" +
-            "onUser", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListDepe" +
+            "ndentItems", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.LogonUserResponse LogonUser(CrissCrossLib.ReportWebService.LogonUserRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListDependentItemsResponse ListDependentItems(CrissCrossLib.ReportWebService.ListDependentItemsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Log" +
-            "off", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/FindItem" +
+            "s", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.LogoffResponse Logoff(CrissCrossLib.ReportWebService.LogoffRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.FindItemsResponse FindItems(CrissCrossLib.ReportWebService.FindItemsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Cre" +
-            "ateModel", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListPare" +
+            "nts", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.CreateModelResponse CreateModel(CrissCrossLib.ReportWebService.CreateModelRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListParentsResponse ListParents(CrissCrossLib.ReportWebService.ListParentsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "ModelDefinition", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateFo" +
+            "lder", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetModelDefinitionResponse GetModelDefinition(CrissCrossLib.ReportWebService.GetModelDefinitionRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.CreateFolderResponse CreateFolder(CrissCrossLib.ReportWebService.CreateFolderRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "ModelDefinition", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetPrope" +
+            "rties", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetModelDefinitionResponse SetModelDefinition(CrissCrossLib.ReportWebService.SetModelDefinitionRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetPropertiesResponse SetProperties(CrissCrossLib.ReportWebService.SetPropertiesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tModelPerspectives", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetPrope" +
+            "rties", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListModelPerspectivesResponse ListModelPerspectives(CrissCrossLib.ReportWebService.ListModelPerspectivesRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetPropertiesResponse GetProperties(CrissCrossLib.ReportWebService.GetPropertiesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "UserModel", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetItemR" +
+            "eferences", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetUserModelResponse GetUserModel(CrissCrossLib.ReportWebService.GetUserModelRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetItemReferencesResponse SetItemReferences(CrissCrossLib.ReportWebService.SetItemReferencesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tModelItemChildren", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemR" +
+            "eferences", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListModelItemChildrenResponse ListModelItemChildren(CrissCrossLib.ReportWebService.ListModelItemChildrenRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetItemReferencesResponse GetItemReferences(CrissCrossLib.ReportWebService.GetItemReferencesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "ModelItemPermissions", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListItem" +
+            "Types", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetModelItemPermissionsResponse GetModelItemPermissions(CrissCrossLib.ReportWebService.GetModelItemPermissionsRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListItemTypesResponse ListItemTypes(CrissCrossLib.ReportWebService.ListItemTypesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Get" +
-            "ModelItemPolicies", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetSubsc" +
+            "riptionProperties", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.GetModelItemPoliciesResponse GetModelItemPolicies(CrissCrossLib.ReportWebService.GetModelItemPoliciesRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetSubscriptionPropertiesResponse SetSubscriptionProperties(CrissCrossLib.ReportWebService.SetSubscriptionPropertiesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "ModelItemPolicies", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetSubsc" +
+            "riptionProperties", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetModelItemPoliciesResponse SetModelItemPolicies(CrissCrossLib.ReportWebService.SetModelItemPoliciesRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetSubscriptionPropertiesResponse GetSubscriptionProperties(CrissCrossLib.ReportWebService.GetSubscriptionPropertiesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Inh" +
-            "eritModelItemParentSecurity", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetDataD" +
+            "rivenSubscriptionProperties", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.InheritModelItemParentSecurityResponse InheritModelItemParentSecurity(CrissCrossLib.ReportWebService.InheritModelItemParentSecurityRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetDataDrivenSubscriptionPropertiesResponse SetDataDrivenSubscriptionProperties(CrissCrossLib.ReportWebService.SetDataDrivenSubscriptionPropertiesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Rem" +
-            "oveAllModelItemPolicies", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetDataD" +
+            "rivenSubscriptionProperties", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.RemoveAllModelItemPoliciesResponse RemoveAllModelItemPolicies(CrissCrossLib.ReportWebService.RemoveAllModelItemPoliciesRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetDataDrivenSubscriptionPropertiesResponse GetDataDrivenSubscriptionProperties(CrissCrossLib.ReportWebService.GetDataDrivenSubscriptionPropertiesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Set" +
-            "ModelDrillthroughReports", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/DeleteSu" +
+            "bscription", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.SetModelDrillthroughReportsResponse SetModelDrillthroughReports(CrissCrossLib.ReportWebService.SetModelDrillthroughReportsRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.DeleteSubscriptionResponse DeleteSubscription(CrissCrossLib.ReportWebService.DeleteSubscriptionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Lis" +
-            "tModelDrillthroughReports", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateSu" +
+            "bscription", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
-        CrissCrossLib.ReportWebService.ListModelDrillthroughReportsResponse ListModelDrillthroughReports(CrissCrossLib.ReportWebService.ListModelDrillthroughReportsRequest request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.CreateSubscriptionResponse CreateSubscription(CrissCrossLib.ReportWebService.CreateSubscriptionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Gen" +
-            "erateModel", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateDa" +
+            "taDrivenSubscription", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.CreateDataDrivenSubscriptionResponse CreateDataDrivenSubscription(CrissCrossLib.ReportWebService.CreateDataDrivenSubscriptionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetExten" +
+            "sionSettings", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetExtensionSettingsResponse GetExtensionSettings(CrissCrossLib.ReportWebService.GetExtensionSettingsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/Validate" +
+            "ExtensionSettings", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ValidateExtensionSettingsResponse ValidateExtensionSettings(CrissCrossLib.ReportWebService.ValidateExtensionSettingsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListSubs" +
+            "criptions", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListSubscriptionsResponse ListSubscriptions(CrissCrossLib.ReportWebService.ListSubscriptionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListMySu" +
+            "bscriptions", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListMySubscriptionsResponse ListMySubscriptions(CrissCrossLib.ReportWebService.ListMySubscriptionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListSubs" +
+            "criptionsUsingDataSource", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListSubscriptionsUsingDataSourceResponse ListSubscriptionsUsingDataSource(CrissCrossLib.ReportWebService.ListSubscriptionsUsingDataSourceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ChangeSu" +
+            "bscriptionOwner", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ChangeSubscriptionOwnerResponse ChangeSubscriptionOwner(CrissCrossLib.ReportWebService.ChangeSubscriptionOwnerRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateDa" +
+            "taSource", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.CreateDataSourceResponse CreateDataSource(CrissCrossLib.ReportWebService.CreateDataSourceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/PrepareQ" +
+            "uery", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.PrepareQueryResponse PrepareQuery(CrissCrossLib.ReportWebService.PrepareQueryRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/EnableDa" +
+            "taSource", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.EnableDataSourceResponse EnableDataSource(CrissCrossLib.ReportWebService.EnableDataSourceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/DisableD" +
+            "ataSource", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.DisableDataSourceResponse DisableDataSource(CrissCrossLib.ReportWebService.DisableDataSourceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetDataS" +
+            "ourceContents", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetDataSourceContentsResponse SetDataSourceContents(CrissCrossLib.ReportWebService.SetDataSourceContentsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetDataS" +
+            "ourceContents", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetDataSourceContentsResponse GetDataSourceContents(CrissCrossLib.ReportWebService.GetDataSourceContentsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListData" +
+            "baseCredentialRetrievalOptions", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListDatabaseCredentialRetrievalOptionsResponse ListDatabaseCredentialRetrievalOptions(CrissCrossLib.ReportWebService.ListDatabaseCredentialRetrievalOptionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetItemD" +
+            "ataSources", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetItemDataSourcesResponse SetItemDataSources(CrissCrossLib.ReportWebService.SetItemDataSourcesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemD" +
+            "ataSources", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetItemDataSourcesResponse GetItemDataSources(CrissCrossLib.ReportWebService.GetItemDataSourcesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/TestConn" +
+            "ectForDataSourceDefinition", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.TestConnectForDataSourceDefinitionResponse TestConnectForDataSourceDefinition(CrissCrossLib.ReportWebService.TestConnectForDataSourceDefinitionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/TestConn" +
+            "ectForItemDataSource", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.TestConnectForItemDataSourceResponse TestConnectForItemDataSource(CrissCrossLib.ReportWebService.TestConnectForItemDataSourceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateRo" +
+            "le", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.CreateRoleResponse CreateRole(CrissCrossLib.ReportWebService.CreateRoleRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetRoleP" +
+            "roperties", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetRolePropertiesResponse SetRoleProperties(CrissCrossLib.ReportWebService.SetRolePropertiesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetRoleP" +
+            "roperties", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetRolePropertiesResponse GetRoleProperties(CrissCrossLib.ReportWebService.GetRolePropertiesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/DeleteRo" +
+            "le", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.DeleteRoleResponse DeleteRole(CrissCrossLib.ReportWebService.DeleteRoleRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListRole" +
+            "s", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListRolesResponse ListRoles(CrissCrossLib.ReportWebService.ListRolesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListTask" +
+            "s", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListTasksResponse ListTasks(CrissCrossLib.ReportWebService.ListTasksRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetPolic" +
+            "ies", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetPoliciesResponse SetPolicies(CrissCrossLib.ReportWebService.SetPoliciesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetPolic" +
+            "ies", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetPoliciesResponse GetPolicies(CrissCrossLib.ReportWebService.GetPoliciesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemD" +
+            "ataSourcePrompts", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetItemDataSourcePromptsResponse GetItemDataSourcePrompts(CrissCrossLib.ReportWebService.GetItemDataSourcePromptsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/Generate" +
+            "Model", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         CrissCrossLib.ReportWebService.GenerateModelResponse GenerateModel(CrissCrossLib.ReportWebService.GenerateModelRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices/Reg" +
-            "enerateModel", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetModel" +
+            "ItemPermissions", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetModelItemPermissionsResponse GetModelItemPermissions(CrissCrossLib.ReportWebService.GetModelItemPermissionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetModel" +
+            "ItemPolicies", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetModelItemPoliciesResponse SetModelItemPolicies(CrissCrossLib.ReportWebService.SetModelItemPoliciesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetModel" +
+            "ItemPolicies", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetModelItemPoliciesResponse GetModelItemPolicies(CrissCrossLib.ReportWebService.GetModelItemPoliciesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetUserM" +
+            "odel", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetUserModelResponse GetUserModel(CrissCrossLib.ReportWebService.GetUserModelRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/InheritM" +
+            "odelItemParentSecurity", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.InheritModelItemParentSecurityResponse InheritModelItemParentSecurity(CrissCrossLib.ReportWebService.InheritModelItemParentSecurityRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetModel" +
+            "DrillthroughReports", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetModelDrillthroughReportsResponse SetModelDrillthroughReports(CrissCrossLib.ReportWebService.SetModelDrillthroughReportsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListMode" +
+            "lDrillthroughReports", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListModelDrillthroughReportsResponse ListModelDrillthroughReports(CrissCrossLib.ReportWebService.ListModelDrillthroughReportsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListMode" +
+            "lItemChildren", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListModelItemChildrenResponse ListModelItemChildren(CrissCrossLib.ReportWebService.ListModelItemChildrenRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListMode" +
+            "lItemTypes", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListModelItemTypesResponse ListModelItemTypes(CrissCrossLib.ReportWebService.ListModelItemTypesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListMode" +
+            "lPerspectives", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListModelPerspectivesResponse ListModelPerspectives(CrissCrossLib.ReportWebService.ListModelPerspectivesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/Regenera" +
+            "teModel", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
         CrissCrossLib.ReportWebService.RegenerateModelResponse RegenerateModel(CrissCrossLib.ReportWebService.RegenerateModelRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/RemoveAl" +
+            "lModelItemPolicies", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.RemoveAllModelItemPoliciesResponse RemoveAllModelItemPolicies(CrissCrossLib.ReportWebService.RemoveAllModelItemPoliciesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateSc" +
+            "hedule", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.CreateScheduleResponse CreateSchedule(CrissCrossLib.ReportWebService.CreateScheduleRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/DeleteSc" +
+            "hedule", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.DeleteScheduleResponse DeleteSchedule(CrissCrossLib.ReportWebService.DeleteScheduleRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListSche" +
+            "dules", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListSchedulesResponse ListSchedules(CrissCrossLib.ReportWebService.ListSchedulesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetSched" +
+            "uleProperties", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetSchedulePropertiesResponse GetScheduleProperties(CrissCrossLib.ReportWebService.GetSchedulePropertiesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListSche" +
+            "duleStates", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListScheduleStatesResponse ListScheduleStates(CrissCrossLib.ReportWebService.ListScheduleStatesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/PauseSch" +
+            "edule", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.PauseScheduleResponse PauseSchedule(CrissCrossLib.ReportWebService.PauseScheduleRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ResumeSc" +
+            "hedule", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ResumeScheduleResponse ResumeSchedule(CrissCrossLib.ReportWebService.ResumeScheduleRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetSched" +
+            "uleProperties", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetSchedulePropertiesResponse SetScheduleProperties(CrissCrossLib.ReportWebService.SetSchedulePropertiesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListSche" +
+            "duledItems", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListScheduledItemsResponse ListScheduledItems(CrissCrossLib.ReportWebService.ListScheduledItemsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetItemP" +
+            "arameters", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetItemParametersResponse SetItemParameters(CrissCrossLib.ReportWebService.SetItemParametersRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemP" +
+            "arameters", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetItemParametersResponse GetItemParameters(CrissCrossLib.ReportWebService.GetItemParametersRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListPara" +
+            "meterTypes", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListParameterTypesResponse ListParameterTypes(CrissCrossLib.ReportWebService.ListParameterTypesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListPara" +
+            "meterStates", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListParameterStatesResponse ListParameterStates(CrissCrossLib.ReportWebService.ListParameterStatesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateRe" +
+            "portEditSession", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.CreateReportEditSessionResponse CreateReportEditSession(CrissCrossLib.ReportWebService.CreateReportEditSessionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateLi" +
+            "nkedItem", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.CreateLinkedItemResponse CreateLinkedItem(CrissCrossLib.ReportWebService.CreateLinkedItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetItemL" +
+            "ink", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetItemLinkResponse SetItemLink(CrissCrossLib.ReportWebService.SetItemLinkRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemL" +
+            "ink", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetItemLinkResponse GetItemLink(CrissCrossLib.ReportWebService.GetItemLinkRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListExec" +
+            "utionSettings", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListExecutionSettingsResponse ListExecutionSettings(CrissCrossLib.ReportWebService.ListExecutionSettingsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetExecu" +
+            "tionOptions", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetExecutionOptionsResponse SetExecutionOptions(CrissCrossLib.ReportWebService.SetExecutionOptionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetExecu" +
+            "tionOptions", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetExecutionOptionsResponse GetExecutionOptions(CrissCrossLib.ReportWebService.GetExecutionOptionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/UpdateIt" +
+            "emExecutionSnapshot", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.UpdateItemExecutionSnapshotResponse UpdateItemExecutionSnapshot(CrissCrossLib.ReportWebService.UpdateItemExecutionSnapshotRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetCache" +
+            "Options", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetCacheOptionsResponse SetCacheOptions(CrissCrossLib.ReportWebService.SetCacheOptionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetCache" +
+            "Options", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetCacheOptionsResponse GetCacheOptions(CrissCrossLib.ReportWebService.GetCacheOptionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/FlushCac" +
+            "he", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.FlushCacheResponse FlushCache(CrissCrossLib.ReportWebService.FlushCacheRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateIt" +
+            "emHistorySnapshot", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.CreateItemHistorySnapshotResponse CreateItemHistorySnapshot(CrissCrossLib.ReportWebService.CreateItemHistorySnapshotRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/DeleteIt" +
+            "emHistorySnapshot", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.DeleteItemHistorySnapshotResponse DeleteItemHistorySnapshot(CrissCrossLib.ReportWebService.DeleteItemHistorySnapshotRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetItemH" +
+            "istoryLimit", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetItemHistoryLimitResponse SetItemHistoryLimit(CrissCrossLib.ReportWebService.SetItemHistoryLimitRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemH" +
+            "istoryLimit", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetItemHistoryLimitResponse GetItemHistoryLimit(CrissCrossLib.ReportWebService.GetItemHistoryLimitRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetItemH" +
+            "istoryOptions", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetItemHistoryOptionsResponse SetItemHistoryOptions(CrissCrossLib.ReportWebService.SetItemHistoryOptionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemH" +
+            "istoryOptions", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetItemHistoryOptionsResponse GetItemHistoryOptions(CrissCrossLib.ReportWebService.GetItemHistoryOptionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetRepor" +
+            "tServerConfigInfo", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetReportServerConfigInfoResponse GetReportServerConfigInfo(CrissCrossLib.ReportWebService.GetReportServerConfigInfoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/IsSSLReq" +
+            "uired", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.IsSSLRequiredResponse IsSSLRequired(CrissCrossLib.ReportWebService.IsSSLRequiredRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetSyste" +
+            "mProperties", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetSystemPropertiesResponse SetSystemProperties(CrissCrossLib.ReportWebService.SetSystemPropertiesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetSyste" +
+            "mProperties", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetSystemPropertiesResponse GetSystemProperties(CrissCrossLib.ReportWebService.GetSystemPropertiesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetSyste" +
+            "mPolicies", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetSystemPoliciesResponse SetSystemPolicies(CrissCrossLib.ReportWebService.SetSystemPoliciesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetSyste" +
+            "mPolicies", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetSystemPoliciesResponse GetSystemPolicies(CrissCrossLib.ReportWebService.GetSystemPoliciesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListExte" +
+            "nsions", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListExtensionsResponse ListExtensions(CrissCrossLib.ReportWebService.ListExtensionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListExte" +
+            "nsionTypes", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListExtensionTypesResponse ListExtensionTypes(CrissCrossLib.ReportWebService.ListExtensionTypesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListEven" +
+            "ts", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListEventsResponse ListEvents(CrissCrossLib.ReportWebService.ListEventsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/FireEven" +
+            "t", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.FireEventResponse FireEvent(CrissCrossLib.ReportWebService.FireEventRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListJobs" +
+            "", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListJobsResponse ListJobs(CrissCrossLib.ReportWebService.ListJobsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListJobT" +
+            "ypes", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListJobTypesResponse ListJobTypes(CrissCrossLib.ReportWebService.ListJobTypesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListJobA" +
+            "ctions", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListJobActionsResponse ListJobActions(CrissCrossLib.ReportWebService.ListJobActionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListJobS" +
+            "tates", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListJobStatesResponse ListJobStates(CrissCrossLib.ReportWebService.ListJobStatesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CancelJo" +
+            "b", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.CancelJobResponse CancelJob(CrissCrossLib.ReportWebService.CancelJobRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateCa" +
+            "cheRefreshPlan", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.CreateCacheRefreshPlanResponse CreateCacheRefreshPlan(CrissCrossLib.ReportWebService.CreateCacheRefreshPlanRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetCache" +
+            "RefreshPlanProperties", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.SetCacheRefreshPlanPropertiesResponse SetCacheRefreshPlanProperties(CrissCrossLib.ReportWebService.SetCacheRefreshPlanPropertiesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetCache" +
+            "RefreshPlanProperties", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetCacheRefreshPlanPropertiesResponse GetCacheRefreshPlanProperties(CrissCrossLib.ReportWebService.GetCacheRefreshPlanPropertiesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/DeleteCa" +
+            "cheRefreshPlan", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.DeleteCacheRefreshPlanResponse DeleteCacheRefreshPlan(CrissCrossLib.ReportWebService.DeleteCacheRefreshPlanRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListCach" +
+            "eRefreshPlans", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListCacheRefreshPlansResponse ListCacheRefreshPlans(CrissCrossLib.ReportWebService.ListCacheRefreshPlansRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/LogonUse" +
+            "r", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.LogonUserResponse LogonUser(CrissCrossLib.ReportWebService.LogonUserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/Logoff", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.LogoffResponse Logoff(CrissCrossLib.ReportWebService.LogoffRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetPermi" +
+            "ssions", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetPermissionsResponse GetPermissions(CrissCrossLib.ReportWebService.GetPermissionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetSyste" +
+            "mPermissions", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.GetSystemPermissionsResponse GetSystemPermissions(CrissCrossLib.ReportWebService.GetSystemPermissionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListSecu" +
+            "rityScopes", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpirationDefinition))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
+        CrissCrossLib.ReportWebService.ListSecurityScopesResponse ListSecurityScopes(CrissCrossLib.ReportWebService.ListSecurityScopesRequest request);
     }
     
     /// <remarks/>
@@ -948,64 +1091,36 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class ServerInfoHeader : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class TrustedUserHeader : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string reportServerVersionNumberField;
+        private string userNameField;
         
-        private string reportServerEditionField;
-        
-        private string reportServerVersionField;
-        
-        private string reportServerDateTimeField;
+        private byte[] userTokenField;
         
         private System.Xml.XmlAttribute[] anyAttrField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string ReportServerVersionNumber {
+        public string UserName {
             get {
-                return this.reportServerVersionNumberField;
+                return this.userNameField;
             }
             set {
-                this.reportServerVersionNumberField = value;
-                this.RaisePropertyChanged("ReportServerVersionNumber");
+                this.userNameField = value;
+                this.RaisePropertyChanged("UserName");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string ReportServerEdition {
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", Order=1)]
+        public byte[] UserToken {
             get {
-                return this.reportServerEditionField;
+                return this.userTokenField;
             }
             set {
-                this.reportServerEditionField = value;
-                this.RaisePropertyChanged("ReportServerEdition");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string ReportServerVersion {
-            get {
-                return this.reportServerVersionField;
-            }
-            set {
-                this.reportServerVersionField = value;
-                this.RaisePropertyChanged("ReportServerVersion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string ReportServerDateTime {
-            get {
-                return this.reportServerDateTimeField;
-            }
-            set {
-                this.reportServerDateTimeField = value;
-                this.RaisePropertyChanged("ReportServerDateTime");
+                this.userTokenField = value;
+                this.RaisePropertyChanged("UserToken");
             }
         }
         
@@ -1036,34 +1151,118 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class ModelDrillthroughReport : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class CacheRefreshPlan : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string pathField;
+        private string cacheRefreshPlanIDField;
         
-        private DrillthroughType typeField;
+        private string itemPathField;
+        
+        private string descriptionField;
+        
+        private CacheRefreshPlanState stateField;
+        
+        private System.DateTime lastExecutedField;
+        
+        private System.DateTime modifiedDateField;
+        
+        private string modifiedByField;
+        
+        private string lastRunStatusField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Path {
+        public string CacheRefreshPlanID {
             get {
-                return this.pathField;
+                return this.cacheRefreshPlanIDField;
             }
             set {
-                this.pathField = value;
-                this.RaisePropertyChanged("Path");
+                this.cacheRefreshPlanIDField = value;
+                this.RaisePropertyChanged("CacheRefreshPlanID");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public DrillthroughType Type {
+        public string ItemPath {
             get {
-                return this.typeField;
+                return this.itemPathField;
             }
             set {
-                this.typeField = value;
-                this.RaisePropertyChanged("Type");
+                this.itemPathField = value;
+                this.RaisePropertyChanged("ItemPath");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public CacheRefreshPlanState State {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+                this.RaisePropertyChanged("State");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public System.DateTime LastExecuted {
+            get {
+                return this.lastExecutedField;
+            }
+            set {
+                this.lastExecutedField = value;
+                this.RaisePropertyChanged("LastExecuted");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public System.DateTime ModifiedDate {
+            get {
+                return this.modifiedDateField;
+            }
+            set {
+                this.modifiedDateField = value;
+                this.RaisePropertyChanged("ModifiedDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string ModifiedBy {
+            get {
+                return this.modifiedByField;
+            }
+            set {
+                this.modifiedByField = value;
+                this.RaisePropertyChanged("ModifiedBy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string LastRunStatus {
+            get {
+                return this.lastRunStatusField;
+            }
+            set {
+                this.lastRunStatusField = value;
+                this.RaisePropertyChanged("LastRunStatus");
             }
         }
         
@@ -1080,14 +1279,75 @@ namespace CrissCrossLib.ReportWebService {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum DrillthroughType {
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class CacheRefreshPlanState : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool missingParameterValueField;
+        
+        private bool invalidParameterValueField;
+        
+        private bool unknownItemParameterField;
+        
+        private bool cachingNotEnabledOnItemField;
         
         /// <remarks/>
-        Detail,
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool MissingParameterValue {
+            get {
+                return this.missingParameterValueField;
+            }
+            set {
+                this.missingParameterValueField = value;
+                this.RaisePropertyChanged("MissingParameterValue");
+            }
+        }
         
         /// <remarks/>
-        List,
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool InvalidParameterValue {
+            get {
+                return this.invalidParameterValueField;
+            }
+            set {
+                this.invalidParameterValueField = value;
+                this.RaisePropertyChanged("InvalidParameterValue");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool UnknownItemParameter {
+            get {
+                return this.unknownItemParameterField;
+            }
+            set {
+                this.unknownItemParameterField = value;
+                this.RaisePropertyChanged("UnknownItemParameter");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool CachingNotEnabledOnItem {
+            get {
+                return this.cachingNotEnabledOnItemField;
+            }
+            set {
+                this.cachingNotEnabledOnItemField = value;
+                this.RaisePropertyChanged("CachingNotEnabledOnItem");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     /// <remarks/>
@@ -1095,28 +1355,38 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class ModelItem : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class Job : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string idField;
+        private string jobIDField;
         
         private string nameField;
         
-        private ModelItemTypeEnum typeField;
+        private string pathField;
         
         private string descriptionField;
         
-        private ModelItem[] modelItemsField;
+        private string machineField;
+        
+        private string userField;
+        
+        private System.DateTime startDateTimeField;
+        
+        private string jobActionNameField;
+        
+        private string jobTypeNameField;
+        
+        private string jobStatusNameField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string ID {
+        public string JobID {
             get {
-                return this.idField;
+                return this.jobIDField;
             }
             set {
-                this.idField = value;
-                this.RaisePropertyChanged("ID");
+                this.jobIDField = value;
+                this.RaisePropertyChanged("JobID");
             }
         }
         
@@ -1134,13 +1404,13 @@ namespace CrissCrossLib.ReportWebService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public ModelItemTypeEnum Type {
+        public string Path {
             get {
-                return this.typeField;
+                return this.pathField;
             }
             set {
-                this.typeField = value;
-                this.RaisePropertyChanged("Type");
+                this.pathField = value;
+                this.RaisePropertyChanged("Path");
             }
         }
         
@@ -1157,99 +1427,74 @@ namespace CrissCrossLib.ReportWebService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=4)]
-        public ModelItem[] ModelItems {
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string Machine {
             get {
-                return this.modelItemsField;
+                return this.machineField;
             }
             set {
-                this.modelItemsField = value;
-                this.RaisePropertyChanged("ModelItems");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum ModelItemTypeEnum {
-        
-        /// <remarks/>
-        Model,
-        
-        /// <remarks/>
-        EntityFolder,
-        
-        /// <remarks/>
-        FieldFolder,
-        
-        /// <remarks/>
-        Entity,
-        
-        /// <remarks/>
-        Attribute,
-        
-        /// <remarks/>
-        Role,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class ModelPerspective : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idField;
-        
-        private string nameField;
-        
-        private string descriptionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string ID {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("ID");
+                this.machineField = value;
+                this.RaisePropertyChanged("Machine");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Name {
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string User {
             get {
-                return this.nameField;
+                return this.userField;
             }
             set {
-                this.nameField = value;
-                this.RaisePropertyChanged("Name");
+                this.userField = value;
+                this.RaisePropertyChanged("User");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string Description {
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public System.DateTime StartDateTime {
             get {
-                return this.descriptionField;
+                return this.startDateTimeField;
             }
             set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("Description");
+                this.startDateTimeField = value;
+                this.RaisePropertyChanged("StartDateTime");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string JobActionName {
+            get {
+                return this.jobActionNameField;
+            }
+            set {
+                this.jobActionNameField = value;
+                this.RaisePropertyChanged("JobActionName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string JobTypeName {
+            get {
+                return this.jobTypeNameField;
+            }
+            set {
+                this.jobTypeNameField = value;
+                this.RaisePropertyChanged("JobTypeName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string JobStatusName {
+            get {
+                return this.jobStatusNameField;
+            }
+            set {
+                this.jobStatusNameField = value;
+                this.RaisePropertyChanged("JobStatusName");
             }
         }
         
@@ -1268,219 +1513,7 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class ModelCatalogItem : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string modelField;
-        
-        private string descriptionField;
-        
-        private ModelPerspective[] perspectivesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Model {
-            get {
-                return this.modelField;
-            }
-            set {
-                this.modelField = value;
-                this.RaisePropertyChanged("Model");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("Description");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
-        public ModelPerspective[] Perspectives {
-            get {
-                return this.perspectivesField;
-            }
-            set {
-                this.perspectivesField = value;
-                this.RaisePropertyChanged("Perspectives");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class Policy : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string groupUserNameField;
-        
-        private Role[] rolesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string GroupUserName {
-            get {
-                return this.groupUserNameField;
-            }
-            set {
-                this.groupUserNameField = value;
-                this.RaisePropertyChanged("GroupUserName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
-        public Role[] Roles {
-            get {
-                return this.rolesField;
-            }
-            set {
-                this.rolesField = value;
-                this.RaisePropertyChanged("Roles");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class Role : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string nameField;
-        
-        private string descriptionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-                this.RaisePropertyChanged("Name");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("Description");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class Task : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string taskIDField;
-        
-        private string nameField;
-        
-        private string descriptionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string TaskID {
-            get {
-                return this.taskIDField;
-            }
-            set {
-                this.taskIDField = value;
-                this.RaisePropertyChanged("TaskID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-                this.RaisePropertyChanged("Name");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("Description");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class Event : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string typeField;
@@ -1512,10 +1545,10 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class Extension : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private ExtensionTypeEnum extensionTypeField;
+        private string extensionTypeNameField;
         
         private string nameField;
         
@@ -1527,13 +1560,13 @@ namespace CrissCrossLib.ReportWebService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public ExtensionTypeEnum ExtensionType {
+        public string ExtensionTypeName {
             get {
-                return this.extensionTypeField;
+                return this.extensionTypeNameField;
             }
             set {
-                this.extensionTypeField = value;
-                this.RaisePropertyChanged("ExtensionType");
+                this.extensionTypeNameField = value;
+                this.RaisePropertyChanged("ExtensionTypeName");
             }
         }
         
@@ -1596,22 +1629,23 @@ namespace CrissCrossLib.ReportWebService {
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ScheduleExpiration))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeExpiration))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum ExtensionTypeEnum {
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ExpirationDefinition : object, System.ComponentModel.INotifyPropertyChanged {
         
-        /// <remarks/>
-        Delivery,
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
-        /// <remarks/>
-        Render,
-        
-        /// <remarks/>
-        Data,
-        
-        /// <remarks/>
-        All,
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     /// <remarks/>
@@ -1619,7 +1653,2132 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ScheduleExpiration : ExpirationDefinition {
+        
+        private ScheduleDefinitionOrReference itemField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ScheduleDefinition", typeof(ScheduleDefinition), Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("ScheduleReference", typeof(ScheduleReference), Order=0)]
+        public ScheduleDefinitionOrReference Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+                this.RaisePropertyChanged("Item");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ScheduleDefinition : ScheduleDefinitionOrReference {
+        
+        private System.DateTime startDateTimeField;
+        
+        private System.DateTime endDateField;
+        
+        private bool endDateFieldSpecified;
+        
+        private RecurrencePattern itemField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.DateTime StartDateTime {
+            get {
+                return this.startDateTimeField;
+            }
+            set {
+                this.startDateTimeField = value;
+                this.RaisePropertyChanged("StartDateTime");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.DateTime EndDate {
+            get {
+                return this.endDateField;
+            }
+            set {
+                this.endDateField = value;
+                this.RaisePropertyChanged("EndDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool EndDateSpecified {
+            get {
+                return this.endDateFieldSpecified;
+            }
+            set {
+                this.endDateFieldSpecified = value;
+                this.RaisePropertyChanged("EndDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("DailyRecurrence", typeof(DailyRecurrence), Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("MinuteRecurrence", typeof(MinuteRecurrence), Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("MonthlyDOWRecurrence", typeof(MonthlyDOWRecurrence), Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("MonthlyRecurrence", typeof(MonthlyRecurrence), Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("WeeklyRecurrence", typeof(WeeklyRecurrence), Order=2)]
+        public RecurrencePattern Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+                this.RaisePropertyChanged("Item");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class DailyRecurrence : RecurrencePattern {
+        
+        private int daysIntervalField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int DaysInterval {
+            get {
+                return this.daysIntervalField;
+            }
+            set {
+                this.daysIntervalField = value;
+                this.RaisePropertyChanged("DaysInterval");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MinuteRecurrence))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DailyRecurrence))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeeklyRecurrence))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MonthlyRecurrence))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MonthlyDOWRecurrence))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class RecurrencePattern : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class MinuteRecurrence : RecurrencePattern {
+        
+        private int minutesIntervalField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int MinutesInterval {
+            get {
+                return this.minutesIntervalField;
+            }
+            set {
+                this.minutesIntervalField = value;
+                this.RaisePropertyChanged("MinutesInterval");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class WeeklyRecurrence : RecurrencePattern {
+        
+        private int weeksIntervalField;
+        
+        private bool weeksIntervalFieldSpecified;
+        
+        private DaysOfWeekSelector daysOfWeekField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int WeeksInterval {
+            get {
+                return this.weeksIntervalField;
+            }
+            set {
+                this.weeksIntervalField = value;
+                this.RaisePropertyChanged("WeeksInterval");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool WeeksIntervalSpecified {
+            get {
+                return this.weeksIntervalFieldSpecified;
+            }
+            set {
+                this.weeksIntervalFieldSpecified = value;
+                this.RaisePropertyChanged("WeeksIntervalSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public DaysOfWeekSelector DaysOfWeek {
+            get {
+                return this.daysOfWeekField;
+            }
+            set {
+                this.daysOfWeekField = value;
+                this.RaisePropertyChanged("DaysOfWeek");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class DaysOfWeekSelector : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool sundayField;
+        
+        private bool mondayField;
+        
+        private bool tuesdayField;
+        
+        private bool wednesdayField;
+        
+        private bool thursdayField;
+        
+        private bool fridayField;
+        
+        private bool saturdayField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool Sunday {
+            get {
+                return this.sundayField;
+            }
+            set {
+                this.sundayField = value;
+                this.RaisePropertyChanged("Sunday");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool Monday {
+            get {
+                return this.mondayField;
+            }
+            set {
+                this.mondayField = value;
+                this.RaisePropertyChanged("Monday");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool Tuesday {
+            get {
+                return this.tuesdayField;
+            }
+            set {
+                this.tuesdayField = value;
+                this.RaisePropertyChanged("Tuesday");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool Wednesday {
+            get {
+                return this.wednesdayField;
+            }
+            set {
+                this.wednesdayField = value;
+                this.RaisePropertyChanged("Wednesday");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool Thursday {
+            get {
+                return this.thursdayField;
+            }
+            set {
+                this.thursdayField = value;
+                this.RaisePropertyChanged("Thursday");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool Friday {
+            get {
+                return this.fridayField;
+            }
+            set {
+                this.fridayField = value;
+                this.RaisePropertyChanged("Friday");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool Saturday {
+            get {
+                return this.saturdayField;
+            }
+            set {
+                this.saturdayField = value;
+                this.RaisePropertyChanged("Saturday");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class MonthlyRecurrence : RecurrencePattern {
+        
+        private string daysField;
+        
+        private MonthsOfYearSelector monthsOfYearField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Days {
+            get {
+                return this.daysField;
+            }
+            set {
+                this.daysField = value;
+                this.RaisePropertyChanged("Days");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public MonthsOfYearSelector MonthsOfYear {
+            get {
+                return this.monthsOfYearField;
+            }
+            set {
+                this.monthsOfYearField = value;
+                this.RaisePropertyChanged("MonthsOfYear");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class MonthsOfYearSelector : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool januaryField;
+        
+        private bool februaryField;
+        
+        private bool marchField;
+        
+        private bool aprilField;
+        
+        private bool mayField;
+        
+        private bool juneField;
+        
+        private bool julyField;
+        
+        private bool augustField;
+        
+        private bool septemberField;
+        
+        private bool octoberField;
+        
+        private bool novemberField;
+        
+        private bool decemberField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool January {
+            get {
+                return this.januaryField;
+            }
+            set {
+                this.januaryField = value;
+                this.RaisePropertyChanged("January");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool February {
+            get {
+                return this.februaryField;
+            }
+            set {
+                this.februaryField = value;
+                this.RaisePropertyChanged("February");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool March {
+            get {
+                return this.marchField;
+            }
+            set {
+                this.marchField = value;
+                this.RaisePropertyChanged("March");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool April {
+            get {
+                return this.aprilField;
+            }
+            set {
+                this.aprilField = value;
+                this.RaisePropertyChanged("April");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool May {
+            get {
+                return this.mayField;
+            }
+            set {
+                this.mayField = value;
+                this.RaisePropertyChanged("May");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool June {
+            get {
+                return this.juneField;
+            }
+            set {
+                this.juneField = value;
+                this.RaisePropertyChanged("June");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool July {
+            get {
+                return this.julyField;
+            }
+            set {
+                this.julyField = value;
+                this.RaisePropertyChanged("July");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool August {
+            get {
+                return this.augustField;
+            }
+            set {
+                this.augustField = value;
+                this.RaisePropertyChanged("August");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public bool September {
+            get {
+                return this.septemberField;
+            }
+            set {
+                this.septemberField = value;
+                this.RaisePropertyChanged("September");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public bool October {
+            get {
+                return this.octoberField;
+            }
+            set {
+                this.octoberField = value;
+                this.RaisePropertyChanged("October");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public bool November {
+            get {
+                return this.novemberField;
+            }
+            set {
+                this.novemberField = value;
+                this.RaisePropertyChanged("November");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public bool December {
+            get {
+                return this.decemberField;
+            }
+            set {
+                this.decemberField = value;
+                this.RaisePropertyChanged("December");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class MonthlyDOWRecurrence : RecurrencePattern {
+        
+        private WeekNumberEnum whichWeekField;
+        
+        private bool whichWeekFieldSpecified;
+        
+        private DaysOfWeekSelector daysOfWeekField;
+        
+        private MonthsOfYearSelector monthsOfYearField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public WeekNumberEnum WhichWeek {
+            get {
+                return this.whichWeekField;
+            }
+            set {
+                this.whichWeekField = value;
+                this.RaisePropertyChanged("WhichWeek");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool WhichWeekSpecified {
+            get {
+                return this.whichWeekFieldSpecified;
+            }
+            set {
+                this.whichWeekFieldSpecified = value;
+                this.RaisePropertyChanged("WhichWeekSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public DaysOfWeekSelector DaysOfWeek {
+            get {
+                return this.daysOfWeekField;
+            }
+            set {
+                this.daysOfWeekField = value;
+                this.RaisePropertyChanged("DaysOfWeek");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public MonthsOfYearSelector MonthsOfYear {
+            get {
+                return this.monthsOfYearField;
+            }
+            set {
+                this.monthsOfYearField = value;
+                this.RaisePropertyChanged("MonthsOfYear");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public enum WeekNumberEnum {
+        
+        /// <remarks/>
+        FirstWeek,
+        
+        /// <remarks/>
+        SecondWeek,
+        
+        /// <remarks/>
+        ThirdWeek,
+        
+        /// <remarks/>
+        FourthWeek,
+        
+        /// <remarks/>
+        LastWeek,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ScheduleReference))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(NoSchedule))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ScheduleDefinition))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ScheduleDefinitionOrReference : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ScheduleReference : ScheduleDefinitionOrReference {
+        
+        private string scheduleIDField;
+        
+        private ScheduleDefinition definitionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string ScheduleID {
+            get {
+                return this.scheduleIDField;
+            }
+            set {
+                this.scheduleIDField = value;
+                this.RaisePropertyChanged("ScheduleID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public ScheduleDefinition Definition {
+            get {
+                return this.definitionField;
+            }
+            set {
+                this.definitionField = value;
+                this.RaisePropertyChanged("Definition");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class NoSchedule : ScheduleDefinitionOrReference {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class TimeExpiration : ExpirationDefinition {
+        
+        private int minutesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int Minutes {
+            get {
+                return this.minutesField;
+            }
+            set {
+                this.minutesField = value;
+                this.RaisePropertyChanged("Minutes");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class DataSourceCredentials : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string dataSourceNameField;
+        
+        private string userNameField;
+        
+        private string passwordField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string DataSourceName {
+            get {
+                return this.dataSourceNameField;
+            }
+            set {
+                this.dataSourceNameField = value;
+                this.RaisePropertyChanged("DataSourceName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string UserName {
+            get {
+                return this.userNameField;
+            }
+            set {
+                this.userNameField = value;
+                this.RaisePropertyChanged("UserName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                this.passwordField = value;
+                this.RaisePropertyChanged("Password");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ItemParameter : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string nameField;
+        
+        private string parameterTypeNameField;
+        
+        private bool nullableField;
+        
+        private bool nullableFieldSpecified;
+        
+        private bool allowBlankField;
+        
+        private bool allowBlankFieldSpecified;
+        
+        private bool multiValueField;
+        
+        private bool multiValueFieldSpecified;
+        
+        private bool queryParameterField;
+        
+        private bool queryParameterFieldSpecified;
+        
+        private string promptField;
+        
+        private bool promptUserField;
+        
+        private bool promptUserFieldSpecified;
+        
+        private string[] dependenciesField;
+        
+        private bool validValuesQueryBasedField;
+        
+        private bool validValuesQueryBasedFieldSpecified;
+        
+        private ValidValue[] validValuesField;
+        
+        private bool defaultValuesQueryBasedField;
+        
+        private bool defaultValuesQueryBasedFieldSpecified;
+        
+        private string[] defaultValuesField;
+        
+        private string parameterStateNameField;
+        
+        private string errorMessageField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string ParameterTypeName {
+            get {
+                return this.parameterTypeNameField;
+            }
+            set {
+                this.parameterTypeNameField = value;
+                this.RaisePropertyChanged("ParameterTypeName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool Nullable {
+            get {
+                return this.nullableField;
+            }
+            set {
+                this.nullableField = value;
+                this.RaisePropertyChanged("Nullable");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool NullableSpecified {
+            get {
+                return this.nullableFieldSpecified;
+            }
+            set {
+                this.nullableFieldSpecified = value;
+                this.RaisePropertyChanged("NullableSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool AllowBlank {
+            get {
+                return this.allowBlankField;
+            }
+            set {
+                this.allowBlankField = value;
+                this.RaisePropertyChanged("AllowBlank");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool AllowBlankSpecified {
+            get {
+                return this.allowBlankFieldSpecified;
+            }
+            set {
+                this.allowBlankFieldSpecified = value;
+                this.RaisePropertyChanged("AllowBlankSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool MultiValue {
+            get {
+                return this.multiValueField;
+            }
+            set {
+                this.multiValueField = value;
+                this.RaisePropertyChanged("MultiValue");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool MultiValueSpecified {
+            get {
+                return this.multiValueFieldSpecified;
+            }
+            set {
+                this.multiValueFieldSpecified = value;
+                this.RaisePropertyChanged("MultiValueSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool QueryParameter {
+            get {
+                return this.queryParameterField;
+            }
+            set {
+                this.queryParameterField = value;
+                this.RaisePropertyChanged("QueryParameter");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool QueryParameterSpecified {
+            get {
+                return this.queryParameterFieldSpecified;
+            }
+            set {
+                this.queryParameterFieldSpecified = value;
+                this.RaisePropertyChanged("QueryParameterSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string Prompt {
+            get {
+                return this.promptField;
+            }
+            set {
+                this.promptField = value;
+                this.RaisePropertyChanged("Prompt");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool PromptUser {
+            get {
+                return this.promptUserField;
+            }
+            set {
+                this.promptUserField = value;
+                this.RaisePropertyChanged("PromptUser");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PromptUserSpecified {
+            get {
+                return this.promptUserFieldSpecified;
+            }
+            set {
+                this.promptUserFieldSpecified = value;
+                this.RaisePropertyChanged("PromptUserSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=8)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("Dependency")]
+        public string[] Dependencies {
+            get {
+                return this.dependenciesField;
+            }
+            set {
+                this.dependenciesField = value;
+                this.RaisePropertyChanged("Dependencies");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public bool ValidValuesQueryBased {
+            get {
+                return this.validValuesQueryBasedField;
+            }
+            set {
+                this.validValuesQueryBasedField = value;
+                this.RaisePropertyChanged("ValidValuesQueryBased");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ValidValuesQueryBasedSpecified {
+            get {
+                return this.validValuesQueryBasedFieldSpecified;
+            }
+            set {
+                this.validValuesQueryBasedFieldSpecified = value;
+                this.RaisePropertyChanged("ValidValuesQueryBasedSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=10)]
+        public ValidValue[] ValidValues {
+            get {
+                return this.validValuesField;
+            }
+            set {
+                this.validValuesField = value;
+                this.RaisePropertyChanged("ValidValues");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public bool DefaultValuesQueryBased {
+            get {
+                return this.defaultValuesQueryBasedField;
+            }
+            set {
+                this.defaultValuesQueryBasedField = value;
+                this.RaisePropertyChanged("DefaultValuesQueryBased");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DefaultValuesQueryBasedSpecified {
+            get {
+                return this.defaultValuesQueryBasedFieldSpecified;
+            }
+            set {
+                this.defaultValuesQueryBasedFieldSpecified = value;
+                this.RaisePropertyChanged("DefaultValuesQueryBasedSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=12)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("Value")]
+        public string[] DefaultValues {
+            get {
+                return this.defaultValuesField;
+            }
+            set {
+                this.defaultValuesField = value;
+                this.RaisePropertyChanged("DefaultValues");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public string ParameterStateName {
+            get {
+                return this.parameterStateNameField;
+            }
+            set {
+                this.parameterStateNameField = value;
+                this.RaisePropertyChanged("ParameterStateName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public string ErrorMessage {
+            get {
+                return this.errorMessageField;
+            }
+            set {
+                this.errorMessageField = value;
+                this.RaisePropertyChanged("ErrorMessage");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ValidValue : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string labelField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Label {
+            get {
+                return this.labelField;
+            }
+            set {
+                this.labelField = value;
+                this.RaisePropertyChanged("Label");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class Schedule : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string scheduleIDField;
+        
+        private string nameField;
+        
+        private ScheduleDefinition definitionField;
+        
+        private string descriptionField;
+        
+        private string creatorField;
+        
+        private System.DateTime nextRunTimeField;
+        
+        private bool nextRunTimeFieldSpecified;
+        
+        private System.DateTime lastRunTimeField;
+        
+        private bool lastRunTimeFieldSpecified;
+        
+        private bool referencesPresentField;
+        
+        private string scheduleStateNameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string ScheduleID {
+            get {
+                return this.scheduleIDField;
+            }
+            set {
+                this.scheduleIDField = value;
+                this.RaisePropertyChanged("ScheduleID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public ScheduleDefinition Definition {
+            get {
+                return this.definitionField;
+            }
+            set {
+                this.definitionField = value;
+                this.RaisePropertyChanged("Definition");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string Creator {
+            get {
+                return this.creatorField;
+            }
+            set {
+                this.creatorField = value;
+                this.RaisePropertyChanged("Creator");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public System.DateTime NextRunTime {
+            get {
+                return this.nextRunTimeField;
+            }
+            set {
+                this.nextRunTimeField = value;
+                this.RaisePropertyChanged("NextRunTime");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool NextRunTimeSpecified {
+            get {
+                return this.nextRunTimeFieldSpecified;
+            }
+            set {
+                this.nextRunTimeFieldSpecified = value;
+                this.RaisePropertyChanged("NextRunTimeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public System.DateTime LastRunTime {
+            get {
+                return this.lastRunTimeField;
+            }
+            set {
+                this.lastRunTimeField = value;
+                this.RaisePropertyChanged("LastRunTime");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LastRunTimeSpecified {
+            get {
+                return this.lastRunTimeFieldSpecified;
+            }
+            set {
+                this.lastRunTimeFieldSpecified = value;
+                this.RaisePropertyChanged("LastRunTimeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool ReferencesPresent {
+            get {
+                return this.referencesPresentField;
+            }
+            set {
+                this.referencesPresentField = value;
+                this.RaisePropertyChanged("ReferencesPresent");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string ScheduleStateName {
+            get {
+                return this.scheduleStateNameField;
+            }
+            set {
+                this.scheduleStateNameField = value;
+                this.RaisePropertyChanged("ScheduleStateName");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ModelPerspective : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string nameField;
+        
+        private string descriptionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string ID {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ModelCatalogItem : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string modelField;
+        
+        private string descriptionField;
+        
+        private ModelPerspective[] perspectivesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Model {
+            get {
+                return this.modelField;
+            }
+            set {
+                this.modelField = value;
+                this.RaisePropertyChanged("Model");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+        public ModelPerspective[] Perspectives {
+            get {
+                return this.perspectivesField;
+            }
+            set {
+                this.perspectivesField = value;
+                this.RaisePropertyChanged("Perspectives");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ModelItem : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string nameField;
+        
+        private string modelItemTypeNameField;
+        
+        private string descriptionField;
+        
+        private ModelItem[] modelItemsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string ID {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string ModelItemTypeName {
+            get {
+                return this.modelItemTypeNameField;
+            }
+            set {
+                this.modelItemTypeNameField = value;
+                this.RaisePropertyChanged("ModelItemTypeName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=4)]
+        public ModelItem[] ModelItems {
+            get {
+                return this.modelItemsField;
+            }
+            set {
+                this.modelItemsField = value;
+                this.RaisePropertyChanged("ModelItems");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ModelDrillthroughReport : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string pathField;
+        
+        private DrillthroughType typeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Path {
+            get {
+                return this.pathField;
+            }
+            set {
+                this.pathField = value;
+                this.RaisePropertyChanged("Path");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public DrillthroughType Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+                this.RaisePropertyChanged("Type");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public enum DrillthroughType {
+        
+        /// <remarks/>
+        Detail,
+        
+        /// <remarks/>
+        List,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class DataSourcePrompt : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string nameField;
+        
+        private string dataSourceIDField;
+        
+        private string promptField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string DataSourceID {
+            get {
+                return this.dataSourceIDField;
+            }
+            set {
+                this.dataSourceIDField = value;
+                this.RaisePropertyChanged("DataSourceID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Prompt {
+            get {
+                return this.promptField;
+            }
+            set {
+                this.promptField = value;
+                this.RaisePropertyChanged("Prompt");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class Policy : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string groupUserNameField;
+        
+        private Role[] rolesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string GroupUserName {
+            get {
+                return this.groupUserNameField;
+            }
+            set {
+                this.groupUserNameField = value;
+                this.RaisePropertyChanged("GroupUserName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        public Role[] Roles {
+            get {
+                return this.rolesField;
+            }
+            set {
+                this.rolesField = value;
+                this.RaisePropertyChanged("Roles");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class Role : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string nameField;
+        
+        private string descriptionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class Task : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string taskIDField;
+        
+        private string nameField;
+        
+        private string descriptionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string TaskID {
+            get {
+                return this.taskIDField;
+            }
+            set {
+                this.taskIDField = value;
+                this.RaisePropertyChanged("TaskID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class DataSource : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string nameField;
+        
+        private DataSourceDefinitionOrReference itemField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("DataSourceDefinition", typeof(DataSourceDefinition), Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("DataSourceReference", typeof(DataSourceReference), Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("InvalidDataSourceReference", typeof(InvalidDataSourceReference), Order=1)]
+        public DataSourceDefinitionOrReference Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+                this.RaisePropertyChanged("Item");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class DataSourceDefinition : DataSourceDefinitionOrReference {
+        
+        private string extensionField;
+        
+        private string connectStringField;
+        
+        private bool useOriginalConnectStringField;
+        
+        private bool originalConnectStringExpressionBasedField;
+        
+        private CredentialRetrievalEnum credentialRetrievalField;
+        
+        private bool windowsCredentialsField;
+        
+        private bool impersonateUserField;
+        
+        private bool impersonateUserFieldSpecified;
+        
+        private string promptField;
+        
+        private string userNameField;
+        
+        private string passwordField;
+        
+        private bool enabledField;
+        
+        private bool enabledFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Extension {
+            get {
+                return this.extensionField;
+            }
+            set {
+                this.extensionField = value;
+                this.RaisePropertyChanged("Extension");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string ConnectString {
+            get {
+                return this.connectStringField;
+            }
+            set {
+                this.connectStringField = value;
+                this.RaisePropertyChanged("ConnectString");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool UseOriginalConnectString {
+            get {
+                return this.useOriginalConnectStringField;
+            }
+            set {
+                this.useOriginalConnectStringField = value;
+                this.RaisePropertyChanged("UseOriginalConnectString");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool OriginalConnectStringExpressionBased {
+            get {
+                return this.originalConnectStringExpressionBasedField;
+            }
+            set {
+                this.originalConnectStringExpressionBasedField = value;
+                this.RaisePropertyChanged("OriginalConnectStringExpressionBased");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public CredentialRetrievalEnum CredentialRetrieval {
+            get {
+                return this.credentialRetrievalField;
+            }
+            set {
+                this.credentialRetrievalField = value;
+                this.RaisePropertyChanged("CredentialRetrieval");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool WindowsCredentials {
+            get {
+                return this.windowsCredentialsField;
+            }
+            set {
+                this.windowsCredentialsField = value;
+                this.RaisePropertyChanged("WindowsCredentials");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool ImpersonateUser {
+            get {
+                return this.impersonateUserField;
+            }
+            set {
+                this.impersonateUserField = value;
+                this.RaisePropertyChanged("ImpersonateUser");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ImpersonateUserSpecified {
+            get {
+                return this.impersonateUserFieldSpecified;
+            }
+            set {
+                this.impersonateUserFieldSpecified = value;
+                this.RaisePropertyChanged("ImpersonateUserSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string Prompt {
+            get {
+                return this.promptField;
+            }
+            set {
+                this.promptField = value;
+                this.RaisePropertyChanged("Prompt");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string UserName {
+            get {
+                return this.userNameField;
+            }
+            set {
+                this.userNameField = value;
+                this.RaisePropertyChanged("UserName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string Password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                this.passwordField = value;
+                this.RaisePropertyChanged("Password");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public bool Enabled {
+            get {
+                return this.enabledField;
+            }
+            set {
+                this.enabledField = value;
+                this.RaisePropertyChanged("Enabled");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool EnabledSpecified {
+            get {
+                return this.enabledFieldSpecified;
+            }
+            set {
+                this.enabledFieldSpecified = value;
+                this.RaisePropertyChanged("EnabledSpecified");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public enum CredentialRetrievalEnum {
+        
+        /// <remarks/>
+        Prompt,
+        
+        /// <remarks/>
+        Store,
+        
+        /// <remarks/>
+        Integrated,
+        
+        /// <remarks/>
+        None,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvalidDataSourceReference))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DataSourceReference))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DataSourceDefinition))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class DataSourceDefinitionOrReference : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class InvalidDataSourceReference : DataSourceDefinitionOrReference {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class DataSourceReference : DataSourceDefinitionOrReference {
+        
+        private string referenceField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Reference {
+            get {
+                return this.referenceField;
+            }
+            set {
+                this.referenceField = value;
+                this.RaisePropertyChanged("Reference");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class Subscription : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string subscriptionIDField;
@@ -1847,7 +4006,7 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class ExtensionSettings : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string extensionField;
@@ -1895,7 +4054,7 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class ParameterFieldReference : ParameterValueOrFieldReference {
         
         private string parameterNameField;
@@ -1934,7 +4093,7 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class ParameterValueOrFieldReference : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -1952,7 +4111,7 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class ParameterValue : ParameterValueOrFieldReference {
         
         private string nameField;
@@ -2003,7 +4162,7 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class ActiveState : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool deliveryExtensionRemovedField;
@@ -2161,7 +4320,7 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class ExtensionParameter : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string nameField;
@@ -2320,53 +4479,7 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class ValidValue : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string labelField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Label {
-            get {
-                return this.labelField;
-            }
-            set {
-                this.labelField = value;
-                this.RaisePropertyChanged("Label");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class QueryDefinition : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string commandTypeField;
@@ -2440,7 +4553,7 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class Field : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string aliasField;
@@ -2486,7 +4599,7 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class DataSetDefinition : object, System.ComponentModel.INotifyPropertyChanged {
         
         private Field[] fieldsField;
@@ -2670,7 +4783,7 @@ namespace CrissCrossLib.ReportWebService {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public enum SensitivityEnum {
         
         /// <remarks/>
@@ -2688,7 +4801,7 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class DataRetrievalPlan : object, System.ComponentModel.INotifyPropertyChanged {
         
         private DataSourceDefinitionOrReference itemField;
@@ -2736,308 +4849,17 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class DataSourceDefinition : DataSourceDefinitionOrReference {
-        
-        private string extensionField;
-        
-        private string connectStringField;
-        
-        private bool useOriginalConnectStringField;
-        
-        private bool originalConnectStringExpressionBasedField;
-        
-        private CredentialRetrievalEnum credentialRetrievalField;
-        
-        private bool windowsCredentialsField;
-        
-        private bool impersonateUserField;
-        
-        private bool impersonateUserFieldSpecified;
-        
-        private string promptField;
-        
-        private string userNameField;
-        
-        private string passwordField;
-        
-        private bool enabledField;
-        
-        private bool enabledFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Extension {
-            get {
-                return this.extensionField;
-            }
-            set {
-                this.extensionField = value;
-                this.RaisePropertyChanged("Extension");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string ConnectString {
-            get {
-                return this.connectStringField;
-            }
-            set {
-                this.connectStringField = value;
-                this.RaisePropertyChanged("ConnectString");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public bool UseOriginalConnectString {
-            get {
-                return this.useOriginalConnectStringField;
-            }
-            set {
-                this.useOriginalConnectStringField = value;
-                this.RaisePropertyChanged("UseOriginalConnectString");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public bool OriginalConnectStringExpressionBased {
-            get {
-                return this.originalConnectStringExpressionBasedField;
-            }
-            set {
-                this.originalConnectStringExpressionBasedField = value;
-                this.RaisePropertyChanged("OriginalConnectStringExpressionBased");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public CredentialRetrievalEnum CredentialRetrieval {
-            get {
-                return this.credentialRetrievalField;
-            }
-            set {
-                this.credentialRetrievalField = value;
-                this.RaisePropertyChanged("CredentialRetrieval");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public bool WindowsCredentials {
-            get {
-                return this.windowsCredentialsField;
-            }
-            set {
-                this.windowsCredentialsField = value;
-                this.RaisePropertyChanged("WindowsCredentials");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public bool ImpersonateUser {
-            get {
-                return this.impersonateUserField;
-            }
-            set {
-                this.impersonateUserField = value;
-                this.RaisePropertyChanged("ImpersonateUser");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ImpersonateUserSpecified {
-            get {
-                return this.impersonateUserFieldSpecified;
-            }
-            set {
-                this.impersonateUserFieldSpecified = value;
-                this.RaisePropertyChanged("ImpersonateUserSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public string Prompt {
-            get {
-                return this.promptField;
-            }
-            set {
-                this.promptField = value;
-                this.RaisePropertyChanged("Prompt");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public string UserName {
-            get {
-                return this.userNameField;
-            }
-            set {
-                this.userNameField = value;
-                this.RaisePropertyChanged("UserName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public string Password {
-            get {
-                return this.passwordField;
-            }
-            set {
-                this.passwordField = value;
-                this.RaisePropertyChanged("Password");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
-        public bool Enabled {
-            get {
-                return this.enabledField;
-            }
-            set {
-                this.enabledField = value;
-                this.RaisePropertyChanged("Enabled");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool EnabledSpecified {
-            get {
-                return this.enabledFieldSpecified;
-            }
-            set {
-                this.enabledFieldSpecified = value;
-                this.RaisePropertyChanged("EnabledSpecified");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum CredentialRetrievalEnum {
-        
-        /// <remarks/>
-        Prompt,
-        
-        /// <remarks/>
-        Store,
-        
-        /// <remarks/>
-        Integrated,
-        
-        /// <remarks/>
-        None,
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvalidDataSourceReference))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DataSourceReference))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DataSourceDefinition))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class DataSourceDefinitionOrReference : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class InvalidDataSourceReference : DataSourceDefinitionOrReference {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class DataSourceReference : DataSourceDefinitionOrReference {
-        
-        private string referenceField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Reference {
-            get {
-                return this.referenceField;
-            }
-            set {
-                this.referenceField = value;
-                this.RaisePropertyChanged("Reference");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class Schedule : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string scheduleIDField;
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ItemReferenceData : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string nameField;
         
-        private ScheduleDefinition definitionField;
+        private string referenceField;
         
-        private string descriptionField;
-        
-        private string creatorField;
-        
-        private System.DateTime nextRunTimeField;
-        
-        private bool nextRunTimeFieldSpecified;
-        
-        private System.DateTime lastRunTimeField;
-        
-        private bool lastRunTimeFieldSpecified;
-        
-        private bool referencesPresentField;
-        
-        private ScheduleStateEnum stateField;
+        private string referenceTypeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string ScheduleID {
-            get {
-                return this.scheduleIDField;
-            }
-            set {
-                this.scheduleIDField = value;
-                this.RaisePropertyChanged("ScheduleID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string Name {
             get {
                 return this.nameField;
@@ -3049,428 +4871,26 @@ namespace CrissCrossLib.ReportWebService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public ScheduleDefinition Definition {
-            get {
-                return this.definitionField;
-            }
-            set {
-                this.definitionField = value;
-                this.RaisePropertyChanged("Definition");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("Description");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public string Creator {
-            get {
-                return this.creatorField;
-            }
-            set {
-                this.creatorField = value;
-                this.RaisePropertyChanged("Creator");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public System.DateTime NextRunTime {
-            get {
-                return this.nextRunTimeField;
-            }
-            set {
-                this.nextRunTimeField = value;
-                this.RaisePropertyChanged("NextRunTime");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool NextRunTimeSpecified {
-            get {
-                return this.nextRunTimeFieldSpecified;
-            }
-            set {
-                this.nextRunTimeFieldSpecified = value;
-                this.RaisePropertyChanged("NextRunTimeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public System.DateTime LastRunTime {
-            get {
-                return this.lastRunTimeField;
-            }
-            set {
-                this.lastRunTimeField = value;
-                this.RaisePropertyChanged("LastRunTime");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool LastRunTimeSpecified {
-            get {
-                return this.lastRunTimeFieldSpecified;
-            }
-            set {
-                this.lastRunTimeFieldSpecified = value;
-                this.RaisePropertyChanged("LastRunTimeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public bool ReferencesPresent {
-            get {
-                return this.referencesPresentField;
-            }
-            set {
-                this.referencesPresentField = value;
-                this.RaisePropertyChanged("ReferencesPresent");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public ScheduleStateEnum State {
-            get {
-                return this.stateField;
-            }
-            set {
-                this.stateField = value;
-                this.RaisePropertyChanged("State");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class ScheduleDefinition : ScheduleDefinitionOrReference {
-        
-        private System.DateTime startDateTimeField;
-        
-        private System.DateTime endDateField;
-        
-        private bool endDateFieldSpecified;
-        
-        private RecurrencePattern itemField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public System.DateTime StartDateTime {
-            get {
-                return this.startDateTimeField;
-            }
-            set {
-                this.startDateTimeField = value;
-                this.RaisePropertyChanged("StartDateTime");
-            }
-        }
-        
-        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public System.DateTime EndDate {
+        public string Reference {
             get {
-                return this.endDateField;
+                return this.referenceField;
             }
             set {
-                this.endDateField = value;
-                this.RaisePropertyChanged("EndDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool EndDateSpecified {
-            get {
-                return this.endDateFieldSpecified;
-            }
-            set {
-                this.endDateFieldSpecified = value;
-                this.RaisePropertyChanged("EndDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DailyRecurrence", typeof(DailyRecurrence), Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute("MinuteRecurrence", typeof(MinuteRecurrence), Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute("MonthlyDOWRecurrence", typeof(MonthlyDOWRecurrence), Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute("MonthlyRecurrence", typeof(MonthlyRecurrence), Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute("WeeklyRecurrence", typeof(WeeklyRecurrence), Order=2)]
-        public RecurrencePattern Item {
-            get {
-                return this.itemField;
-            }
-            set {
-                this.itemField = value;
-                this.RaisePropertyChanged("Item");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class DailyRecurrence : RecurrencePattern {
-        
-        private int daysIntervalField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public int DaysInterval {
-            get {
-                return this.daysIntervalField;
-            }
-            set {
-                this.daysIntervalField = value;
-                this.RaisePropertyChanged("DaysInterval");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MonthlyDOWRecurrence))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MonthlyRecurrence))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DailyRecurrence))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeeklyRecurrence))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MinuteRecurrence))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class RecurrencePattern : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class MonthlyDOWRecurrence : RecurrencePattern {
-        
-        private WeekNumberEnum whichWeekField;
-        
-        private bool whichWeekFieldSpecified;
-        
-        private DaysOfWeekSelector daysOfWeekField;
-        
-        private MonthsOfYearSelector monthsOfYearField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public WeekNumberEnum WhichWeek {
-            get {
-                return this.whichWeekField;
-            }
-            set {
-                this.whichWeekField = value;
-                this.RaisePropertyChanged("WhichWeek");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool WhichWeekSpecified {
-            get {
-                return this.whichWeekFieldSpecified;
-            }
-            set {
-                this.whichWeekFieldSpecified = value;
-                this.RaisePropertyChanged("WhichWeekSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public DaysOfWeekSelector DaysOfWeek {
-            get {
-                return this.daysOfWeekField;
-            }
-            set {
-                this.daysOfWeekField = value;
-                this.RaisePropertyChanged("DaysOfWeek");
+                this.referenceField = value;
+                this.RaisePropertyChanged("Reference");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public MonthsOfYearSelector MonthsOfYear {
+        public string ReferenceType {
             get {
-                return this.monthsOfYearField;
+                return this.referenceTypeField;
             }
             set {
-                this.monthsOfYearField = value;
-                this.RaisePropertyChanged("MonthsOfYear");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum WeekNumberEnum {
-        
-        /// <remarks/>
-        FirstWeek,
-        
-        /// <remarks/>
-        SecondWeek,
-        
-        /// <remarks/>
-        ThirdWeek,
-        
-        /// <remarks/>
-        FourthWeek,
-        
-        /// <remarks/>
-        LastWeek,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class DaysOfWeekSelector : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private bool sundayField;
-        
-        private bool mondayField;
-        
-        private bool tuesdayField;
-        
-        private bool wednesdayField;
-        
-        private bool thursdayField;
-        
-        private bool fridayField;
-        
-        private bool saturdayField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public bool Sunday {
-            get {
-                return this.sundayField;
-            }
-            set {
-                this.sundayField = value;
-                this.RaisePropertyChanged("Sunday");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public bool Monday {
-            get {
-                return this.mondayField;
-            }
-            set {
-                this.mondayField = value;
-                this.RaisePropertyChanged("Monday");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public bool Tuesday {
-            get {
-                return this.tuesdayField;
-            }
-            set {
-                this.tuesdayField = value;
-                this.RaisePropertyChanged("Tuesday");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public bool Wednesday {
-            get {
-                return this.wednesdayField;
-            }
-            set {
-                this.wednesdayField = value;
-                this.RaisePropertyChanged("Wednesday");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public bool Thursday {
-            get {
-                return this.thursdayField;
-            }
-            set {
-                this.thursdayField = value;
-                this.RaisePropertyChanged("Thursday");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public bool Friday {
-            get {
-                return this.fridayField;
-            }
-            set {
-                this.fridayField = value;
-                this.RaisePropertyChanged("Friday");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public bool Saturday {
-            get {
-                return this.saturdayField;
-            }
-            set {
-                this.saturdayField = value;
-                this.RaisePropertyChanged("Saturday");
+                this.referenceTypeField = value;
+                this.RaisePropertyChanged("ReferenceType");
             }
         }
         
@@ -3489,174 +4909,34 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class MonthsOfYearSelector : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ItemReference : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private bool januaryField;
+        private string nameField;
         
-        private bool februaryField;
-        
-        private bool marchField;
-        
-        private bool aprilField;
-        
-        private bool mayField;
-        
-        private bool juneField;
-        
-        private bool julyField;
-        
-        private bool augustField;
-        
-        private bool septemberField;
-        
-        private bool octoberField;
-        
-        private bool novemberField;
-        
-        private bool decemberField;
+        private string referenceField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public bool January {
+        public string Name {
             get {
-                return this.januaryField;
+                return this.nameField;
             }
             set {
-                this.januaryField = value;
-                this.RaisePropertyChanged("January");
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public bool February {
+        public string Reference {
             get {
-                return this.februaryField;
+                return this.referenceField;
             }
             set {
-                this.februaryField = value;
-                this.RaisePropertyChanged("February");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public bool March {
-            get {
-                return this.marchField;
-            }
-            set {
-                this.marchField = value;
-                this.RaisePropertyChanged("March");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public bool April {
-            get {
-                return this.aprilField;
-            }
-            set {
-                this.aprilField = value;
-                this.RaisePropertyChanged("April");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public bool May {
-            get {
-                return this.mayField;
-            }
-            set {
-                this.mayField = value;
-                this.RaisePropertyChanged("May");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public bool June {
-            get {
-                return this.juneField;
-            }
-            set {
-                this.juneField = value;
-                this.RaisePropertyChanged("June");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public bool July {
-            get {
-                return this.julyField;
-            }
-            set {
-                this.julyField = value;
-                this.RaisePropertyChanged("July");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public bool August {
-            get {
-                return this.augustField;
-            }
-            set {
-                this.augustField = value;
-                this.RaisePropertyChanged("August");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public bool September {
-            get {
-                return this.septemberField;
-            }
-            set {
-                this.septemberField = value;
-                this.RaisePropertyChanged("September");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public bool October {
-            get {
-                return this.octoberField;
-            }
-            set {
-                this.octoberField = value;
-                this.RaisePropertyChanged("October");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
-        public bool November {
-            get {
-                return this.novemberField;
-            }
-            set {
-                this.novemberField = value;
-                this.RaisePropertyChanged("November");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
-        public bool December {
-            get {
-                return this.decemberField;
-            }
-            set {
-                this.decemberField = value;
-                this.RaisePropertyChanged("December");
+                this.referenceField = value;
+                this.RaisePropertyChanged("Reference");
             }
         }
         
@@ -3675,34 +4955,43 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class MonthlyRecurrence : RecurrencePattern {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ItemNamespaceHeader : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string daysField;
+        private ItemNamespaceEnum itemNamespaceField;
         
-        private MonthsOfYearSelector monthsOfYearField;
+        private System.Xml.XmlAttribute[] anyAttrField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Days {
+        public ItemNamespaceEnum ItemNamespace {
             get {
-                return this.daysField;
+                return this.itemNamespaceField;
             }
             set {
-                this.daysField = value;
-                this.RaisePropertyChanged("Days");
+                this.itemNamespaceField = value;
+                this.RaisePropertyChanged("ItemNamespace");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public MonthsOfYearSelector MonthsOfYear {
+        [System.Xml.Serialization.XmlAnyAttributeAttribute()]
+        public System.Xml.XmlAttribute[] AnyAttr {
             get {
-                return this.monthsOfYearField;
+                return this.anyAttrField;
             }
             set {
-                this.monthsOfYearField = value;
-                this.RaisePropertyChanged("MonthsOfYear");
+                this.anyAttrField = value;
+                this.RaisePropertyChanged("AnyAttr");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -3710,87 +4999,80 @@ namespace CrissCrossLib.ReportWebService {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public enum ItemNamespaceEnum {
+        
+        /// <remarks/>
+        PathBased,
+        
+        /// <remarks/>
+        GUIDBased,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class WeeklyRecurrence : RecurrencePattern {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class SearchCondition : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private int weeksIntervalField;
+        private ConditionEnum conditionField;
         
-        private bool weeksIntervalFieldSpecified;
+        private bool conditionFieldSpecified;
         
-        private DaysOfWeekSelector daysOfWeekField;
+        private string[] valuesField;
+        
+        private string nameField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public int WeeksInterval {
+        public ConditionEnum Condition {
             get {
-                return this.weeksIntervalField;
+                return this.conditionField;
             }
             set {
-                this.weeksIntervalField = value;
-                this.RaisePropertyChanged("WeeksInterval");
+                this.conditionField = value;
+                this.RaisePropertyChanged("Condition");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool WeeksIntervalSpecified {
+        public bool ConditionSpecified {
             get {
-                return this.weeksIntervalFieldSpecified;
+                return this.conditionFieldSpecified;
             }
             set {
-                this.weeksIntervalFieldSpecified = value;
-                this.RaisePropertyChanged("WeeksIntervalSpecified");
+                this.conditionFieldSpecified = value;
+                this.RaisePropertyChanged("ConditionSpecified");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public DaysOfWeekSelector DaysOfWeek {
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("Value")]
+        public string[] Values {
             get {
-                return this.daysOfWeekField;
+                return this.valuesField;
             }
             set {
-                this.daysOfWeekField = value;
-                this.RaisePropertyChanged("DaysOfWeek");
+                this.valuesField = value;
+                this.RaisePropertyChanged("Values");
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class MinuteRecurrence : RecurrencePattern {
-        
-        private int minutesIntervalField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public int MinutesInterval {
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Name {
             get {
-                return this.minutesIntervalField;
+                return this.nameField;
             }
             set {
-                this.minutesIntervalField = value;
-                this.RaisePropertyChanged("MinutesInterval");
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(NoSchedule))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ScheduleReference))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ScheduleDefinition))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class ScheduleDefinitionOrReference : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -3805,10 +5087,20 @@ namespace CrissCrossLib.ReportWebService {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class NoSchedule : ScheduleDefinitionOrReference {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public enum ConditionEnum {
+        
+        /// <remarks/>
+        Contains,
+        
+        /// <remarks/>
+        Equals,
+        
+        /// <remarks/>
+        In,
+        
+        /// <remarks/>
+        Between,
     }
     
     /// <remarks/>
@@ -3816,67 +5108,8 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class ScheduleReference : ScheduleDefinitionOrReference {
-        
-        private string scheduleIDField;
-        
-        private ScheduleDefinition definitionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string ScheduleID {
-            get {
-                return this.scheduleIDField;
-            }
-            set {
-                this.scheduleIDField = value;
-                this.RaisePropertyChanged("ScheduleID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public ScheduleDefinition Definition {
-            get {
-                return this.definitionField;
-            }
-            set {
-                this.definitionField = value;
-                this.RaisePropertyChanged("Definition");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum ScheduleStateEnum {
-        
-        /// <remarks/>
-        Ready,
-        
-        /// <remarks/>
-        Running,
-        
-        /// <remarks/>
-        Paused,
-        
-        /// <remarks/>
-        Expired,
-        
-        /// <remarks/>
-        Failing,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class ReportHistorySnapshot : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ItemHistorySnapshot : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string historyIDField;
         
@@ -3935,254 +5168,118 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class DataSourcePrompt : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class SYSTEMTIME : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string nameField;
+        private short yearField;
         
-        private string dataSourceIDField;
+        private short monthField;
         
-        private string promptField;
+        private short dayOfWeekField;
+        
+        private short dayField;
+        
+        private short hourField;
+        
+        private short minuteField;
+        
+        private short secondField;
+        
+        private short millisecondsField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Name {
+        public short year {
             get {
-                return this.nameField;
+                return this.yearField;
             }
             set {
-                this.nameField = value;
-                this.RaisePropertyChanged("Name");
+                this.yearField = value;
+                this.RaisePropertyChanged("year");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string DataSourceID {
+        public short month {
             get {
-                return this.dataSourceIDField;
+                return this.monthField;
             }
             set {
-                this.dataSourceIDField = value;
-                this.RaisePropertyChanged("DataSourceID");
+                this.monthField = value;
+                this.RaisePropertyChanged("month");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string Prompt {
+        public short dayOfWeek {
             get {
-                return this.promptField;
+                return this.dayOfWeekField;
             }
             set {
-                this.promptField = value;
-                this.RaisePropertyChanged("Prompt");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class DataSource : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string nameField;
-        
-        private DataSourceDefinitionOrReference itemField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-                this.RaisePropertyChanged("Name");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DataSourceDefinition", typeof(DataSourceDefinition), Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute("DataSourceReference", typeof(DataSourceReference), Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute("InvalidDataSourceReference", typeof(InvalidDataSourceReference), Order=1)]
-        public DataSourceDefinitionOrReference Item {
-            get {
-                return this.itemField;
-            }
-            set {
-                this.itemField = value;
-                this.RaisePropertyChanged("Item");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class Job : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string jobIDField;
-        
-        private string nameField;
-        
-        private string pathField;
-        
-        private string descriptionField;
-        
-        private string machineField;
-        
-        private string userField;
-        
-        private System.DateTime startDateTimeField;
-        
-        private JobActionEnum actionField;
-        
-        private JobTypeEnum typeField;
-        
-        private JobStatusEnum statusField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string JobID {
-            get {
-                return this.jobIDField;
-            }
-            set {
-                this.jobIDField = value;
-                this.RaisePropertyChanged("JobID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-                this.RaisePropertyChanged("Name");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string Path {
-            get {
-                return this.pathField;
-            }
-            set {
-                this.pathField = value;
-                this.RaisePropertyChanged("Path");
+                this.dayOfWeekField = value;
+                this.RaisePropertyChanged("dayOfWeek");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string Description {
+        public short day {
             get {
-                return this.descriptionField;
+                return this.dayField;
             }
             set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("Description");
+                this.dayField = value;
+                this.RaisePropertyChanged("day");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public string Machine {
+        public short hour {
             get {
-                return this.machineField;
+                return this.hourField;
             }
             set {
-                this.machineField = value;
-                this.RaisePropertyChanged("Machine");
+                this.hourField = value;
+                this.RaisePropertyChanged("hour");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public string User {
+        public short minute {
             get {
-                return this.userField;
+                return this.minuteField;
             }
             set {
-                this.userField = value;
-                this.RaisePropertyChanged("User");
+                this.minuteField = value;
+                this.RaisePropertyChanged("minute");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public System.DateTime StartDateTime {
+        public short second {
             get {
-                return this.startDateTimeField;
+                return this.secondField;
             }
             set {
-                this.startDateTimeField = value;
-                this.RaisePropertyChanged("StartDateTime");
+                this.secondField = value;
+                this.RaisePropertyChanged("second");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public JobActionEnum Action {
+        public short milliseconds {
             get {
-                return this.actionField;
+                return this.millisecondsField;
             }
             set {
-                this.actionField = value;
-                this.RaisePropertyChanged("Action");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public JobTypeEnum Type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-                this.RaisePropertyChanged("Type");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public JobStatusEnum Status {
-            get {
-                return this.statusField;
-            }
-            set {
-                this.statusField = value;
-                this.RaisePropertyChanged("Status");
+                this.millisecondsField = value;
+                this.RaisePropertyChanged("milliseconds");
             }
         }
         
@@ -4199,461 +5296,78 @@ namespace CrissCrossLib.ReportWebService {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum JobActionEnum {
-        
-        /// <remarks/>
-        Render,
-        
-        /// <remarks/>
-        SnapshotCreation,
-        
-        /// <remarks/>
-        ReportHistoryCreation,
-        
-        /// <remarks/>
-        ExecuteQuery,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum JobTypeEnum {
-        
-        /// <remarks/>
-        User,
-        
-        /// <remarks/>
-        System,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum JobStatusEnum {
-        
-        /// <remarks/>
-        New,
-        
-        /// <remarks/>
-        Running,
-        
-        /// <remarks/>
-        CancelRequested,
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeExpiration))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ScheduleExpiration))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class ExpirationDefinition : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class TimeZoneInformation : object, System.ComponentModel.INotifyPropertyChanged {
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        private int biasField;
         
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class TimeExpiration : ExpirationDefinition {
+        private int standardBiasField;
         
-        private int minutesField;
+        private SYSTEMTIME standardDateField;
+        
+        private int daylightBiasField;
+        
+        private SYSTEMTIME daylightDateField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public int Minutes {
+        public int Bias {
             get {
-                return this.minutesField;
+                return this.biasField;
             }
             set {
-                this.minutesField = value;
-                this.RaisePropertyChanged("Minutes");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class ScheduleExpiration : ExpirationDefinition {
-        
-        private ScheduleDefinitionOrReference itemField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ScheduleDefinition", typeof(ScheduleDefinition), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("ScheduleReference", typeof(ScheduleReference), Order=0)]
-        public ScheduleDefinitionOrReference Item {
-            get {
-                return this.itemField;
-            }
-            set {
-                this.itemField = value;
-                this.RaisePropertyChanged("Item");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class ReportParameter : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string nameField;
-        
-        private ParameterTypeEnum typeField;
-        
-        private bool typeFieldSpecified;
-        
-        private bool nullableField;
-        
-        private bool nullableFieldSpecified;
-        
-        private bool allowBlankField;
-        
-        private bool allowBlankFieldSpecified;
-        
-        private bool multiValueField;
-        
-        private bool multiValueFieldSpecified;
-        
-        private bool queryParameterField;
-        
-        private bool queryParameterFieldSpecified;
-        
-        private string promptField;
-        
-        private bool promptUserField;
-        
-        private bool promptUserFieldSpecified;
-        
-        private string[] dependenciesField;
-        
-        private bool validValuesQueryBasedField;
-        
-        private bool validValuesQueryBasedFieldSpecified;
-        
-        private ValidValue[] validValuesField;
-        
-        private bool defaultValuesQueryBasedField;
-        
-        private bool defaultValuesQueryBasedFieldSpecified;
-        
-        private string[] defaultValuesField;
-        
-        private ParameterStateEnum stateField;
-        
-        private bool stateFieldSpecified;
-        
-        private string errorMessageField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-                this.RaisePropertyChanged("Name");
+                this.biasField = value;
+                this.RaisePropertyChanged("Bias");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public ParameterTypeEnum Type {
+        public int StandardBias {
             get {
-                return this.typeField;
+                return this.standardBiasField;
             }
             set {
-                this.typeField = value;
-                this.RaisePropertyChanged("Type");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool TypeSpecified {
-            get {
-                return this.typeFieldSpecified;
-            }
-            set {
-                this.typeFieldSpecified = value;
-                this.RaisePropertyChanged("TypeSpecified");
+                this.standardBiasField = value;
+                this.RaisePropertyChanged("StandardBias");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public bool Nullable {
+        public SYSTEMTIME StandardDate {
             get {
-                return this.nullableField;
+                return this.standardDateField;
             }
             set {
-                this.nullableField = value;
-                this.RaisePropertyChanged("Nullable");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool NullableSpecified {
-            get {
-                return this.nullableFieldSpecified;
-            }
-            set {
-                this.nullableFieldSpecified = value;
-                this.RaisePropertyChanged("NullableSpecified");
+                this.standardDateField = value;
+                this.RaisePropertyChanged("StandardDate");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public bool AllowBlank {
+        public int DaylightBias {
             get {
-                return this.allowBlankField;
+                return this.daylightBiasField;
             }
             set {
-                this.allowBlankField = value;
-                this.RaisePropertyChanged("AllowBlank");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool AllowBlankSpecified {
-            get {
-                return this.allowBlankFieldSpecified;
-            }
-            set {
-                this.allowBlankFieldSpecified = value;
-                this.RaisePropertyChanged("AllowBlankSpecified");
+                this.daylightBiasField = value;
+                this.RaisePropertyChanged("DaylightBias");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public bool MultiValue {
+        public SYSTEMTIME DaylightDate {
             get {
-                return this.multiValueField;
+                return this.daylightDateField;
             }
             set {
-                this.multiValueField = value;
-                this.RaisePropertyChanged("MultiValue");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool MultiValueSpecified {
-            get {
-                return this.multiValueFieldSpecified;
-            }
-            set {
-                this.multiValueFieldSpecified = value;
-                this.RaisePropertyChanged("MultiValueSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public bool QueryParameter {
-            get {
-                return this.queryParameterField;
-            }
-            set {
-                this.queryParameterField = value;
-                this.RaisePropertyChanged("QueryParameter");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool QueryParameterSpecified {
-            get {
-                return this.queryParameterFieldSpecified;
-            }
-            set {
-                this.queryParameterFieldSpecified = value;
-                this.RaisePropertyChanged("QueryParameterSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public string Prompt {
-            get {
-                return this.promptField;
-            }
-            set {
-                this.promptField = value;
-                this.RaisePropertyChanged("Prompt");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public bool PromptUser {
-            get {
-                return this.promptUserField;
-            }
-            set {
-                this.promptUserField = value;
-                this.RaisePropertyChanged("PromptUser");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool PromptUserSpecified {
-            get {
-                return this.promptUserFieldSpecified;
-            }
-            set {
-                this.promptUserFieldSpecified = value;
-                this.RaisePropertyChanged("PromptUserSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=8)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("Dependency")]
-        public string[] Dependencies {
-            get {
-                return this.dependenciesField;
-            }
-            set {
-                this.dependenciesField = value;
-                this.RaisePropertyChanged("Dependencies");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public bool ValidValuesQueryBased {
-            get {
-                return this.validValuesQueryBasedField;
-            }
-            set {
-                this.validValuesQueryBasedField = value;
-                this.RaisePropertyChanged("ValidValuesQueryBased");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ValidValuesQueryBasedSpecified {
-            get {
-                return this.validValuesQueryBasedFieldSpecified;
-            }
-            set {
-                this.validValuesQueryBasedFieldSpecified = value;
-                this.RaisePropertyChanged("ValidValuesQueryBasedSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=10)]
-        public ValidValue[] ValidValues {
-            get {
-                return this.validValuesField;
-            }
-            set {
-                this.validValuesField = value;
-                this.RaisePropertyChanged("ValidValues");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
-        public bool DefaultValuesQueryBased {
-            get {
-                return this.defaultValuesQueryBasedField;
-            }
-            set {
-                this.defaultValuesQueryBasedField = value;
-                this.RaisePropertyChanged("DefaultValuesQueryBased");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DefaultValuesQueryBasedSpecified {
-            get {
-                return this.defaultValuesQueryBasedFieldSpecified;
-            }
-            set {
-                this.defaultValuesQueryBasedFieldSpecified = value;
-                this.RaisePropertyChanged("DefaultValuesQueryBasedSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=12)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("Value")]
-        public string[] DefaultValues {
-            get {
-                return this.defaultValuesField;
-            }
-            set {
-                this.defaultValuesField = value;
-                this.RaisePropertyChanged("DefaultValues");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
-        public ParameterStateEnum State {
-            get {
-                return this.stateField;
-            }
-            set {
-                this.stateField = value;
-                this.RaisePropertyChanged("State");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool StateSpecified {
-            get {
-                return this.stateFieldSpecified;
-            }
-            set {
-                this.stateFieldSpecified = value;
-                this.RaisePropertyChanged("StateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
-        public string ErrorMessage {
-            get {
-                return this.errorMessageField;
-            }
-            set {
-                this.errorMessageField = value;
-                this.RaisePropertyChanged("ErrorMessage");
+                this.daylightDateField = value;
+                this.RaisePropertyChanged("DaylightDate");
             }
         }
         
@@ -4670,91 +5384,92 @@ namespace CrissCrossLib.ReportWebService {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum ParameterTypeEnum {
-        
-        /// <remarks/>
-        Boolean,
-        
-        /// <remarks/>
-        DateTime,
-        
-        /// <remarks/>
-        Integer,
-        
-        /// <remarks/>
-        Float,
-        
-        /// <remarks/>
-        String,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum ParameterStateEnum {
-        
-        /// <remarks/>
-        HasValidValue,
-        
-        /// <remarks/>
-        MissingValidValue,
-        
-        /// <remarks/>
-        HasOutstandingDependencies,
-        
-        /// <remarks/>
-        DynamicValuesUnavailable,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class DataSourceCredentials : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+    public partial class ServerInfoHeader : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string dataSourceNameField;
+        private string reportServerVersionNumberField;
         
-        private string userNameField;
+        private string reportServerEditionField;
         
-        private string passwordField;
+        private string reportServerVersionField;
+        
+        private string reportServerDateTimeField;
+        
+        private TimeZoneInformation reportServerTimeZoneInfoField;
+        
+        private System.Xml.XmlAttribute[] anyAttrField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string DataSourceName {
+        public string ReportServerVersionNumber {
             get {
-                return this.dataSourceNameField;
+                return this.reportServerVersionNumberField;
             }
             set {
-                this.dataSourceNameField = value;
-                this.RaisePropertyChanged("DataSourceName");
+                this.reportServerVersionNumberField = value;
+                this.RaisePropertyChanged("ReportServerVersionNumber");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string UserName {
+        public string ReportServerEdition {
             get {
-                return this.userNameField;
+                return this.reportServerEditionField;
             }
             set {
-                this.userNameField = value;
-                this.RaisePropertyChanged("UserName");
+                this.reportServerEditionField = value;
+                this.RaisePropertyChanged("ReportServerEdition");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string Password {
+        public string ReportServerVersion {
             get {
-                return this.passwordField;
+                return this.reportServerVersionField;
             }
             set {
-                this.passwordField = value;
-                this.RaisePropertyChanged("Password");
+                this.reportServerVersionField = value;
+                this.RaisePropertyChanged("ReportServerVersion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string ReportServerDateTime {
+            get {
+                return this.reportServerDateTimeField;
+            }
+            set {
+                this.reportServerDateTimeField = value;
+                this.RaisePropertyChanged("ReportServerDateTime");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public TimeZoneInformation ReportServerTimeZoneInfo {
+            get {
+                return this.reportServerTimeZoneInfoField;
+            }
+            set {
+                this.reportServerTimeZoneInfoField = value;
+                this.RaisePropertyChanged("ReportServerTimeZoneInfo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAnyAttributeAttribute()]
+        public System.Xml.XmlAttribute[] AnyAttr {
+            get {
+                return this.anyAttrField;
+            }
+            set {
+                this.anyAttrField = value;
+                this.RaisePropertyChanged("AnyAttr");
             }
         }
         
@@ -4773,7 +5488,7 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class Warning : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string codeField;
@@ -4861,66 +5576,7 @@ namespace CrissCrossLib.ReportWebService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class ItemNamespaceHeader : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private ItemNamespaceEnum itemNamespaceField;
-        
-        private System.Xml.XmlAttribute[] anyAttrField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public ItemNamespaceEnum ItemNamespace {
-            get {
-                return this.itemNamespaceField;
-            }
-            set {
-                this.itemNamespaceField = value;
-                this.RaisePropertyChanged("ItemNamespace");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAnyAttributeAttribute()]
-        public System.Xml.XmlAttribute[] AnyAttr {
-            get {
-                return this.anyAttrField;
-            }
-            set {
-                this.anyAttrField = value;
-                this.RaisePropertyChanged("AnyAttr");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum ItemNamespaceEnum {
-        
-        /// <remarks/>
-        PathBased,
-        
-        /// <remarks/>
-        GUIDBased,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class CatalogItem : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string idField;
@@ -4931,7 +5587,7 @@ namespace CrissCrossLib.ReportWebService {
         
         private string virtualPathField;
         
-        private ItemTypeEnum typeField;
+        private string typeNameField;
         
         private int sizeField;
         
@@ -4955,11 +5611,7 @@ namespace CrissCrossLib.ReportWebService {
         
         private string modifiedByField;
         
-        private string mimeTypeField;
-        
-        private System.DateTime executionDateField;
-        
-        private bool executionDateFieldSpecified;
+        private Property[] itemMetadataField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -5011,13 +5663,13 @@ namespace CrissCrossLib.ReportWebService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public ItemTypeEnum Type {
+        public string TypeName {
             get {
-                return this.typeField;
+                return this.typeNameField;
             }
             set {
-                this.typeField = value;
-                this.RaisePropertyChanged("Type");
+                this.typeNameField = value;
+                this.RaisePropertyChanged("TypeName");
             }
         }
         
@@ -5154,38 +5806,14 @@ namespace CrissCrossLib.ReportWebService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
-        public string MimeType {
+        [System.Xml.Serialization.XmlArrayAttribute(Order=12)]
+        public Property[] ItemMetadata {
             get {
-                return this.mimeTypeField;
+                return this.itemMetadataField;
             }
             set {
-                this.mimeTypeField = value;
-                this.RaisePropertyChanged("MimeType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
-        public System.DateTime ExecutionDate {
-            get {
-                return this.executionDateField;
-            }
-            set {
-                this.executionDateField = value;
-                this.RaisePropertyChanged("ExecutionDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ExecutionDateSpecified {
-            get {
-                return this.executionDateFieldSpecified;
-            }
-            set {
-                this.executionDateFieldSpecified = value;
-                this.RaisePropertyChanged("ExecutionDateSpecified");
+                this.itemMetadataField = value;
+                this.RaisePropertyChanged("ItemMetadata");
             }
         }
         
@@ -5202,38 +5830,9 @@ namespace CrissCrossLib.ReportWebService {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum ItemTypeEnum {
-        
-        /// <remarks/>
-        Unknown,
-        
-        /// <remarks/>
-        Folder,
-        
-        /// <remarks/>
-        Report,
-        
-        /// <remarks/>
-        Resource,
-        
-        /// <remarks/>
-        LinkedReport,
-        
-        /// <remarks/>
-        DataSource,
-        
-        /// <remarks/>
-        Model,
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SearchCondition))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public partial class Property : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string nameField;
@@ -5274,318 +5873,227 @@ namespace CrissCrossLib.ReportWebService {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class SearchCondition : Property {
-        
-        private ConditionEnum conditionField;
-        
-        private bool conditionFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public ConditionEnum Condition {
-            get {
-                return this.conditionField;
-            }
-            set {
-                this.conditionField = value;
-                this.RaisePropertyChanged("Condition");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ConditionSpecified {
-            get {
-                return this.conditionFieldSpecified;
-            }
-            set {
-                this.conditionFieldSpecified = value;
-                this.RaisePropertyChanged("ConditionSpecified");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum ConditionEnum {
-        
-        /// <remarks/>
-        Contains,
-        
-        /// <remarks/>
-        Equals,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public partial class BatchHeader : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string batchIDField;
-        
-        private System.Xml.XmlAttribute[] anyAttrField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string BatchID {
-            get {
-                return this.batchIDField;
-            }
-            set {
-                this.batchIDField = value;
-                this.RaisePropertyChanged("BatchID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAnyAttributeAttribute()]
-        public System.Xml.XmlAttribute[] AnyAttr {
-            get {
-                return this.anyAttrField;
-            }
-            set {
-                this.anyAttrField = value;
-                this.RaisePropertyChanged("AnyAttr");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSecureMethods", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListSecureMethodsRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateCatalogItem", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateCatalogItemRequest {
         
-        public ListSecureMethodsRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSecureMethodsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListSecureMethodsResponse {
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemType;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string[] ListSecureMethodsResult;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string Name;
         
-        public ListSecureMethodsResponse() {
-        }
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public string Parent;
         
-        public ListSecureMethodsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] ListSecureMethodsResult) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.ListSecureMethodsResult = ListSecureMethodsResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateBatch", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateBatchRequest {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
+        public bool Overwrite;
         
-        public CreateBatchRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateBatchResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateBatchResponse {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] Definition;
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string BatchID;
-        
-        public CreateBatchResponse() {
-        }
-        
-        public CreateBatchResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string BatchID) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.BatchID = BatchID;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CancelBatch", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CancelBatchRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        public CancelBatchRequest() {
-        }
-        
-        public CancelBatchRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader) {
-            this.BatchHeader = BatchHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CancelBatchResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CancelBatchResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public CancelBatchResponse() {
-        }
-        
-        public CancelBatchResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ExecuteBatch", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ExecuteBatchRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        public ExecuteBatchRequest() {
-        }
-        
-        public ExecuteBatchRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader) {
-            this.BatchHeader = BatchHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ExecuteBatchResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ExecuteBatchResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public ExecuteBatchResponse() {
-        }
-        
-        public ExecuteBatchResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSystemProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetSystemPropertiesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=5)]
         public CrissCrossLib.ReportWebService.Property[] Properties;
         
-        public GetSystemPropertiesRequest() {
+        public CreateCatalogItemRequest() {
         }
         
-        public GetSystemPropertiesRequest(CrissCrossLib.ReportWebService.Property[] Properties) {
+        public CreateCatalogItemRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemType, string Name, string Parent, bool Overwrite, byte[] Definition, CrissCrossLib.ReportWebService.Property[] Properties) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemType = ItemType;
+            this.Name = Name;
+            this.Parent = Parent;
+            this.Overwrite = Overwrite;
+            this.Definition = Definition;
             this.Properties = Properties;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSystemPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetSystemPropertiesResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateCatalogItemResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateCatalogItemResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Property[] Values;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.CatalogItem ItemInfo;
         
-        public GetSystemPropertiesResponse() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public CrissCrossLib.ReportWebService.Warning[] Warnings;
+        
+        public CreateCatalogItemResponse() {
         }
         
-        public GetSystemPropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Property[] Values) {
+        public CreateCatalogItemResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.CatalogItem ItemInfo, CrissCrossLib.ReportWebService.Warning[] Warnings) {
             this.ServerInfoHeader = ServerInfoHeader;
-            this.Values = Values;
+            this.ItemInfo = ItemInfo;
+            this.Warnings = Warnings;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetSystemProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetSystemPropertiesRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemDefinition", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetItemDefinitionRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] Definition;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
         public CrissCrossLib.ReportWebService.Property[] Properties;
         
-        public SetSystemPropertiesRequest() {
+        public SetItemDefinitionRequest() {
         }
         
-        public SetSystemPropertiesRequest(CrissCrossLib.ReportWebService.Property[] Properties) {
+        public SetItemDefinitionRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, byte[] Definition, CrissCrossLib.ReportWebService.Property[] Properties) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.Definition = Definition;
             this.Properties = Properties;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetSystemPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetSystemPropertiesResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemDefinitionResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetItemDefinitionResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        public SetSystemPropertiesResponse() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Warning[] Warnings;
+        
+        public SetItemDefinitionResponse() {
         }
         
-        public SetSystemPropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+        public SetItemDefinitionResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Warning[] Warnings) {
             this.ServerInfoHeader = ServerInfoHeader;
+            this.Warnings = Warnings;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteItem", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemDefinition", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemDefinitionRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        public GetItemDefinitionRequest() {
+        }
+        
+        public GetItemDefinitionRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemDefinitionResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemDefinitionResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] Definition;
+        
+        public GetItemDefinitionResponse() {
+        }
+        
+        public GetItemDefinitionResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, byte[] Definition) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Definition = Definition;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemType", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemTypeRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        public GetItemTypeRequest() {
+        }
+        
+        public GetItemTypeRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemTypeResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemTypeResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Type;
+        
+        public GetItemTypeResponse() {
+        }
+        
+        public GetItemTypeResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string Type) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Type = Type;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteItem", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class DeleteItemRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Item;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
         
         public DeleteItemRequest() {
         }
         
-        public DeleteItemRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Item) {
-            this.BatchHeader = BatchHeader;
-            this.Item = Item;
+        public DeleteItemRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteItemResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteItemResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class DeleteItemResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
         public DeleteItemResponse() {
@@ -5598,34 +6106,34 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="MoveItem", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="MoveItem", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class MoveItemRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Item;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public string Target;
         
         public MoveItemRequest() {
         }
         
-        public MoveItemRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Item, string Target) {
-            this.BatchHeader = BatchHeader;
-            this.Item = Item;
+        public MoveItemRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, string Target) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
             this.Target = Target;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="MoveItemResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="MoveItemResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class MoveItemResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
         public MoveItemResponse() {
@@ -5638,33 +6146,113 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListChildren", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InheritParentSecurity", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class InheritParentSecurityRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        public InheritParentSecurityRequest() {
+        }
+        
+        public InheritParentSecurityRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InheritParentSecurityResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class InheritParentSecurityResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public InheritParentSecurityResponse() {
+        }
+        
+        public InheritParentSecurityResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListItemHistory", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListItemHistoryRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        public ListItemHistoryRequest() {
+        }
+        
+        public ListItemHistoryRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListItemHistoryResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListItemHistoryResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.ItemHistorySnapshot[] ItemHistory;
+        
+        public ListItemHistoryResponse() {
+        }
+        
+        public ListItemHistoryResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.ItemHistorySnapshot[] ItemHistory) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ItemHistory = ItemHistory;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListChildren", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class ListChildrenRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Item;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public bool Recursive;
         
         public ListChildrenRequest() {
         }
         
-        public ListChildrenRequest(string Item, bool Recursive) {
-            this.Item = Item;
+        public ListChildrenRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, bool Recursive) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
             this.Recursive = Recursive;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListChildrenResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListChildrenResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class ListChildrenResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public CrissCrossLib.ReportWebService.CatalogItem[] CatalogItems;
         
         public ListChildrenResponse() {
@@ -5678,29 +6266,33 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListDependentItems", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListDependentItems", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class ListDependentItemsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Item;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
         
         public ListDependentItemsRequest() {
         }
         
-        public ListDependentItemsRequest(string Item) {
-            this.Item = Item;
+        public ListDependentItemsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListDependentItemsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListDependentItemsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class ListDependentItemsResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public CrissCrossLib.ReportWebService.CatalogItem[] CatalogItems;
         
         public ListDependentItemsResponse() {
@@ -5712,1663 +6304,10 @@ namespace CrissCrossLib.ReportWebService {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetPropertiesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ItemNamespaceHeader ItemNamespaceHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Item;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public CrissCrossLib.ReportWebService.Property[] Properties;
-        
-        public GetPropertiesRequest() {
-        }
-        
-        public GetPropertiesRequest(CrissCrossLib.ReportWebService.ItemNamespaceHeader ItemNamespaceHeader, string Item, CrissCrossLib.ReportWebService.Property[] Properties) {
-            this.ItemNamespaceHeader = ItemNamespaceHeader;
-            this.Item = Item;
-            this.Properties = Properties;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetPropertiesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Property[] Values;
-        
-        public GetPropertiesResponse() {
-        }
-        
-        public GetPropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Property[] Values) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Values = Values;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetPropertiesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Item;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public CrissCrossLib.ReportWebService.Property[] Properties;
-        
-        public SetPropertiesRequest() {
-        }
-        
-        public SetPropertiesRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Item, CrissCrossLib.ReportWebService.Property[] Properties) {
-            this.BatchHeader = BatchHeader;
-            this.Item = Item;
-            this.Properties = Properties;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetPropertiesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public SetPropertiesResponse() {
-        }
-        
-        public SetPropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemType", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetItemTypeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Item;
-        
-        public GetItemTypeRequest() {
-        }
-        
-        public GetItemTypeRequest(string Item) {
-            this.Item = Item;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemTypeResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetItemTypeResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.ItemTypeEnum Type;
-        
-        public GetItemTypeResponse() {
-        }
-        
-        public GetItemTypeResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.ItemTypeEnum Type) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Type = Type;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateFolder", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateFolderRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Folder;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string Parent;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public CrissCrossLib.ReportWebService.Property[] Properties;
-        
-        public CreateFolderRequest() {
-        }
-        
-        public CreateFolderRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Folder, string Parent, CrissCrossLib.ReportWebService.Property[] Properties) {
-            this.BatchHeader = BatchHeader;
-            this.Folder = Folder;
-            this.Parent = Parent;
-            this.Properties = Properties;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateFolderResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateFolderResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public CreateFolderResponse() {
-        }
-        
-        public CreateFolderResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateReport", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateReportRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string Parent;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public bool Overwrite;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Definition;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=4)]
-        public CrissCrossLib.ReportWebService.Property[] Properties;
-        
-        public CreateReportRequest() {
-        }
-        
-        public CreateReportRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Report, string Parent, bool Overwrite, byte[] Definition, CrissCrossLib.ReportWebService.Property[] Properties) {
-            this.BatchHeader = BatchHeader;
-            this.Report = Report;
-            this.Parent = Parent;
-            this.Overwrite = Overwrite;
-            this.Definition = Definition;
-            this.Properties = Properties;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateReportResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateReportResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Warning[] Warnings;
-        
-        public CreateReportResponse() {
-        }
-        
-        public CreateReportResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Warning[] Warnings) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Warnings = Warnings;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetReportDefinition", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetReportDefinitionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        public GetReportDefinitionRequest() {
-        }
-        
-        public GetReportDefinitionRequest(string Report) {
-            this.Report = Report;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetReportDefinitionResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetReportDefinitionResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Definition;
-        
-        public GetReportDefinitionResponse() {
-        }
-        
-        public GetReportDefinitionResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, byte[] Definition) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Definition = Definition;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetReportDefinition", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetReportDefinitionRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Definition;
-        
-        public SetReportDefinitionRequest() {
-        }
-        
-        public SetReportDefinitionRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Report, byte[] Definition) {
-            this.BatchHeader = BatchHeader;
-            this.Report = Report;
-            this.Definition = Definition;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetReportDefinitionResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetReportDefinitionResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Warning[] Warnings;
-        
-        public SetReportDefinitionResponse() {
-        }
-        
-        public SetReportDefinitionResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Warning[] Warnings) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Warnings = Warnings;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateResource", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateResourceRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Resource;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string Parent;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public bool Overwrite;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Contents;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=4)]
-        public string MimeType;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=5)]
-        public CrissCrossLib.ReportWebService.Property[] Properties;
-        
-        public CreateResourceRequest() {
-        }
-        
-        public CreateResourceRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Resource, string Parent, bool Overwrite, byte[] Contents, string MimeType, CrissCrossLib.ReportWebService.Property[] Properties) {
-            this.BatchHeader = BatchHeader;
-            this.Resource = Resource;
-            this.Parent = Parent;
-            this.Overwrite = Overwrite;
-            this.Contents = Contents;
-            this.MimeType = MimeType;
-            this.Properties = Properties;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateResourceResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateResourceResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public CreateResourceResponse() {
-        }
-        
-        public CreateResourceResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetResourceContents", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetResourceContentsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Resource;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Contents;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public string MimeType;
-        
-        public SetResourceContentsRequest() {
-        }
-        
-        public SetResourceContentsRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Resource, byte[] Contents, string MimeType) {
-            this.BatchHeader = BatchHeader;
-            this.Resource = Resource;
-            this.Contents = Contents;
-            this.MimeType = MimeType;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetResourceContentsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetResourceContentsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public SetResourceContentsResponse() {
-        }
-        
-        public SetResourceContentsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetResourceContents", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetResourceContentsRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Resource;
-        
-        public GetResourceContentsRequest() {
-        }
-        
-        public GetResourceContentsRequest(string Resource) {
-            this.Resource = Resource;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetResourceContentsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetResourceContentsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Contents;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string MimeType;
-        
-        public GetResourceContentsResponse() {
-        }
-        
-        public GetResourceContentsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, byte[] Contents, string MimeType) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Contents = Contents;
-            this.MimeType = MimeType;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetReportParameters", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetReportParametersRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string HistoryID;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public bool ForRendering;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=3)]
-        public CrissCrossLib.ReportWebService.ParameterValue[] Values;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=4)]
-        public CrissCrossLib.ReportWebService.DataSourceCredentials[] Credentials;
-        
-        public GetReportParametersRequest() {
-        }
-        
-        public GetReportParametersRequest(string Report, string HistoryID, bool ForRendering, CrissCrossLib.ReportWebService.ParameterValue[] Values, CrissCrossLib.ReportWebService.DataSourceCredentials[] Credentials) {
-            this.Report = Report;
-            this.HistoryID = HistoryID;
-            this.ForRendering = ForRendering;
-            this.Values = Values;
-            this.Credentials = Credentials;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetReportParametersResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetReportParametersResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.ReportParameter[] Parameters;
-        
-        public GetReportParametersResponse() {
-        }
-        
-        public GetReportParametersResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.ReportParameter[] Parameters) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Parameters = Parameters;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetReportParameters", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetReportParametersRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public CrissCrossLib.ReportWebService.ReportParameter[] Parameters;
-        
-        public SetReportParametersRequest() {
-        }
-        
-        public SetReportParametersRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Report, CrissCrossLib.ReportWebService.ReportParameter[] Parameters) {
-            this.BatchHeader = BatchHeader;
-            this.Report = Report;
-            this.Parameters = Parameters;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetReportParametersResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetReportParametersResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public SetReportParametersResponse() {
-        }
-        
-        public SetReportParametersResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateLinkedReport", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateLinkedReportRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string Parent;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public string Link;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=3)]
-        public CrissCrossLib.ReportWebService.Property[] Properties;
-        
-        public CreateLinkedReportRequest() {
-        }
-        
-        public CreateLinkedReportRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Report, string Parent, string Link, CrissCrossLib.ReportWebService.Property[] Properties) {
-            this.BatchHeader = BatchHeader;
-            this.Report = Report;
-            this.Parent = Parent;
-            this.Link = Link;
-            this.Properties = Properties;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateLinkedReportResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateLinkedReportResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public CreateLinkedReportResponse() {
-        }
-        
-        public CreateLinkedReportResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetReportLink", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetReportLinkRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        public GetReportLinkRequest() {
-        }
-        
-        public GetReportLinkRequest(string Report) {
-            this.Report = Report;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetReportLinkResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetReportLinkResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Link;
-        
-        public GetReportLinkResponse() {
-        }
-        
-        public GetReportLinkResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string Link) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Link = Link;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetReportLink", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetReportLinkRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string Link;
-        
-        public SetReportLinkRequest() {
-        }
-        
-        public SetReportLinkRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Report, string Link) {
-            this.BatchHeader = BatchHeader;
-            this.Report = Report;
-            this.Link = Link;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetReportLinkResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetReportLinkResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public SetReportLinkResponse() {
-        }
-        
-        public SetReportLinkResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRenderResource", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetRenderResourceRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Format;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string DeviceInfo;
-        
-        public GetRenderResourceRequest() {
-        }
-        
-        public GetRenderResourceRequest(string Format, string DeviceInfo) {
-            this.Format = Format;
-            this.DeviceInfo = DeviceInfo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRenderResourceResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetRenderResourceResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Result;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string MimeType;
-        
-        public GetRenderResourceResponse() {
-        }
-        
-        public GetRenderResourceResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, byte[] Result, string MimeType) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Result = Result;
-            this.MimeType = MimeType;
-        }
-    }
-    
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum ExecutionSettingEnum {
-        
-        /// <remarks/>
-        Live,
-        
-        /// <remarks/>
-        Snapshot,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetExecutionOptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetExecutionOptionsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public CrissCrossLib.ReportWebService.ExecutionSettingEnum ExecutionSetting;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute("NoSchedule", typeof(NoSchedule))]
-        [System.Xml.Serialization.XmlElementAttribute("ScheduleDefinition", typeof(ScheduleDefinition))]
-        [System.Xml.Serialization.XmlElementAttribute("ScheduleReference", typeof(ScheduleReference))]
-        public CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item;
-        
-        public SetExecutionOptionsRequest() {
-        }
-        
-        public SetExecutionOptionsRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Report, CrissCrossLib.ReportWebService.ExecutionSettingEnum ExecutionSetting, CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item) {
-            this.BatchHeader = BatchHeader;
-            this.Report = Report;
-            this.ExecutionSetting = ExecutionSetting;
-            this.Item = Item;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetExecutionOptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetExecutionOptionsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public SetExecutionOptionsResponse() {
-        }
-        
-        public SetExecutionOptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetExecutionOptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetExecutionOptionsRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        public GetExecutionOptionsRequest() {
-        }
-        
-        public GetExecutionOptionsRequest(string Report) {
-            this.Report = Report;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetExecutionOptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetExecutionOptionsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.ExecutionSettingEnum ExecutionSetting;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute("NoSchedule", typeof(NoSchedule))]
-        [System.Xml.Serialization.XmlElementAttribute("ScheduleDefinition", typeof(ScheduleDefinition))]
-        [System.Xml.Serialization.XmlElementAttribute("ScheduleReference", typeof(ScheduleReference))]
-        public CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item;
-        
-        public GetExecutionOptionsResponse() {
-        }
-        
-        public GetExecutionOptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.ExecutionSettingEnum ExecutionSetting, CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.ExecutionSetting = ExecutionSetting;
-            this.Item = Item;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetCacheOptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetCacheOptionsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public bool CacheReport;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute("ScheduleExpiration", typeof(ScheduleExpiration))]
-        [System.Xml.Serialization.XmlElementAttribute("TimeExpiration", typeof(TimeExpiration))]
-        public CrissCrossLib.ReportWebService.ExpirationDefinition Item;
-        
-        public SetCacheOptionsRequest() {
-        }
-        
-        public SetCacheOptionsRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Report, bool CacheReport, CrissCrossLib.ReportWebService.ExpirationDefinition Item) {
-            this.BatchHeader = BatchHeader;
-            this.Report = Report;
-            this.CacheReport = CacheReport;
-            this.Item = Item;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetCacheOptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetCacheOptionsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public SetCacheOptionsResponse() {
-        }
-        
-        public SetCacheOptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCacheOptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetCacheOptionsRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        public GetCacheOptionsRequest() {
-        }
-        
-        public GetCacheOptionsRequest(string Report) {
-            this.Report = Report;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCacheOptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetCacheOptionsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public bool CacheReport;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute("ScheduleExpiration", typeof(ScheduleExpiration))]
-        [System.Xml.Serialization.XmlElementAttribute("TimeExpiration", typeof(TimeExpiration))]
-        public CrissCrossLib.ReportWebService.ExpirationDefinition Item;
-        
-        public GetCacheOptionsResponse() {
-        }
-        
-        public GetCacheOptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, bool CacheReport, CrissCrossLib.ReportWebService.ExpirationDefinition Item) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.CacheReport = CacheReport;
-            this.Item = Item;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateReportExecutionSnapshot", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class UpdateReportExecutionSnapshotRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        public UpdateReportExecutionSnapshotRequest() {
-        }
-        
-        public UpdateReportExecutionSnapshotRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Report) {
-            this.BatchHeader = BatchHeader;
-            this.Report = Report;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateReportExecutionSnapshotResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class UpdateReportExecutionSnapshotResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public UpdateReportExecutionSnapshotResponse() {
-        }
-        
-        public UpdateReportExecutionSnapshotResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="FlushCache", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class FlushCacheRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        public FlushCacheRequest() {
-        }
-        
-        public FlushCacheRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Report) {
-            this.BatchHeader = BatchHeader;
-            this.Report = Report;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="FlushCacheResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class FlushCacheResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public FlushCacheResponse() {
-        }
-        
-        public FlushCacheResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListJobs", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListJobsRequest {
-        
-        public ListJobsRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListJobsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListJobsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Job[] Jobs;
-        
-        public ListJobsResponse() {
-        }
-        
-        public ListJobsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Job[] Jobs) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Jobs = Jobs;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CancelJob", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CancelJobRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string JobID;
-        
-        public CancelJobRequest() {
-        }
-        
-        public CancelJobRequest(string JobID) {
-            this.JobID = JobID;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CancelJobResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CancelJobResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public bool CancelJobResult;
-        
-        public CancelJobResponse() {
-        }
-        
-        public CancelJobResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, bool CancelJobResult) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.CancelJobResult = CancelJobResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateDataSource", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateDataSourceRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string DataSource;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string Parent;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public bool Overwrite;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=3)]
-        public CrissCrossLib.ReportWebService.DataSourceDefinition Definition;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=4)]
-        public CrissCrossLib.ReportWebService.Property[] Properties;
-        
-        public CreateDataSourceRequest() {
-        }
-        
-        public CreateDataSourceRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string DataSource, string Parent, bool Overwrite, CrissCrossLib.ReportWebService.DataSourceDefinition Definition, CrissCrossLib.ReportWebService.Property[] Properties) {
-            this.BatchHeader = BatchHeader;
-            this.DataSource = DataSource;
-            this.Parent = Parent;
-            this.Overwrite = Overwrite;
-            this.Definition = Definition;
-            this.Properties = Properties;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateDataSourceResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateDataSourceResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public CreateDataSourceResponse() {
-        }
-        
-        public CreateDataSourceResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDataSourceContents", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetDataSourceContentsRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string DataSource;
-        
-        public GetDataSourceContentsRequest() {
-        }
-        
-        public GetDataSourceContentsRequest(string DataSource) {
-            this.DataSource = DataSource;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDataSourceContentsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetDataSourceContentsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.DataSourceDefinition Definition;
-        
-        public GetDataSourceContentsResponse() {
-        }
-        
-        public GetDataSourceContentsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.DataSourceDefinition Definition) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Definition = Definition;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetDataSourceContents", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetDataSourceContentsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string DataSource;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public CrissCrossLib.ReportWebService.DataSourceDefinition Definition;
-        
-        public SetDataSourceContentsRequest() {
-        }
-        
-        public SetDataSourceContentsRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string DataSource, CrissCrossLib.ReportWebService.DataSourceDefinition Definition) {
-            this.BatchHeader = BatchHeader;
-            this.DataSource = DataSource;
-            this.Definition = Definition;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetDataSourceContentsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetDataSourceContentsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public SetDataSourceContentsResponse() {
-        }
-        
-        public SetDataSourceContentsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EnableDataSource", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class EnableDataSourceRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string DataSource;
-        
-        public EnableDataSourceRequest() {
-        }
-        
-        public EnableDataSourceRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string DataSource) {
-            this.BatchHeader = BatchHeader;
-            this.DataSource = DataSource;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EnableDataSourceResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class EnableDataSourceResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public EnableDataSourceResponse() {
-        }
-        
-        public EnableDataSourceResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DisableDataSource", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class DisableDataSourceRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string DataSource;
-        
-        public DisableDataSourceRequest() {
-        }
-        
-        public DisableDataSourceRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string DataSource) {
-            this.BatchHeader = BatchHeader;
-            this.DataSource = DataSource;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DisableDataSourceResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class DisableDataSourceResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public DisableDataSourceResponse() {
-        }
-        
-        public DisableDataSourceResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemDataSources", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetItemDataSourcesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Item;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public CrissCrossLib.ReportWebService.DataSource[] DataSources;
-        
-        public SetItemDataSourcesRequest() {
-        }
-        
-        public SetItemDataSourcesRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Item, CrissCrossLib.ReportWebService.DataSource[] DataSources) {
-            this.BatchHeader = BatchHeader;
-            this.Item = Item;
-            this.DataSources = DataSources;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemDataSourcesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetItemDataSourcesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public SetItemDataSourcesResponse() {
-        }
-        
-        public SetItemDataSourcesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemDataSources", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetItemDataSourcesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Item;
-        
-        public GetItemDataSourcesRequest() {
-        }
-        
-        public GetItemDataSourcesRequest(string Item) {
-            this.Item = Item;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemDataSourcesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetItemDataSourcesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.DataSource[] DataSources;
-        
-        public GetItemDataSourcesResponse() {
-        }
-        
-        public GetItemDataSourcesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.DataSource[] DataSources) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.DataSources = DataSources;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemDataSourcePrompts", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetItemDataSourcePromptsRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Item;
-        
-        public GetItemDataSourcePromptsRequest() {
-        }
-        
-        public GetItemDataSourcePromptsRequest(string Item) {
-            this.Item = Item;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemDataSourcePromptsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetItemDataSourcePromptsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.DataSourcePrompt[] DataSourcePrompts;
-        
-        public GetItemDataSourcePromptsResponse() {
-        }
-        
-        public GetItemDataSourcePromptsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.DataSourcePrompt[] DataSourcePrompts) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.DataSourcePrompts = DataSourcePrompts;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateReportHistorySnapshot", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateReportHistorySnapshotRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        public CreateReportHistorySnapshotRequest() {
-        }
-        
-        public CreateReportHistorySnapshotRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Report) {
-            this.BatchHeader = BatchHeader;
-            this.Report = Report;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateReportHistorySnapshotResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateReportHistorySnapshotResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string HistoryID;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public CrissCrossLib.ReportWebService.Warning[] Warnings;
-        
-        public CreateReportHistorySnapshotResponse() {
-        }
-        
-        public CreateReportHistorySnapshotResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string HistoryID, CrissCrossLib.ReportWebService.Warning[] Warnings) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.HistoryID = HistoryID;
-            this.Warnings = Warnings;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetReportHistoryOptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetReportHistoryOptionsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public bool EnableManualSnapshotCreation;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public bool KeepExecutionSnapshots;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute("NoSchedule", typeof(NoSchedule))]
-        [System.Xml.Serialization.XmlElementAttribute("ScheduleDefinition", typeof(ScheduleDefinition))]
-        [System.Xml.Serialization.XmlElementAttribute("ScheduleReference", typeof(ScheduleReference))]
-        public CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item;
-        
-        public SetReportHistoryOptionsRequest() {
-        }
-        
-        public SetReportHistoryOptionsRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Report, bool EnableManualSnapshotCreation, bool KeepExecutionSnapshots, CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item) {
-            this.BatchHeader = BatchHeader;
-            this.Report = Report;
-            this.EnableManualSnapshotCreation = EnableManualSnapshotCreation;
-            this.KeepExecutionSnapshots = KeepExecutionSnapshots;
-            this.Item = Item;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetReportHistoryOptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetReportHistoryOptionsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public SetReportHistoryOptionsResponse() {
-        }
-        
-        public SetReportHistoryOptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetReportHistoryOptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetReportHistoryOptionsRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        public GetReportHistoryOptionsRequest() {
-        }
-        
-        public GetReportHistoryOptionsRequest(string Report) {
-            this.Report = Report;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetReportHistoryOptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetReportHistoryOptionsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public bool EnableManualSnapshotCreation;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public bool KeepExecutionSnapshots;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute("NoSchedule", typeof(NoSchedule))]
-        [System.Xml.Serialization.XmlElementAttribute("ScheduleDefinition", typeof(ScheduleDefinition))]
-        [System.Xml.Serialization.XmlElementAttribute("ScheduleReference", typeof(ScheduleReference))]
-        public CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item;
-        
-        public GetReportHistoryOptionsResponse() {
-        }
-        
-        public GetReportHistoryOptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, bool EnableManualSnapshotCreation, bool KeepExecutionSnapshots, CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.EnableManualSnapshotCreation = EnableManualSnapshotCreation;
-            this.KeepExecutionSnapshots = KeepExecutionSnapshots;
-            this.Item = Item;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetReportHistoryLimit", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetReportHistoryLimitRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public bool UseSystem;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public int HistoryLimit;
-        
-        public SetReportHistoryLimitRequest() {
-        }
-        
-        public SetReportHistoryLimitRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Report, bool UseSystem, int HistoryLimit) {
-            this.BatchHeader = BatchHeader;
-            this.Report = Report;
-            this.UseSystem = UseSystem;
-            this.HistoryLimit = HistoryLimit;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetReportHistoryLimitResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetReportHistoryLimitResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public SetReportHistoryLimitResponse() {
-        }
-        
-        public SetReportHistoryLimitResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetReportHistoryLimit", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetReportHistoryLimitRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        public GetReportHistoryLimitRequest() {
-        }
-        
-        public GetReportHistoryLimitRequest(string Report) {
-            this.Report = Report;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetReportHistoryLimitResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetReportHistoryLimitResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public int HistoryLimit;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public bool IsSystem;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public int SystemLimit;
-        
-        public GetReportHistoryLimitResponse() {
-        }
-        
-        public GetReportHistoryLimitResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, int HistoryLimit, bool IsSystem, int SystemLimit) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.HistoryLimit = HistoryLimit;
-            this.IsSystem = IsSystem;
-            this.SystemLimit = SystemLimit;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListReportHistory", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListReportHistoryRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        public ListReportHistoryRequest() {
-        }
-        
-        public ListReportHistoryRequest(string Report) {
-            this.Report = Report;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListReportHistoryResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListReportHistoryResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.ReportHistorySnapshot[] ReportHistory;
-        
-        public ListReportHistoryResponse() {
-        }
-        
-        public ListReportHistoryResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.ReportHistorySnapshot[] ReportHistory) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.ReportHistory = ReportHistory;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteReportHistorySnapshot", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class DeleteReportHistorySnapshotRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string HistoryID;
-        
-        public DeleteReportHistorySnapshotRequest() {
-        }
-        
-        public DeleteReportHistorySnapshotRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Report, string HistoryID) {
-            this.BatchHeader = BatchHeader;
-            this.Report = Report;
-            this.HistoryID = HistoryID;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteReportHistorySnapshotResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class DeleteReportHistorySnapshotResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public DeleteReportHistorySnapshotResponse() {
-        }
-        
-        public DeleteReportHistorySnapshotResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
     public enum BooleanOperatorEnum {
         
         /// <remarks/>
@@ -7380,37 +6319,45 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="FindItems", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FindItems", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class FindItemsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string Folder;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public CrissCrossLib.ReportWebService.BooleanOperatorEnum BooleanOperator;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public CrissCrossLib.ReportWebService.SearchCondition[] Conditions;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public CrissCrossLib.ReportWebService.Property[] SearchOptions;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
+        public CrissCrossLib.ReportWebService.SearchCondition[] SearchConditions;
         
         public FindItemsRequest() {
         }
         
-        public FindItemsRequest(string Folder, CrissCrossLib.ReportWebService.BooleanOperatorEnum BooleanOperator, CrissCrossLib.ReportWebService.SearchCondition[] Conditions) {
+        public FindItemsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Folder, CrissCrossLib.ReportWebService.BooleanOperatorEnum BooleanOperator, CrissCrossLib.ReportWebService.Property[] SearchOptions, CrissCrossLib.ReportWebService.SearchCondition[] SearchConditions) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.Folder = Folder;
             this.BooleanOperator = BooleanOperator;
-            this.Conditions = Conditions;
+            this.SearchOptions = SearchOptions;
+            this.SearchConditions = SearchConditions;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="FindItemsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FindItemsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class FindItemsResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public CrissCrossLib.ReportWebService.CatalogItem[] Items;
         
         public FindItemsResponse() {
@@ -7424,456 +6371,331 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateSchedule", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateScheduleRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListParents", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListParentsRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Name;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public CrissCrossLib.ReportWebService.ScheduleDefinition ScheduleDefinition;
-        
-        public CreateScheduleRequest() {
+        public ListParentsRequest() {
         }
         
-        public CreateScheduleRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Name, CrissCrossLib.ReportWebService.ScheduleDefinition ScheduleDefinition) {
-            this.BatchHeader = BatchHeader;
-            this.Name = Name;
-            this.ScheduleDefinition = ScheduleDefinition;
+        public ListParentsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateScheduleResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateScheduleResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListParentsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListParentsResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string ScheduleID;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.CatalogItem[] ListParentsResult;
         
-        public CreateScheduleResponse() {
+        public ListParentsResponse() {
         }
         
-        public CreateScheduleResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string ScheduleID) {
+        public ListParentsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.CatalogItem[] ListParentsResult) {
             this.ServerInfoHeader = ServerInfoHeader;
-            this.ScheduleID = ScheduleID;
+            this.ListParentsResult = ListParentsResult;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteSchedule", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class DeleteScheduleRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateFolder", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateFolderRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string ScheduleID;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Folder;
         
-        public DeleteScheduleRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string Parent;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public CrissCrossLib.ReportWebService.Property[] Properties;
+        
+        public CreateFolderRequest() {
         }
         
-        public DeleteScheduleRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string ScheduleID) {
-            this.BatchHeader = BatchHeader;
-            this.ScheduleID = ScheduleID;
+        public CreateFolderRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Folder, string Parent, CrissCrossLib.ReportWebService.Property[] Properties) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Folder = Folder;
+            this.Parent = Parent;
+            this.Properties = Properties;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteScheduleResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class DeleteScheduleResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateFolderResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateFolderResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        public DeleteScheduleResponse() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.CatalogItem ItemInfo;
+        
+        public CreateFolderResponse() {
         }
         
-        public DeleteScheduleResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+        public CreateFolderResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.CatalogItem ItemInfo) {
             this.ServerInfoHeader = ServerInfoHeader;
+            this.ItemInfo = ItemInfo;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetScheduleProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetSchedulePropertiesRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetPropertiesRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Name;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string ScheduleID;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public CrissCrossLib.ReportWebService.Property[] Properties;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public CrissCrossLib.ReportWebService.ScheduleDefinition ScheduleDefinition;
-        
-        public SetSchedulePropertiesRequest() {
+        public SetPropertiesRequest() {
         }
         
-        public SetSchedulePropertiesRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Name, string ScheduleID, CrissCrossLib.ReportWebService.ScheduleDefinition ScheduleDefinition) {
-            this.BatchHeader = BatchHeader;
-            this.Name = Name;
-            this.ScheduleID = ScheduleID;
-            this.ScheduleDefinition = ScheduleDefinition;
+        public SetPropertiesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, CrissCrossLib.ReportWebService.Property[] Properties) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.Properties = Properties;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetSchedulePropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetSchedulePropertiesResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetPropertiesResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        public SetSchedulePropertiesResponse() {
+        public SetPropertiesResponse() {
         }
         
-        public SetSchedulePropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetScheduleProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetSchedulePropertiesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string ScheduleID;
-        
-        public GetSchedulePropertiesRequest() {
-        }
-        
-        public GetSchedulePropertiesRequest(string ScheduleID) {
-            this.ScheduleID = ScheduleID;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSchedulePropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetSchedulePropertiesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Schedule Schedule;
-        
-        public GetSchedulePropertiesResponse() {
-        }
-        
-        public GetSchedulePropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Schedule Schedule) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Schedule = Schedule;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListScheduledReports", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListScheduledReportsRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string ScheduleID;
-        
-        public ListScheduledReportsRequest() {
-        }
-        
-        public ListScheduledReportsRequest(string ScheduleID) {
-            this.ScheduleID = ScheduleID;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListScheduledReportsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListScheduledReportsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.CatalogItem[] Reports;
-        
-        public ListScheduledReportsResponse() {
-        }
-        
-        public ListScheduledReportsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.CatalogItem[] Reports) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Reports = Reports;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSchedules", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListSchedulesRequest {
-        
-        public ListSchedulesRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSchedulesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListSchedulesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Schedule[] Schedules;
-        
-        public ListSchedulesResponse() {
-        }
-        
-        public ListSchedulesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Schedule[] Schedules) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Schedules = Schedules;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PauseSchedule", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class PauseScheduleRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string ScheduleID;
-        
-        public PauseScheduleRequest() {
-        }
-        
-        public PauseScheduleRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string ScheduleID) {
-            this.BatchHeader = BatchHeader;
-            this.ScheduleID = ScheduleID;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PauseScheduleResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class PauseScheduleResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public PauseScheduleResponse() {
-        }
-        
-        public PauseScheduleResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+        public SetPropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
             this.ServerInfoHeader = ServerInfoHeader;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ResumeSchedule", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ResumeScheduleRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetPropertiesRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ItemNamespaceHeader ItemNamespaceHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string ScheduleID;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        public ResumeScheduleRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public CrissCrossLib.ReportWebService.Property[] Properties;
+        
+        public GetPropertiesRequest() {
         }
         
-        public ResumeScheduleRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string ScheduleID) {
-            this.BatchHeader = BatchHeader;
-            this.ScheduleID = ScheduleID;
+        public GetPropertiesRequest(CrissCrossLib.ReportWebService.ItemNamespaceHeader ItemNamespaceHeader, CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, CrissCrossLib.ReportWebService.Property[] Properties) {
+            this.ItemNamespaceHeader = ItemNamespaceHeader;
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.Properties = Properties;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ResumeScheduleResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ResumeScheduleResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetPropertiesResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        public ResumeScheduleResponse() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Property[] Values;
+        
+        public GetPropertiesResponse() {
         }
         
-        public ResumeScheduleResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+        public GetPropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Property[] Values) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Values = Values;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemReferences", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetItemReferencesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public CrissCrossLib.ReportWebService.ItemReference[] ItemReferences;
+        
+        public SetItemReferencesRequest() {
+        }
+        
+        public SetItemReferencesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, CrissCrossLib.ReportWebService.ItemReference[] ItemReferences) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.ItemReferences = ItemReferences;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemReferencesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetItemReferencesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetItemReferencesResponse() {
+        }
+        
+        public SetItemReferencesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
             this.ServerInfoHeader = ServerInfoHeader;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateSubscription", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateSubscriptionRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemReferences", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemReferencesRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string ReferenceItemType;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public string Description;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=3)]
-        public string EventType;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=4)]
-        public string MatchData;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=5)]
-        public CrissCrossLib.ReportWebService.ParameterValue[] Parameters;
-        
-        public CreateSubscriptionRequest() {
+        public GetItemReferencesRequest() {
         }
         
-        public CreateSubscriptionRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Report, CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings, string Description, string EventType, string MatchData, CrissCrossLib.ReportWebService.ParameterValue[] Parameters) {
-            this.BatchHeader = BatchHeader;
-            this.Report = Report;
-            this.ExtensionSettings = ExtensionSettings;
-            this.Description = Description;
-            this.EventType = EventType;
-            this.MatchData = MatchData;
-            this.Parameters = Parameters;
+        public GetItemReferencesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, string ReferenceItemType) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.ReferenceItemType = ReferenceItemType;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateSubscriptionResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateSubscriptionResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemReferencesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemReferencesResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string SubscriptionID;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.ItemReferenceData[] ItemReferences;
         
-        public CreateSubscriptionResponse() {
+        public GetItemReferencesResponse() {
         }
         
-        public CreateSubscriptionResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string SubscriptionID) {
+        public GetItemReferencesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.ItemReferenceData[] ItemReferences) {
             this.ServerInfoHeader = ServerInfoHeader;
-            this.SubscriptionID = SubscriptionID;
+            this.ItemReferences = ItemReferences;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateDataDrivenSubscription", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateDataDrivenSubscriptionRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListItemTypes", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListItemTypesRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public CrissCrossLib.ReportWebService.DataRetrievalPlan DataRetrievalPlan;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=3)]
-        public string Description;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=4)]
-        public string EventType;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=5)]
-        public string MatchData;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=6)]
-        public CrissCrossLib.ReportWebService.ParameterValueOrFieldReference[] Parameters;
-        
-        public CreateDataDrivenSubscriptionRequest() {
+        public ListItemTypesRequest() {
         }
         
-        public CreateDataDrivenSubscriptionRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Report, CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings, CrissCrossLib.ReportWebService.DataRetrievalPlan DataRetrievalPlan, string Description, string EventType, string MatchData, CrissCrossLib.ReportWebService.ParameterValueOrFieldReference[] Parameters) {
-            this.BatchHeader = BatchHeader;
-            this.Report = Report;
-            this.ExtensionSettings = ExtensionSettings;
-            this.DataRetrievalPlan = DataRetrievalPlan;
-            this.Description = Description;
-            this.EventType = EventType;
-            this.MatchData = MatchData;
-            this.Parameters = Parameters;
+        public ListItemTypesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateDataDrivenSubscriptionResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateDataDrivenSubscriptionResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListItemTypesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListItemTypesResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string SubscriptionID;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string[] ListItemTypesResult;
         
-        public CreateDataDrivenSubscriptionResponse() {
+        public ListItemTypesResponse() {
         }
         
-        public CreateDataDrivenSubscriptionResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string SubscriptionID) {
+        public ListItemTypesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] ListItemTypesResult) {
             this.ServerInfoHeader = ServerInfoHeader;
-            this.SubscriptionID = SubscriptionID;
+            this.ListItemTypesResult = ListItemTypesResult;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetSubscriptionProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetSubscriptionProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class SetSubscriptionPropertiesRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string SubscriptionID;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
         public string Description;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
         public string EventType;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=4)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=4)]
         public string MatchData;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=5)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=5)]
         public CrissCrossLib.ReportWebService.ParameterValue[] Parameters;
         
         public SetSubscriptionPropertiesRequest() {
         }
         
-        public SetSubscriptionPropertiesRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string SubscriptionID, CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings, string Description, string EventType, string MatchData, CrissCrossLib.ReportWebService.ParameterValue[] Parameters) {
-            this.BatchHeader = BatchHeader;
+        public SetSubscriptionPropertiesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string SubscriptionID, CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings, string Description, string EventType, string MatchData, CrissCrossLib.ReportWebService.ParameterValue[] Parameters) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.SubscriptionID = SubscriptionID;
             this.ExtensionSettings = ExtensionSettings;
             this.Description = Description;
@@ -7885,10 +6707,10 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetSubscriptionPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetSubscriptionPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class SetSubscriptionPropertiesResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
         public SetSubscriptionPropertiesResponse() {
@@ -7901,110 +6723,54 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetDataDrivenSubscriptionProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetDataDrivenSubscriptionPropertiesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string DataDrivenSubscriptionID;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public CrissCrossLib.ReportWebService.DataRetrievalPlan DataRetrievalPlan;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=3)]
-        public string Description;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=4)]
-        public string EventType;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=5)]
-        public string MatchData;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=6)]
-        public CrissCrossLib.ReportWebService.ParameterValueOrFieldReference[] Parameters;
-        
-        public SetDataDrivenSubscriptionPropertiesRequest() {
-        }
-        
-        public SetDataDrivenSubscriptionPropertiesRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string DataDrivenSubscriptionID, CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings, CrissCrossLib.ReportWebService.DataRetrievalPlan DataRetrievalPlan, string Description, string EventType, string MatchData, CrissCrossLib.ReportWebService.ParameterValueOrFieldReference[] Parameters) {
-            this.BatchHeader = BatchHeader;
-            this.DataDrivenSubscriptionID = DataDrivenSubscriptionID;
-            this.ExtensionSettings = ExtensionSettings;
-            this.DataRetrievalPlan = DataRetrievalPlan;
-            this.Description = Description;
-            this.EventType = EventType;
-            this.MatchData = MatchData;
-            this.Parameters = Parameters;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetDataDrivenSubscriptionPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetDataDrivenSubscriptionPropertiesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public SetDataDrivenSubscriptionPropertiesResponse() {
-        }
-        
-        public SetDataDrivenSubscriptionPropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSubscriptionProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSubscriptionProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class GetSubscriptionPropertiesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string SubscriptionID;
         
         public GetSubscriptionPropertiesRequest() {
         }
         
-        public GetSubscriptionPropertiesRequest(string SubscriptionID) {
+        public GetSubscriptionPropertiesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string SubscriptionID) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.SubscriptionID = SubscriptionID;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSubscriptionPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSubscriptionPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class GetSubscriptionPropertiesResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string Owner;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
         public string Description;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
         public CrissCrossLib.ReportWebService.ActiveState Active;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=4)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=4)]
         public string Status;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=5)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=5)]
         public string EventType;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=6)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=6)]
         public string MatchData;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=7)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=7)]
         public CrissCrossLib.ReportWebService.ParameterValue[] Parameters;
         
         public GetSubscriptionPropertiesResponse() {
@@ -8025,53 +6791,117 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDataDrivenSubscriptionProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetDataDrivenSubscriptionProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetDataDrivenSubscriptionPropertiesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string DataDrivenSubscriptionID;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public CrissCrossLib.ReportWebService.DataRetrievalPlan DataRetrievalPlan;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
+        public string Description;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=4)]
+        public string EventType;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=5)]
+        public string MatchData;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=6)]
+        public CrissCrossLib.ReportWebService.ParameterValueOrFieldReference[] Parameters;
+        
+        public SetDataDrivenSubscriptionPropertiesRequest() {
+        }
+        
+        public SetDataDrivenSubscriptionPropertiesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string DataDrivenSubscriptionID, CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings, CrissCrossLib.ReportWebService.DataRetrievalPlan DataRetrievalPlan, string Description, string EventType, string MatchData, CrissCrossLib.ReportWebService.ParameterValueOrFieldReference[] Parameters) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.DataDrivenSubscriptionID = DataDrivenSubscriptionID;
+            this.ExtensionSettings = ExtensionSettings;
+            this.DataRetrievalPlan = DataRetrievalPlan;
+            this.Description = Description;
+            this.EventType = EventType;
+            this.MatchData = MatchData;
+            this.Parameters = Parameters;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetDataDrivenSubscriptionPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetDataDrivenSubscriptionPropertiesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetDataDrivenSubscriptionPropertiesResponse() {
+        }
+        
+        public SetDataDrivenSubscriptionPropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDataDrivenSubscriptionProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class GetDataDrivenSubscriptionPropertiesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string DataDrivenSubscriptionID;
         
         public GetDataDrivenSubscriptionPropertiesRequest() {
         }
         
-        public GetDataDrivenSubscriptionPropertiesRequest(string DataDrivenSubscriptionID) {
+        public GetDataDrivenSubscriptionPropertiesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string DataDrivenSubscriptionID) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.DataDrivenSubscriptionID = DataDrivenSubscriptionID;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDataDrivenSubscriptionPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDataDrivenSubscriptionPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class GetDataDrivenSubscriptionPropertiesResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string Owner;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
         public CrissCrossLib.ReportWebService.DataRetrievalPlan DataRetrievalPlan;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
         public string Description;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=4)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=4)]
         public CrissCrossLib.ReportWebService.ActiveState Active;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=5)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=5)]
         public string Status;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=6)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=6)]
         public string EventType;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=7)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=7)]
         public string MatchData;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=8)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=8)]
         public CrissCrossLib.ReportWebService.ParameterValueOrFieldReference[] Parameters;
         
         public GetDataDrivenSubscriptionPropertiesResponse() {
@@ -8093,30 +6923,30 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteSubscription", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteSubscription", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class DeleteSubscriptionRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string SubscriptionID;
         
         public DeleteSubscriptionRequest() {
         }
         
-        public DeleteSubscriptionRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string SubscriptionID) {
-            this.BatchHeader = BatchHeader;
+        public DeleteSubscriptionRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string SubscriptionID) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.SubscriptionID = SubscriptionID;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteSubscriptionResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteSubscriptionResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class DeleteSubscriptionResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
         public DeleteSubscriptionResponse() {
@@ -8129,23 +6959,451 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrepareQuery", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateSubscription", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateSubscriptionRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public string Description;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
+        public string EventType;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=4)]
+        public string MatchData;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=5)]
+        public CrissCrossLib.ReportWebService.ParameterValue[] Parameters;
+        
+        public CreateSubscriptionRequest() {
+        }
+        
+        public CreateSubscriptionRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings, string Description, string EventType, string MatchData, CrissCrossLib.ReportWebService.ParameterValue[] Parameters) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.ExtensionSettings = ExtensionSettings;
+            this.Description = Description;
+            this.EventType = EventType;
+            this.MatchData = MatchData;
+            this.Parameters = Parameters;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateSubscriptionResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateSubscriptionResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string SubscriptionID;
+        
+        public CreateSubscriptionResponse() {
+        }
+        
+        public CreateSubscriptionResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string SubscriptionID) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.SubscriptionID = SubscriptionID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateDataDrivenSubscription", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateDataDrivenSubscriptionRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public CrissCrossLib.ReportWebService.DataRetrievalPlan DataRetrievalPlan;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
+        public string Description;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=4)]
+        public string EventType;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=5)]
+        public string MatchData;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=6)]
+        public CrissCrossLib.ReportWebService.ParameterValueOrFieldReference[] Parameters;
+        
+        public CreateDataDrivenSubscriptionRequest() {
+        }
+        
+        public CreateDataDrivenSubscriptionRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, CrissCrossLib.ReportWebService.ExtensionSettings ExtensionSettings, CrissCrossLib.ReportWebService.DataRetrievalPlan DataRetrievalPlan, string Description, string EventType, string MatchData, CrissCrossLib.ReportWebService.ParameterValueOrFieldReference[] Parameters) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.ExtensionSettings = ExtensionSettings;
+            this.DataRetrievalPlan = DataRetrievalPlan;
+            this.Description = Description;
+            this.EventType = EventType;
+            this.MatchData = MatchData;
+            this.Parameters = Parameters;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateDataDrivenSubscriptionResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateDataDrivenSubscriptionResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string SubscriptionID;
+        
+        public CreateDataDrivenSubscriptionResponse() {
+        }
+        
+        public CreateDataDrivenSubscriptionResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string SubscriptionID) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.SubscriptionID = SubscriptionID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetExtensionSettings", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetExtensionSettingsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Extension;
+        
+        public GetExtensionSettingsRequest() {
+        }
+        
+        public GetExtensionSettingsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Extension) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Extension = Extension;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetExtensionSettingsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetExtensionSettingsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.ExtensionParameter[] ExtensionParameters;
+        
+        public GetExtensionSettingsResponse() {
+        }
+        
+        public GetExtensionSettingsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.ExtensionParameter[] ExtensionParameters) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ExtensionParameters = ExtensionParameters;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ValidateExtensionSettings", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ValidateExtensionSettingsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Extension;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public CrissCrossLib.ReportWebService.ParameterValueOrFieldReference[] ParameterValues;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public string SiteUrl;
+        
+        public ValidateExtensionSettingsRequest() {
+        }
+        
+        public ValidateExtensionSettingsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Extension, CrissCrossLib.ReportWebService.ParameterValueOrFieldReference[] ParameterValues, string SiteUrl) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Extension = Extension;
+            this.ParameterValues = ParameterValues;
+            this.SiteUrl = SiteUrl;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ValidateExtensionSettingsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ValidateExtensionSettingsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.ExtensionParameter[] ParameterErrors;
+        
+        public ValidateExtensionSettingsResponse() {
+        }
+        
+        public ValidateExtensionSettingsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.ExtensionParameter[] ParameterErrors) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ParameterErrors = ParameterErrors;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSubscriptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListSubscriptionsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPathOrSiteURL;
+        
+        public ListSubscriptionsRequest() {
+        }
+        
+        public ListSubscriptionsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPathOrSiteURL) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPathOrSiteURL = ItemPathOrSiteURL;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSubscriptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListSubscriptionsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Subscription[] SubscriptionItems;
+        
+        public ListSubscriptionsResponse() {
+        }
+        
+        public ListSubscriptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Subscription[] SubscriptionItems) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.SubscriptionItems = SubscriptionItems;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListMySubscriptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListMySubscriptionsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPathOrSiteURL;
+        
+        public ListMySubscriptionsRequest() {
+        }
+        
+        public ListMySubscriptionsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPathOrSiteURL) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPathOrSiteURL = ItemPathOrSiteURL;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListMySubscriptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListMySubscriptionsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Subscription[] SubscriptionItems;
+        
+        public ListMySubscriptionsResponse() {
+        }
+        
+        public ListMySubscriptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Subscription[] SubscriptionItems) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.SubscriptionItems = SubscriptionItems;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSubscriptionsUsingDataSource", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListSubscriptionsUsingDataSourceRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string DataSource;
+        
+        public ListSubscriptionsUsingDataSourceRequest() {
+        }
+        
+        public ListSubscriptionsUsingDataSourceRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string DataSource) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.DataSource = DataSource;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSubscriptionsUsingDataSourceResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListSubscriptionsUsingDataSourceResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Subscription[] SubscriptionItems;
+        
+        public ListSubscriptionsUsingDataSourceResponse() {
+        }
+        
+        public ListSubscriptionsUsingDataSourceResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Subscription[] SubscriptionItems) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.SubscriptionItems = SubscriptionItems;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ChangeSubscriptionOwner", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ChangeSubscriptionOwnerRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string SubscriptionID;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string NewOwner;
+        
+        public ChangeSubscriptionOwnerRequest() {
+        }
+        
+        public ChangeSubscriptionOwnerRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string SubscriptionID, string NewOwner) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.SubscriptionID = SubscriptionID;
+            this.NewOwner = NewOwner;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ChangeSubscriptionOwnerResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ChangeSubscriptionOwnerResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public ChangeSubscriptionOwnerResponse() {
+        }
+        
+        public ChangeSubscriptionOwnerResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateDataSource", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateDataSourceRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string DataSource;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string Parent;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public bool Overwrite;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
+        public CrissCrossLib.ReportWebService.DataSourceDefinition Definition;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=4)]
+        public CrissCrossLib.ReportWebService.Property[] Properties;
+        
+        public CreateDataSourceRequest() {
+        }
+        
+        public CreateDataSourceRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string DataSource, string Parent, bool Overwrite, CrissCrossLib.ReportWebService.DataSourceDefinition Definition, CrissCrossLib.ReportWebService.Property[] Properties) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.DataSource = DataSource;
+            this.Parent = Parent;
+            this.Overwrite = Overwrite;
+            this.Definition = Definition;
+            this.Properties = Properties;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateDataSourceResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateDataSourceResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.CatalogItem ItemInfo;
+        
+        public CreateDataSourceResponse() {
+        }
+        
+        public CreateDataSourceResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.CatalogItem ItemInfo) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ItemInfo = ItemInfo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrepareQuery", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class PrepareQueryRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public CrissCrossLib.ReportWebService.DataSource DataSource;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public CrissCrossLib.ReportWebService.DataSetDefinition DataSet;
         
         public PrepareQueryRequest() {
         }
         
-        public PrepareQueryRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, CrissCrossLib.ReportWebService.DataSource DataSource, CrissCrossLib.ReportWebService.DataSetDefinition DataSet) {
-            this.BatchHeader = BatchHeader;
+        public PrepareQueryRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, CrissCrossLib.ReportWebService.DataSource DataSource, CrissCrossLib.ReportWebService.DataSetDefinition DataSet) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.DataSource = DataSource;
             this.DataSet = DataSet;
         }
@@ -8153,19 +7411,19 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrepareQueryResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrepareQueryResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class PrepareQueryResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public CrissCrossLib.ReportWebService.DataSetDefinition DataSettings;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public bool Changed;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
         public string[] ParameterNames;
         
         public PrepareQueryResponse() {
@@ -8181,341 +7439,585 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetExtensionSettings", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetExtensionSettingsRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EnableDataSource", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class EnableDataSourceRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Extension;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        public GetExtensionSettingsRequest() {
-        }
-        
-        public GetExtensionSettingsRequest(string Extension) {
-            this.Extension = Extension;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetExtensionSettingsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetExtensionSettingsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.ExtensionParameter[] ExtensionParameters;
-        
-        public GetExtensionSettingsResponse() {
-        }
-        
-        public GetExtensionSettingsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.ExtensionParameter[] ExtensionParameters) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.ExtensionParameters = ExtensionParameters;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ValidateExtensionSettings", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ValidateExtensionSettingsRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Extension;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public CrissCrossLib.ReportWebService.ParameterValueOrFieldReference[] ParameterValues;
-        
-        public ValidateExtensionSettingsRequest() {
-        }
-        
-        public ValidateExtensionSettingsRequest(string Extension, CrissCrossLib.ReportWebService.ParameterValueOrFieldReference[] ParameterValues) {
-            this.Extension = Extension;
-            this.ParameterValues = ParameterValues;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ValidateExtensionSettingsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ValidateExtensionSettingsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.ExtensionParameter[] ParameterErrors;
-        
-        public ValidateExtensionSettingsResponse() {
-        }
-        
-        public ValidateExtensionSettingsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.ExtensionParameter[] ParameterErrors) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.ParameterErrors = ParameterErrors;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSubscriptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListSubscriptionsRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Report;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string Owner;
-        
-        public ListSubscriptionsRequest() {
-        }
-        
-        public ListSubscriptionsRequest(string Report, string Owner) {
-            this.Report = Report;
-            this.Owner = Owner;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSubscriptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListSubscriptionsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Subscription[] SubscriptionItems;
-        
-        public ListSubscriptionsResponse() {
-        }
-        
-        public ListSubscriptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Subscription[] SubscriptionItems) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.SubscriptionItems = SubscriptionItems;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSubscriptionsUsingDataSource", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListSubscriptionsUsingDataSourceRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string DataSource;
         
-        public ListSubscriptionsUsingDataSourceRequest() {
+        public EnableDataSourceRequest() {
         }
         
-        public ListSubscriptionsUsingDataSourceRequest(string DataSource) {
+        public EnableDataSourceRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string DataSource) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.DataSource = DataSource;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSubscriptionsUsingDataSourceResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListSubscriptionsUsingDataSourceResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EnableDataSourceResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class EnableDataSourceResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Subscription[] SubscriptionItems;
-        
-        public ListSubscriptionsUsingDataSourceResponse() {
+        public EnableDataSourceResponse() {
         }
         
-        public ListSubscriptionsUsingDataSourceResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Subscription[] SubscriptionItems) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.SubscriptionItems = SubscriptionItems;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListExtensions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListExtensionsRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.ExtensionTypeEnum ExtensionType;
-        
-        public ListExtensionsRequest() {
-        }
-        
-        public ListExtensionsRequest(CrissCrossLib.ReportWebService.ExtensionTypeEnum ExtensionType) {
-            this.ExtensionType = ExtensionType;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListExtensionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListExtensionsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Extension[] Extensions;
-        
-        public ListExtensionsResponse() {
-        }
-        
-        public ListExtensionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Extension[] Extensions) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Extensions = Extensions;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListEvents", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListEventsRequest {
-        
-        public ListEventsRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListEventsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListEventsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Event[] Events;
-        
-        public ListEventsResponse() {
-        }
-        
-        public ListEventsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Event[] Events) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Events = Events;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="FireEvent", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class FireEventRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string EventType;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string EventData;
-        
-        public FireEventRequest() {
-        }
-        
-        public FireEventRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string EventType, string EventData) {
-            this.BatchHeader = BatchHeader;
-            this.EventType = EventType;
-            this.EventData = EventData;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="FireEventResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class FireEventResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public FireEventResponse() {
-        }
-        
-        public FireEventResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+        public EnableDataSourceResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
             this.ServerInfoHeader = ServerInfoHeader;
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-    public enum SecurityScopeEnum {
-        
-        /// <remarks/>
-        System,
-        
-        /// <remarks/>
-        Catalog,
-        
-        /// <remarks/>
-        Model,
-        
-        /// <remarks/>
-        All,
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListTasks", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListTasksRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DisableDataSource", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class DisableDataSourceRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.SecurityScopeEnum SecurityScope;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        public ListTasksRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string DataSource;
+        
+        public DisableDataSourceRequest() {
         }
         
-        public ListTasksRequest(CrissCrossLib.ReportWebService.SecurityScopeEnum SecurityScope) {
-            this.SecurityScope = SecurityScope;
+        public DisableDataSourceRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string DataSource) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.DataSource = DataSource;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListTasksResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListTasksResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DisableDataSourceResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class DisableDataSourceResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Task[] Tasks;
-        
-        public ListTasksResponse() {
+        public DisableDataSourceResponse() {
         }
         
-        public ListTasksResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Task[] Tasks) {
+        public DisableDataSourceResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
             this.ServerInfoHeader = ServerInfoHeader;
-            this.Tasks = Tasks;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListRoles", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetDataSourceContents", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetDataSourceContentsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string DataSource;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public CrissCrossLib.ReportWebService.DataSourceDefinition Definition;
+        
+        public SetDataSourceContentsRequest() {
+        }
+        
+        public SetDataSourceContentsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string DataSource, CrissCrossLib.ReportWebService.DataSourceDefinition Definition) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.DataSource = DataSource;
+            this.Definition = Definition;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetDataSourceContentsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetDataSourceContentsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetDataSourceContentsResponse() {
+        }
+        
+        public SetDataSourceContentsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDataSourceContents", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetDataSourceContentsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string DataSource;
+        
+        public GetDataSourceContentsRequest() {
+        }
+        
+        public GetDataSourceContentsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string DataSource) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.DataSource = DataSource;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDataSourceContentsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetDataSourceContentsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.DataSourceDefinition Definition;
+        
+        public GetDataSourceContentsResponse() {
+        }
+        
+        public GetDataSourceContentsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.DataSourceDefinition Definition) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Definition = Definition;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListDatabaseCredentialRetrievalOptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListDatabaseCredentialRetrievalOptionsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public ListDatabaseCredentialRetrievalOptionsRequest() {
+        }
+        
+        public ListDatabaseCredentialRetrievalOptionsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListDatabaseCredentialRetrievalOptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListDatabaseCredentialRetrievalOptionsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string[] ListDatabaseCredentialRetrievalOptionsResult;
+        
+        public ListDatabaseCredentialRetrievalOptionsResponse() {
+        }
+        
+        public ListDatabaseCredentialRetrievalOptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] ListDatabaseCredentialRetrievalOptionsResult) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ListDatabaseCredentialRetrievalOptionsResult = ListDatabaseCredentialRetrievalOptionsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemDataSources", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetItemDataSourcesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public CrissCrossLib.ReportWebService.DataSource[] DataSources;
+        
+        public SetItemDataSourcesRequest() {
+        }
+        
+        public SetItemDataSourcesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, CrissCrossLib.ReportWebService.DataSource[] DataSources) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.DataSources = DataSources;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemDataSourcesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetItemDataSourcesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetItemDataSourcesResponse() {
+        }
+        
+        public SetItemDataSourcesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemDataSources", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemDataSourcesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        public GetItemDataSourcesRequest() {
+        }
+        
+        public GetItemDataSourcesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemDataSourcesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemDataSourcesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.DataSource[] DataSources;
+        
+        public GetItemDataSourcesResponse() {
+        }
+        
+        public GetItemDataSourcesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.DataSource[] DataSources) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.DataSources = DataSources;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="TestConnectForDataSourceDefinition", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class TestConnectForDataSourceDefinitionRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.DataSourceDefinition DataSourceDefinition;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string UserName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public string Password;
+        
+        public TestConnectForDataSourceDefinitionRequest() {
+        }
+        
+        public TestConnectForDataSourceDefinitionRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, CrissCrossLib.ReportWebService.DataSourceDefinition DataSourceDefinition, string UserName, string Password) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.DataSourceDefinition = DataSourceDefinition;
+            this.UserName = UserName;
+            this.Password = Password;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="TestConnectForDataSourceDefinitionResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class TestConnectForDataSourceDefinitionResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public bool TestConnectForDataSourceDefinitionResult;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string ConnectError;
+        
+        public TestConnectForDataSourceDefinitionResponse() {
+        }
+        
+        public TestConnectForDataSourceDefinitionResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, bool TestConnectForDataSourceDefinitionResult, string ConnectError) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.TestConnectForDataSourceDefinitionResult = TestConnectForDataSourceDefinitionResult;
+            this.ConnectError = ConnectError;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="TestConnectForItemDataSource", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class TestConnectForItemDataSourceRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string DataSourceName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public string UserName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
+        public string Password;
+        
+        public TestConnectForItemDataSourceRequest() {
+        }
+        
+        public TestConnectForItemDataSourceRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, string DataSourceName, string UserName, string Password) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.DataSourceName = DataSourceName;
+            this.UserName = UserName;
+            this.Password = Password;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="TestConnectForItemDataSourceResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class TestConnectForItemDataSourceResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public bool TestConnectForItemDataSourceResult;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string ConnectError;
+        
+        public TestConnectForItemDataSourceResponse() {
+        }
+        
+        public TestConnectForItemDataSourceResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, bool TestConnectForItemDataSourceResult, string ConnectError) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.TestConnectForItemDataSourceResult = TestConnectForItemDataSourceResult;
+            this.ConnectError = ConnectError;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateRole", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateRoleRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Name;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string Description;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public string[] TaskIDs;
+        
+        public CreateRoleRequest() {
+        }
+        
+        public CreateRoleRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Name, string Description, string[] TaskIDs) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Name = Name;
+            this.Description = Description;
+            this.TaskIDs = TaskIDs;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateRoleResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateRoleResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public CreateRoleResponse() {
+        }
+        
+        public CreateRoleResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetRoleProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetRolePropertiesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Name;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string Description;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public string[] TaskIDs;
+        
+        public SetRolePropertiesRequest() {
+        }
+        
+        public SetRolePropertiesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Name, string Description, string[] TaskIDs) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Name = Name;
+            this.Description = Description;
+            this.TaskIDs = TaskIDs;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetRolePropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetRolePropertiesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetRolePropertiesResponse() {
+        }
+        
+        public SetRolePropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRoleProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetRolePropertiesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Name;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string SiteUrl;
+        
+        public GetRolePropertiesRequest() {
+        }
+        
+        public GetRolePropertiesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Name, string SiteUrl) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Name = Name;
+            this.SiteUrl = SiteUrl;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRolePropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetRolePropertiesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string[] TaskIDs;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string Description;
+        
+        public GetRolePropertiesResponse() {
+        }
+        
+        public GetRolePropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] TaskIDs, string Description) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.TaskIDs = TaskIDs;
+            this.Description = Description;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteRole", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class DeleteRoleRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Name;
+        
+        public DeleteRoleRequest() {
+        }
+        
+        public DeleteRoleRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Name) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Name = Name;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteRoleResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class DeleteRoleResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public DeleteRoleResponse() {
+        }
+        
+        public DeleteRoleResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListRoles", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class ListRolesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.SecurityScopeEnum SecurityScope;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string SecurityScope;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string SiteUrl;
         
         public ListRolesRequest() {
         }
         
-        public ListRolesRequest(CrissCrossLib.ReportWebService.SecurityScopeEnum SecurityScope) {
+        public ListRolesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string SecurityScope, string SiteUrl) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.SecurityScope = SecurityScope;
+            this.SiteUrl = SiteUrl;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListRolesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListRolesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class ListRolesResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public CrissCrossLib.ReportWebService.Role[] Roles;
         
         public ListRolesResponse() {
@@ -8529,261 +8031,116 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateRole", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateRoleRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListTasks", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListTasksRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Name;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string SecurityScope;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string Description;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public CrissCrossLib.ReportWebService.Task[] Tasks;
-        
-        public CreateRoleRequest() {
+        public ListTasksRequest() {
         }
         
-        public CreateRoleRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Name, string Description, CrissCrossLib.ReportWebService.Task[] Tasks) {
-            this.BatchHeader = BatchHeader;
-            this.Name = Name;
-            this.Description = Description;
+        public ListTasksRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string SecurityScope) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.SecurityScope = SecurityScope;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListTasksResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListTasksResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Task[] Tasks;
+        
+        public ListTasksResponse() {
+        }
+        
+        public ListTasksResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Task[] Tasks) {
+            this.ServerInfoHeader = ServerInfoHeader;
             this.Tasks = Tasks;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateRoleResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateRoleResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetPolicies", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetPoliciesRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        public CreateRoleResponse() {
-        }
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
         
-        public CreateRoleResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteRole", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class DeleteRoleRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Name;
-        
-        public DeleteRoleRequest() {
-        }
-        
-        public DeleteRoleRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Name) {
-            this.BatchHeader = BatchHeader;
-            this.Name = Name;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteRoleResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class DeleteRoleResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public DeleteRoleResponse() {
-        }
-        
-        public DeleteRoleResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRoleProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetRolePropertiesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Name;
-        
-        public GetRolePropertiesRequest() {
-        }
-        
-        public GetRolePropertiesRequest(string Name) {
-            this.Name = Name;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRolePropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetRolePropertiesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Task[] Tasks;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string Description;
-        
-        public GetRolePropertiesResponse() {
-        }
-        
-        public GetRolePropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Task[] Tasks, string Description) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Tasks = Tasks;
-            this.Description = Description;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetRoleProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetRolePropertiesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Name;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string Description;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public CrissCrossLib.ReportWebService.Task[] Tasks;
-        
-        public SetRolePropertiesRequest() {
-        }
-        
-        public SetRolePropertiesRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Name, string Description, CrissCrossLib.ReportWebService.Task[] Tasks) {
-            this.BatchHeader = BatchHeader;
-            this.Name = Name;
-            this.Description = Description;
-            this.Tasks = Tasks;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetRolePropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetRolePropertiesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public SetRolePropertiesResponse() {
-        }
-        
-        public SetRolePropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSystemPolicies", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetSystemPoliciesRequest {
-        
-        public GetSystemPoliciesRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSystemPoliciesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetSystemPoliciesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public CrissCrossLib.ReportWebService.Policy[] Policies;
         
-        public GetSystemPoliciesResponse() {
+        public SetPoliciesRequest() {
         }
         
-        public GetSystemPoliciesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Policy[] Policies) {
-            this.ServerInfoHeader = ServerInfoHeader;
+        public SetPoliciesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, CrissCrossLib.ReportWebService.Policy[] Policies) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
             this.Policies = Policies;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetSystemPolicies", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetSystemPoliciesRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetPoliciesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetPoliciesResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Policy[] Policies;
-        
-        public SetSystemPoliciesRequest() {
-        }
-        
-        public SetSystemPoliciesRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, CrissCrossLib.ReportWebService.Policy[] Policies) {
-            this.BatchHeader = BatchHeader;
-            this.Policies = Policies;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetSystemPoliciesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetSystemPoliciesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        public SetSystemPoliciesResponse() {
+        public SetPoliciesResponse() {
         }
         
-        public SetSystemPoliciesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+        public SetPoliciesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
             this.ServerInfoHeader = ServerInfoHeader;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPolicies", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPolicies", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class GetPoliciesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Item;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
         
         public GetPoliciesRequest() {
         }
         
-        public GetPoliciesRequest(string Item) {
-            this.Item = Item;
+        public GetPoliciesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPoliciesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPoliciesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class GetPoliciesResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public CrissCrossLib.ReportWebService.Policy[] Policies;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public bool InheritParent;
         
         public GetPoliciesResponse() {
@@ -8798,483 +8155,119 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetPolicies", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetPoliciesRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemDataSourcePrompts", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemDataSourcePromptsRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Item;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public CrissCrossLib.ReportWebService.Policy[] Policies;
-        
-        public SetPoliciesRequest() {
+        public GetItemDataSourcePromptsRequest() {
         }
         
-        public SetPoliciesRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Item, CrissCrossLib.ReportWebService.Policy[] Policies) {
-            this.BatchHeader = BatchHeader;
-            this.Item = Item;
-            this.Policies = Policies;
+        public GetItemDataSourcePromptsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetPoliciesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetPoliciesResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemDataSourcePromptsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemDataSourcePromptsResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        public SetPoliciesResponse() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.DataSourcePrompt[] DataSourcePrompts;
+        
+        public GetItemDataSourcePromptsResponse() {
         }
         
-        public SetPoliciesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+        public GetItemDataSourcePromptsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.DataSourcePrompt[] DataSourcePrompts) {
             this.ServerInfoHeader = ServerInfoHeader;
+            this.DataSourcePrompts = DataSourcePrompts;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InheritParentSecurity", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class InheritParentSecurityRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GenerateModel", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GenerateModelRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Item;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string DataSource;
         
-        public InheritParentSecurityRequest() {
-        }
-        
-        public InheritParentSecurityRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Item) {
-            this.BatchHeader = BatchHeader;
-            this.Item = Item;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InheritParentSecurityResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class InheritParentSecurityResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public InheritParentSecurityResponse() {
-        }
-        
-        public InheritParentSecurityResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSystemPermissions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetSystemPermissionsRequest {
-        
-        public GetSystemPermissionsRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSystemPermissionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetSystemPermissionsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("Operation")]
-        public string[] Permissions;
-        
-        public GetSystemPermissionsResponse() {
-        }
-        
-        public GetSystemPermissionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] Permissions) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Permissions = Permissions;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPermissions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetPermissionsRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Item;
-        
-        public GetPermissionsRequest() {
-        }
-        
-        public GetPermissionsRequest(string Item) {
-            this.Item = Item;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPermissionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetPermissionsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("Operation")]
-        public string[] Permissions;
-        
-        public GetPermissionsResponse() {
-        }
-        
-        public GetPermissionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] Permissions) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Permissions = Permissions;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="LogonUser", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class LogonUserRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string userName;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string password;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public string authority;
-        
-        public LogonUserRequest() {
-        }
-        
-        public LogonUserRequest(string userName, string password, string authority) {
-            this.userName = userName;
-            this.password = password;
-            this.authority = authority;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="LogonUserResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class LogonUserResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public LogonUserResponse() {
-        }
-        
-        public LogonUserResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Logoff", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class LogoffRequest {
-        
-        public LogoffRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="LogoffResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class LogoffResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public LogoffResponse() {
-        }
-        
-        public LogoffResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateModel", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateModelRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public string Model;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
         public string Parent;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Definition;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
         public CrissCrossLib.ReportWebService.Property[] Properties;
         
-        public CreateModelRequest() {
+        public GenerateModelRequest() {
         }
         
-        public CreateModelRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Model, string Parent, byte[] Definition, CrissCrossLib.ReportWebService.Property[] Properties) {
-            this.BatchHeader = BatchHeader;
+        public GenerateModelRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string DataSource, string Model, string Parent, CrissCrossLib.ReportWebService.Property[] Properties) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.DataSource = DataSource;
             this.Model = Model;
             this.Parent = Parent;
-            this.Definition = Definition;
             this.Properties = Properties;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateModelResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class CreateModelResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GenerateModelResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GenerateModelResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.CatalogItem ItemInfo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public CrissCrossLib.ReportWebService.Warning[] Warnings;
         
-        public CreateModelResponse() {
+        public GenerateModelResponse() {
         }
         
-        public CreateModelResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Warning[] Warnings) {
+        public GenerateModelResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.CatalogItem ItemInfo, CrissCrossLib.ReportWebService.Warning[] Warnings) {
             this.ServerInfoHeader = ServerInfoHeader;
+            this.ItemInfo = ItemInfo;
             this.Warnings = Warnings;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetModelDefinition", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetModelDefinitionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Model;
-        
-        public GetModelDefinitionRequest() {
-        }
-        
-        public GetModelDefinitionRequest(string Model) {
-            this.Model = Model;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetModelDefinitionResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetModelDefinitionResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Definition;
-        
-        public GetModelDefinitionResponse() {
-        }
-        
-        public GetModelDefinitionResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, byte[] Definition) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Definition = Definition;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetModelDefinition", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetModelDefinitionRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Model;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Definition;
-        
-        public SetModelDefinitionRequest() {
-        }
-        
-        public SetModelDefinitionRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Model, byte[] Definition) {
-            this.BatchHeader = BatchHeader;
-            this.Model = Model;
-            this.Definition = Definition;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetModelDefinitionResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetModelDefinitionResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Warning[] Warnings;
-        
-        public SetModelDefinitionResponse() {
-        }
-        
-        public SetModelDefinitionResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Warning[] Warnings) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Warnings = Warnings;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListModelPerspectives", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListModelPerspectivesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Model;
-        
-        public ListModelPerspectivesRequest() {
-        }
-        
-        public ListModelPerspectivesRequest(string Model) {
-            this.Model = Model;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListModelPerspectivesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListModelPerspectivesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.ModelCatalogItem[] ModelCatalogItems;
-        
-        public ListModelPerspectivesResponse() {
-        }
-        
-        public ListModelPerspectivesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.ModelCatalogItem[] ModelCatalogItems) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.ModelCatalogItems = ModelCatalogItems;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetUserModel", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetUserModelRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Model;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string Perspective;
-        
-        public GetUserModelRequest() {
-        }
-        
-        public GetUserModelRequest(string Model, string Perspective) {
-            this.Model = Model;
-            this.Perspective = Perspective;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetUserModelResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetUserModelResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Definition;
-        
-        public GetUserModelResponse() {
-        }
-        
-        public GetUserModelResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, byte[] Definition) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.Definition = Definition;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListModelItemChildren", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListModelItemChildrenRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Model;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string ModelItemID;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public bool Recursive;
-        
-        public ListModelItemChildrenRequest() {
-        }
-        
-        public ListModelItemChildrenRequest(string Model, string ModelItemID, bool Recursive) {
-            this.Model = Model;
-            this.ModelItemID = ModelItemID;
-            this.Recursive = Recursive;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListModelItemChildrenResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class ListModelItemChildrenResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.ModelItem[] ModelItems;
-        
-        public ListModelItemChildrenResponse() {
-        }
-        
-        public ListModelItemChildrenResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.ModelItem[] ModelItems) {
-            this.ServerInfoHeader = ServerInfoHeader;
-            this.ModelItems = ModelItems;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetModelItemPermissions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetModelItemPermissions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class GetModelItemPermissionsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string Model;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public string ModelItemID;
         
         public GetModelItemPermissionsRequest() {
         }
         
-        public GetModelItemPermissionsRequest(string Model, string ModelItemID) {
+        public GetModelItemPermissionsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
             this.ModelItemID = ModelItemID;
         }
@@ -9282,13 +8275,13 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetModelItemPermissionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetModelItemPermissionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class GetModelItemPermissionsResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string[] Permissions;
         
         public GetModelItemPermissionsResponse() {
@@ -9302,19 +8295,67 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetModelItemPolicies", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GetModelItemPoliciesRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetModelItemPolicies", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetModelItemPoliciesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string Model;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string ModelItemID;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public CrissCrossLib.ReportWebService.Policy[] Policies;
+        
+        public SetModelItemPoliciesRequest() {
+        }
+        
+        public SetModelItemPoliciesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID, CrissCrossLib.ReportWebService.Policy[] Policies) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Model = Model;
+            this.ModelItemID = ModelItemID;
+            this.Policies = Policies;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetModelItemPoliciesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetModelItemPoliciesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetModelItemPoliciesResponse() {
+        }
+        
+        public SetModelItemPoliciesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetModelItemPolicies", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetModelItemPoliciesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Model;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public string ModelItemID;
         
         public GetModelItemPoliciesRequest() {
         }
         
-        public GetModelItemPoliciesRequest(string Model, string ModelItemID) {
+        public GetModelItemPoliciesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
             this.ModelItemID = ModelItemID;
         }
@@ -9322,16 +8363,16 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetModelItemPoliciesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetModelItemPoliciesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class GetModelItemPoliciesResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public CrissCrossLib.ReportWebService.Policy[] Policies;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public bool InheritParent;
         
         public GetModelItemPoliciesResponse() {
@@ -9346,67 +8387,68 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetModelItemPolicies", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetModelItemPoliciesRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetUserModel", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetUserModelRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string Model;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
-        public string ModelItemID;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string Perspective;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public CrissCrossLib.ReportWebService.Policy[] Policies;
-        
-        public SetModelItemPoliciesRequest() {
+        public GetUserModelRequest() {
         }
         
-        public SetModelItemPoliciesRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Model, string ModelItemID, CrissCrossLib.ReportWebService.Policy[] Policies) {
-            this.BatchHeader = BatchHeader;
+        public GetUserModelRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Model, string Perspective) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
-            this.ModelItemID = ModelItemID;
-            this.Policies = Policies;
+            this.Perspective = Perspective;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetModelItemPoliciesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class SetModelItemPoliciesResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetUserModelResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetUserModelResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        public SetModelItemPoliciesResponse() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] Definition;
+        
+        public GetUserModelResponse() {
         }
         
-        public SetModelItemPoliciesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+        public GetUserModelResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, byte[] Definition) {
             this.ServerInfoHeader = ServerInfoHeader;
+            this.Definition = Definition;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InheritModelItemParentSecurity", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InheritModelItemParentSecurity", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class InheritModelItemParentSecurityRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string Model;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public string ModelItemID;
         
         public InheritModelItemParentSecurityRequest() {
         }
         
-        public InheritModelItemParentSecurityRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Model, string ModelItemID) {
-            this.BatchHeader = BatchHeader;
+        public InheritModelItemParentSecurityRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
             this.ModelItemID = ModelItemID;
         }
@@ -9414,10 +8456,10 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InheritModelItemParentSecurityResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InheritModelItemParentSecurityResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class InheritModelItemParentSecurityResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
         public InheritModelItemParentSecurityResponse() {
@@ -9430,62 +8472,26 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="RemoveAllModelItemPolicies", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class RemoveAllModelItemPoliciesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string Model;
-        
-        public RemoveAllModelItemPoliciesRequest() {
-        }
-        
-        public RemoveAllModelItemPoliciesRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Model) {
-            this.BatchHeader = BatchHeader;
-            this.Model = Model;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="RemoveAllModelItemPoliciesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class RemoveAllModelItemPoliciesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
-        
-        public RemoveAllModelItemPoliciesResponse() {
-        }
-        
-        public RemoveAllModelItemPoliciesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
-            this.ServerInfoHeader = ServerInfoHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetModelDrillthroughReports", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetModelDrillthroughReports", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class SetModelDrillthroughReportsRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string Model;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public string ModelItemID;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
         public CrissCrossLib.ReportWebService.ModelDrillthroughReport[] Reports;
         
         public SetModelDrillthroughReportsRequest() {
         }
         
-        public SetModelDrillthroughReportsRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Model, string ModelItemID, CrissCrossLib.ReportWebService.ModelDrillthroughReport[] Reports) {
-            this.BatchHeader = BatchHeader;
+        public SetModelDrillthroughReportsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID, CrissCrossLib.ReportWebService.ModelDrillthroughReport[] Reports) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
             this.ModelItemID = ModelItemID;
             this.Reports = Reports;
@@ -9494,10 +8500,10 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SetModelDrillthroughReportsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetModelDrillthroughReportsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class SetModelDrillthroughReportsResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
         public SetModelDrillthroughReportsResponse() {
@@ -9510,19 +8516,23 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListModelDrillthroughReports", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListModelDrillthroughReports", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class ListModelDrillthroughReportsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string Model;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
         public string ModelItemID;
         
         public ListModelDrillthroughReportsRequest() {
         }
         
-        public ListModelDrillthroughReportsRequest(string Model, string ModelItemID) {
+        public ListModelDrillthroughReportsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
             this.ModelItemID = ModelItemID;
         }
@@ -9530,13 +8540,13 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListModelDrillthroughReportsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListModelDrillthroughReportsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class ListModelDrillthroughReportsResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public CrissCrossLib.ReportWebService.ModelDrillthroughReport[] Reports;
         
         public ListModelDrillthroughReportsResponse() {
@@ -9550,85 +8560,157 @@ namespace CrissCrossLib.ReportWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GenerateModel", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GenerateModelRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListModelItemChildren", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListModelItemChildrenRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public string DataSource;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string Model;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=2)]
-        public string Parent;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string ModelItemID;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=3)]
-        public CrissCrossLib.ReportWebService.Property[] Properties;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public bool Recursive;
         
-        public GenerateModelRequest() {
+        public ListModelItemChildrenRequest() {
         }
         
-        public GenerateModelRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string DataSource, string Model, string Parent, CrissCrossLib.ReportWebService.Property[] Properties) {
-            this.BatchHeader = BatchHeader;
-            this.DataSource = DataSource;
+        public ListModelItemChildrenRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID, bool Recursive) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
-            this.Parent = Parent;
-            this.Properties = Properties;
+            this.ModelItemID = ModelItemID;
+            this.Recursive = Recursive;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GenerateModelResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
-    public partial class GenerateModelResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListModelItemChildrenResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListModelItemChildrenResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
-        public CrissCrossLib.ReportWebService.Warning[] Warnings;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.ModelItem[] ModelItems;
         
-        public GenerateModelResponse() {
+        public ListModelItemChildrenResponse() {
         }
         
-        public GenerateModelResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Warning[] Warnings) {
+        public ListModelItemChildrenResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.ModelItem[] ModelItems) {
             this.ServerInfoHeader = ServerInfoHeader;
-            this.Warnings = Warnings;
+            this.ModelItems = ModelItems;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="RegenerateModel", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListModelItemTypes", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListModelItemTypesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public ListModelItemTypesRequest() {
+        }
+        
+        public ListModelItemTypesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListModelItemTypesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListModelItemTypesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string[] ListModelItemTypesResult;
+        
+        public ListModelItemTypesResponse() {
+        }
+        
+        public ListModelItemTypesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] ListModelItemTypesResult) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ListModelItemTypesResult = ListModelItemTypesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListModelPerspectives", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListModelPerspectivesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Model;
+        
+        public ListModelPerspectivesRequest() {
+        }
+        
+        public ListModelPerspectivesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Model) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Model = Model;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListModelPerspectivesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListModelPerspectivesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.ModelCatalogItem[] ModelCatalogItems;
+        
+        public ListModelPerspectivesResponse() {
+        }
+        
+        public ListModelPerspectivesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.ModelCatalogItem[] ModelCatalogItems) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ModelCatalogItems = ModelCatalogItems;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegenerateModel", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class RegenerateModelRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
-        public CrissCrossLib.ReportWebService.BatchHeader BatchHeader;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public string Model;
         
         public RegenerateModelRequest() {
         }
         
-        public RegenerateModelRequest(CrissCrossLib.ReportWebService.BatchHeader BatchHeader, string Model) {
-            this.BatchHeader = BatchHeader;
+        public RegenerateModelRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Model) {
+            this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="RegenerateModelResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegenerateModelResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
     public partial class RegenerateModelResponse {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices")]
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
         public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
         public CrissCrossLib.ReportWebService.Warning[] Warnings;
         
         public RegenerateModelResponse() {
@@ -9640,55 +8722,2358 @@ namespace CrissCrossLib.ReportWebService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ReportingService2005SoapChannel : CrissCrossLib.ReportWebService.ReportingService2005Soap, System.ServiceModel.IClientChannel {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RemoveAllModelItemPolicies", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class RemoveAllModelItemPoliciesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Model;
+        
+        public RemoveAllModelItemPoliciesRequest() {
+        }
+        
+        public RemoveAllModelItemPoliciesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Model) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Model = Model;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ReportingService2005SoapClient : System.ServiceModel.ClientBase<CrissCrossLib.ReportWebService.ReportingService2005Soap>, CrissCrossLib.ReportWebService.ReportingService2005Soap {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RemoveAllModelItemPoliciesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class RemoveAllModelItemPoliciesResponse {
         
-        public ReportingService2005SoapClient() {
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public RemoveAllModelItemPoliciesResponse() {
         }
         
-        public ReportingService2005SoapClient(string endpointConfigurationName) : 
+        public RemoveAllModelItemPoliciesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateSchedule", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateScheduleRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Name;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public CrissCrossLib.ReportWebService.ScheduleDefinition ScheduleDefinition;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public string SiteUrl;
+        
+        public CreateScheduleRequest() {
+        }
+        
+        public CreateScheduleRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Name, CrissCrossLib.ReportWebService.ScheduleDefinition ScheduleDefinition, string SiteUrl) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Name = Name;
+            this.ScheduleDefinition = ScheduleDefinition;
+            this.SiteUrl = SiteUrl;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateScheduleResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateScheduleResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ScheduleID;
+        
+        public CreateScheduleResponse() {
+        }
+        
+        public CreateScheduleResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string ScheduleID) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ScheduleID = ScheduleID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteSchedule", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class DeleteScheduleRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ScheduleID;
+        
+        public DeleteScheduleRequest() {
+        }
+        
+        public DeleteScheduleRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ScheduleID) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ScheduleID = ScheduleID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteScheduleResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class DeleteScheduleResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public DeleteScheduleResponse() {
+        }
+        
+        public DeleteScheduleResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSchedules", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListSchedulesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string SiteUrl;
+        
+        public ListSchedulesRequest() {
+        }
+        
+        public ListSchedulesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string SiteUrl) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.SiteUrl = SiteUrl;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSchedulesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListSchedulesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Schedule[] Schedules;
+        
+        public ListSchedulesResponse() {
+        }
+        
+        public ListSchedulesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Schedule[] Schedules) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Schedules = Schedules;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetScheduleProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetSchedulePropertiesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ScheduleID;
+        
+        public GetSchedulePropertiesRequest() {
+        }
+        
+        public GetSchedulePropertiesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ScheduleID) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ScheduleID = ScheduleID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSchedulePropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetSchedulePropertiesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Schedule Schedule;
+        
+        public GetSchedulePropertiesResponse() {
+        }
+        
+        public GetSchedulePropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Schedule Schedule) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Schedule = Schedule;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListScheduleStates", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListScheduleStatesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public ListScheduleStatesRequest() {
+        }
+        
+        public ListScheduleStatesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListScheduleStatesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListScheduleStatesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string[] ListScheduleStatesResult;
+        
+        public ListScheduleStatesResponse() {
+        }
+        
+        public ListScheduleStatesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] ListScheduleStatesResult) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ListScheduleStatesResult = ListScheduleStatesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PauseSchedule", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class PauseScheduleRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ScheduleID;
+        
+        public PauseScheduleRequest() {
+        }
+        
+        public PauseScheduleRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ScheduleID) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ScheduleID = ScheduleID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PauseScheduleResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class PauseScheduleResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public PauseScheduleResponse() {
+        }
+        
+        public PauseScheduleResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ResumeSchedule", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ResumeScheduleRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ScheduleID;
+        
+        public ResumeScheduleRequest() {
+        }
+        
+        public ResumeScheduleRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ScheduleID) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ScheduleID = ScheduleID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ResumeScheduleResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ResumeScheduleResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public ResumeScheduleResponse() {
+        }
+        
+        public ResumeScheduleResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetScheduleProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetSchedulePropertiesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Name;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string ScheduleID;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public CrissCrossLib.ReportWebService.ScheduleDefinition ScheduleDefinition;
+        
+        public SetSchedulePropertiesRequest() {
+        }
+        
+        public SetSchedulePropertiesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Name, string ScheduleID, CrissCrossLib.ReportWebService.ScheduleDefinition ScheduleDefinition) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Name = Name;
+            this.ScheduleID = ScheduleID;
+            this.ScheduleDefinition = ScheduleDefinition;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetSchedulePropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetSchedulePropertiesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetSchedulePropertiesResponse() {
+        }
+        
+        public SetSchedulePropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListScheduledItems", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListScheduledItemsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ScheduleID;
+        
+        public ListScheduledItemsRequest() {
+        }
+        
+        public ListScheduledItemsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ScheduleID) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ScheduleID = ScheduleID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListScheduledItemsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListScheduledItemsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.CatalogItem[] Items;
+        
+        public ListScheduledItemsResponse() {
+        }
+        
+        public ListScheduledItemsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.CatalogItem[] Items) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Items = Items;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemParameters", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetItemParametersRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public CrissCrossLib.ReportWebService.ItemParameter[] Parameters;
+        
+        public SetItemParametersRequest() {
+        }
+        
+        public SetItemParametersRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, CrissCrossLib.ReportWebService.ItemParameter[] Parameters) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.Parameters = Parameters;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemParametersResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetItemParametersResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetItemParametersResponse() {
+        }
+        
+        public SetItemParametersResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemParameters", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemParametersRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string HistoryID;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public bool ForRendering;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
+        public CrissCrossLib.ReportWebService.ParameterValue[] Values;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=4)]
+        public CrissCrossLib.ReportWebService.DataSourceCredentials[] Credentials;
+        
+        public GetItemParametersRequest() {
+        }
+        
+        public GetItemParametersRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, string HistoryID, bool ForRendering, CrissCrossLib.ReportWebService.ParameterValue[] Values, CrissCrossLib.ReportWebService.DataSourceCredentials[] Credentials) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.HistoryID = HistoryID;
+            this.ForRendering = ForRendering;
+            this.Values = Values;
+            this.Credentials = Credentials;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemParametersResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemParametersResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.ItemParameter[] Parameters;
+        
+        public GetItemParametersResponse() {
+        }
+        
+        public GetItemParametersResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.ItemParameter[] Parameters) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Parameters = Parameters;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListParameterTypes", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListParameterTypesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public ListParameterTypesRequest() {
+        }
+        
+        public ListParameterTypesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListParameterTypesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListParameterTypesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string[] ListParameterTypesResult;
+        
+        public ListParameterTypesResponse() {
+        }
+        
+        public ListParameterTypesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] ListParameterTypesResult) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ListParameterTypesResult = ListParameterTypesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListParameterStates", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListParameterStatesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public ListParameterStatesRequest() {
+        }
+        
+        public ListParameterStatesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListParameterStatesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListParameterStatesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string[] ListParameterStatesResult;
+        
+        public ListParameterStatesResponse() {
+        }
+        
+        public ListParameterStatesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] ListParameterStatesResult) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ListParameterStatesResult = ListParameterStatesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateReportEditSession", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateReportEditSessionRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Report;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string Parent;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] Definition;
+        
+        public CreateReportEditSessionRequest() {
+        }
+        
+        public CreateReportEditSessionRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string Report, string Parent, byte[] Definition) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Report = Report;
+            this.Parent = Parent;
+            this.Definition = Definition;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateReportEditSessionResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateReportEditSessionResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string EditSessionID;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public CrissCrossLib.ReportWebService.Warning[] Warnings;
+        
+        public CreateReportEditSessionResponse() {
+        }
+        
+        public CreateReportEditSessionResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string EditSessionID, CrissCrossLib.ReportWebService.Warning[] Warnings) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.EditSessionID = EditSessionID;
+            this.Warnings = Warnings;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateLinkedItem", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateLinkedItemRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string Parent;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public string Link;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
+        public CrissCrossLib.ReportWebService.Property[] Properties;
+        
+        public CreateLinkedItemRequest() {
+        }
+        
+        public CreateLinkedItemRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, string Parent, string Link, CrissCrossLib.ReportWebService.Property[] Properties) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.Parent = Parent;
+            this.Link = Link;
+            this.Properties = Properties;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateLinkedItemResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateLinkedItemResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public CreateLinkedItemResponse() {
+        }
+        
+        public CreateLinkedItemResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemLink", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetItemLinkRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string Link;
+        
+        public SetItemLinkRequest() {
+        }
+        
+        public SetItemLinkRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, string Link) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.Link = Link;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemLinkResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetItemLinkResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetItemLinkResponse() {
+        }
+        
+        public SetItemLinkResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemLink", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemLinkRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        public GetItemLinkRequest() {
+        }
+        
+        public GetItemLinkRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemLinkResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemLinkResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Link;
+        
+        public GetItemLinkResponse() {
+        }
+        
+        public GetItemLinkResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string Link) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Link = Link;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListExecutionSettings", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListExecutionSettingsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public ListExecutionSettingsRequest() {
+        }
+        
+        public ListExecutionSettingsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListExecutionSettingsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListExecutionSettingsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string[] ListExecutionSettingsResult;
+        
+        public ListExecutionSettingsResponse() {
+        }
+        
+        public ListExecutionSettingsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] ListExecutionSettingsResult) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ListExecutionSettingsResult = ListExecutionSettingsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetExecutionOptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetExecutionOptionsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string ExecutionSetting;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("NoSchedule", typeof(NoSchedule))]
+        [System.Xml.Serialization.XmlElementAttribute("ScheduleDefinition", typeof(ScheduleDefinition))]
+        [System.Xml.Serialization.XmlElementAttribute("ScheduleReference", typeof(ScheduleReference))]
+        public CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item;
+        
+        public SetExecutionOptionsRequest() {
+        }
+        
+        public SetExecutionOptionsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, string ExecutionSetting, CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.ExecutionSetting = ExecutionSetting;
+            this.Item = Item;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetExecutionOptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetExecutionOptionsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetExecutionOptionsResponse() {
+        }
+        
+        public SetExecutionOptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetExecutionOptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetExecutionOptionsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        public GetExecutionOptionsRequest() {
+        }
+        
+        public GetExecutionOptionsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetExecutionOptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetExecutionOptionsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ExecutionSetting;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("NoSchedule", typeof(NoSchedule))]
+        [System.Xml.Serialization.XmlElementAttribute("ScheduleDefinition", typeof(ScheduleDefinition))]
+        [System.Xml.Serialization.XmlElementAttribute("ScheduleReference", typeof(ScheduleReference))]
+        public CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item;
+        
+        public GetExecutionOptionsResponse() {
+        }
+        
+        public GetExecutionOptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string ExecutionSetting, CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ExecutionSetting = ExecutionSetting;
+            this.Item = Item;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateItemExecutionSnapshot", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class UpdateItemExecutionSnapshotRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        public UpdateItemExecutionSnapshotRequest() {
+        }
+        
+        public UpdateItemExecutionSnapshotRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateItemExecutionSnapshotResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class UpdateItemExecutionSnapshotResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public UpdateItemExecutionSnapshotResponse() {
+        }
+        
+        public UpdateItemExecutionSnapshotResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetCacheOptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetCacheOptionsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public bool CacheItem;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("ScheduleExpiration", typeof(ScheduleExpiration))]
+        [System.Xml.Serialization.XmlElementAttribute("TimeExpiration", typeof(TimeExpiration))]
+        public CrissCrossLib.ReportWebService.ExpirationDefinition Item;
+        
+        public SetCacheOptionsRequest() {
+        }
+        
+        public SetCacheOptionsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, bool CacheItem, CrissCrossLib.ReportWebService.ExpirationDefinition Item) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.CacheItem = CacheItem;
+            this.Item = Item;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetCacheOptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetCacheOptionsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetCacheOptionsResponse() {
+        }
+        
+        public SetCacheOptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCacheOptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetCacheOptionsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        public GetCacheOptionsRequest() {
+        }
+        
+        public GetCacheOptionsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCacheOptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetCacheOptionsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public bool CacheItem;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("ScheduleExpiration", typeof(ScheduleExpiration))]
+        [System.Xml.Serialization.XmlElementAttribute("TimeExpiration", typeof(TimeExpiration))]
+        public CrissCrossLib.ReportWebService.ExpirationDefinition Item;
+        
+        public GetCacheOptionsResponse() {
+        }
+        
+        public GetCacheOptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, bool CacheItem, CrissCrossLib.ReportWebService.ExpirationDefinition Item) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.CacheItem = CacheItem;
+            this.Item = Item;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FlushCache", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class FlushCacheRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        public FlushCacheRequest() {
+        }
+        
+        public FlushCacheRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FlushCacheResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class FlushCacheResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public FlushCacheResponse() {
+        }
+        
+        public FlushCacheResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateItemHistorySnapshot", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateItemHistorySnapshotRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        public CreateItemHistorySnapshotRequest() {
+        }
+        
+        public CreateItemHistorySnapshotRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateItemHistorySnapshotResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateItemHistorySnapshotResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string HistoryID;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public CrissCrossLib.ReportWebService.Warning[] Warnings;
+        
+        public CreateItemHistorySnapshotResponse() {
+        }
+        
+        public CreateItemHistorySnapshotResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string HistoryID, CrissCrossLib.ReportWebService.Warning[] Warnings) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.HistoryID = HistoryID;
+            this.Warnings = Warnings;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteItemHistorySnapshot", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class DeleteItemHistorySnapshotRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string HistoryID;
+        
+        public DeleteItemHistorySnapshotRequest() {
+        }
+        
+        public DeleteItemHistorySnapshotRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, string HistoryID) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.HistoryID = HistoryID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteItemHistorySnapshotResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class DeleteItemHistorySnapshotResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public DeleteItemHistorySnapshotResponse() {
+        }
+        
+        public DeleteItemHistorySnapshotResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemHistoryLimit", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetItemHistoryLimitRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public bool UseSystem;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public int HistoryLimit;
+        
+        public SetItemHistoryLimitRequest() {
+        }
+        
+        public SetItemHistoryLimitRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, bool UseSystem, int HistoryLimit) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.UseSystem = UseSystem;
+            this.HistoryLimit = HistoryLimit;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemHistoryLimitResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetItemHistoryLimitResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetItemHistoryLimitResponse() {
+        }
+        
+        public SetItemHistoryLimitResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemHistoryLimit", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemHistoryLimitRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        public GetItemHistoryLimitRequest() {
+        }
+        
+        public GetItemHistoryLimitRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemHistoryLimitResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemHistoryLimitResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public int HistoryLimit;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public bool IsSystem;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public int SystemLimit;
+        
+        public GetItemHistoryLimitResponse() {
+        }
+        
+        public GetItemHistoryLimitResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, int HistoryLimit, bool IsSystem, int SystemLimit) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.HistoryLimit = HistoryLimit;
+            this.IsSystem = IsSystem;
+            this.SystemLimit = SystemLimit;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemHistoryOptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetItemHistoryOptionsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public bool EnableManualSnapshotCreation;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public bool KeepExecutionSnapshots;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute("NoSchedule", typeof(NoSchedule))]
+        [System.Xml.Serialization.XmlElementAttribute("ScheduleDefinition", typeof(ScheduleDefinition))]
+        [System.Xml.Serialization.XmlElementAttribute("ScheduleReference", typeof(ScheduleReference))]
+        public CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item;
+        
+        public SetItemHistoryOptionsRequest() {
+        }
+        
+        public SetItemHistoryOptionsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, bool EnableManualSnapshotCreation, bool KeepExecutionSnapshots, CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.EnableManualSnapshotCreation = EnableManualSnapshotCreation;
+            this.KeepExecutionSnapshots = KeepExecutionSnapshots;
+            this.Item = Item;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetItemHistoryOptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetItemHistoryOptionsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetItemHistoryOptionsResponse() {
+        }
+        
+        public SetItemHistoryOptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemHistoryOptions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemHistoryOptionsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        public GetItemHistoryOptionsRequest() {
+        }
+        
+        public GetItemHistoryOptionsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemHistoryOptionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetItemHistoryOptionsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public bool EnableManualSnapshotCreation;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public bool KeepExecutionSnapshots;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("NoSchedule", typeof(NoSchedule))]
+        [System.Xml.Serialization.XmlElementAttribute("ScheduleDefinition", typeof(ScheduleDefinition))]
+        [System.Xml.Serialization.XmlElementAttribute("ScheduleReference", typeof(ScheduleReference))]
+        public CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item;
+        
+        public GetItemHistoryOptionsResponse() {
+        }
+        
+        public GetItemHistoryOptionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, bool EnableManualSnapshotCreation, bool KeepExecutionSnapshots, CrissCrossLib.ReportWebService.ScheduleDefinitionOrReference Item) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.EnableManualSnapshotCreation = EnableManualSnapshotCreation;
+            this.KeepExecutionSnapshots = KeepExecutionSnapshots;
+            this.Item = Item;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetReportServerConfigInfo", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetReportServerConfigInfoRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public bool ScaleOut;
+        
+        public GetReportServerConfigInfoRequest() {
+        }
+        
+        public GetReportServerConfigInfoRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, bool ScaleOut) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ScaleOut = ScaleOut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetReportServerConfigInfoResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetReportServerConfigInfoResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ServerConfigInfo;
+        
+        public GetReportServerConfigInfoResponse() {
+        }
+        
+        public GetReportServerConfigInfoResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string ServerConfigInfo) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ServerConfigInfo = ServerConfigInfo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="IsSSLRequired", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class IsSSLRequiredRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public IsSSLRequiredRequest() {
+        }
+        
+        public IsSSLRequiredRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="IsSSLRequiredResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class IsSSLRequiredResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public bool IsSSLRequiredResult;
+        
+        public IsSSLRequiredResponse() {
+        }
+        
+        public IsSSLRequiredResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, bool IsSSLRequiredResult) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.IsSSLRequiredResult = IsSSLRequiredResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetSystemProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetSystemPropertiesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Property[] Properties;
+        
+        public SetSystemPropertiesRequest() {
+        }
+        
+        public SetSystemPropertiesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, CrissCrossLib.ReportWebService.Property[] Properties) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Properties = Properties;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetSystemPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetSystemPropertiesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetSystemPropertiesResponse() {
+        }
+        
+        public SetSystemPropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSystemProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetSystemPropertiesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Property[] Properties;
+        
+        public GetSystemPropertiesRequest() {
+        }
+        
+        public GetSystemPropertiesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, CrissCrossLib.ReportWebService.Property[] Properties) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Properties = Properties;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSystemPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetSystemPropertiesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Property[] Values;
+        
+        public GetSystemPropertiesResponse() {
+        }
+        
+        public GetSystemPropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Property[] Values) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Values = Values;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetSystemPolicies", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetSystemPoliciesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Policy[] Policies;
+        
+        public SetSystemPoliciesRequest() {
+        }
+        
+        public SetSystemPoliciesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, CrissCrossLib.ReportWebService.Policy[] Policies) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.Policies = Policies;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetSystemPoliciesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetSystemPoliciesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetSystemPoliciesResponse() {
+        }
+        
+        public SetSystemPoliciesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSystemPolicies", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetSystemPoliciesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public GetSystemPoliciesRequest() {
+        }
+        
+        public GetSystemPoliciesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSystemPoliciesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetSystemPoliciesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Policy[] Policies;
+        
+        public GetSystemPoliciesResponse() {
+        }
+        
+        public GetSystemPoliciesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Policy[] Policies) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Policies = Policies;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListExtensions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListExtensionsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ExtensionType;
+        
+        public ListExtensionsRequest() {
+        }
+        
+        public ListExtensionsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ExtensionType) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ExtensionType = ExtensionType;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListExtensionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListExtensionsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Extension[] Extensions;
+        
+        public ListExtensionsResponse() {
+        }
+        
+        public ListExtensionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Extension[] Extensions) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Extensions = Extensions;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListExtensionTypes", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListExtensionTypesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public ListExtensionTypesRequest() {
+        }
+        
+        public ListExtensionTypesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListExtensionTypesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListExtensionTypesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string[] ListExtensionTypesResult;
+        
+        public ListExtensionTypesResponse() {
+        }
+        
+        public ListExtensionTypesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] ListExtensionTypesResult) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ListExtensionTypesResult = ListExtensionTypesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListEvents", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListEventsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public ListEventsRequest() {
+        }
+        
+        public ListEventsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListEventsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListEventsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Event[] Events;
+        
+        public ListEventsResponse() {
+        }
+        
+        public ListEventsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Event[] Events) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Events = Events;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FireEvent", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class FireEventRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string EventType;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string EventData;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public string SiteUrl;
+        
+        public FireEventRequest() {
+        }
+        
+        public FireEventRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string EventType, string EventData, string SiteUrl) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.EventType = EventType;
+            this.EventData = EventData;
+            this.SiteUrl = SiteUrl;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FireEventResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class FireEventResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public FireEventResponse() {
+        }
+        
+        public FireEventResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListJobs", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListJobsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public ListJobsRequest() {
+        }
+        
+        public ListJobsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListJobsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListJobsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.Job[] Jobs;
+        
+        public ListJobsResponse() {
+        }
+        
+        public ListJobsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.Job[] Jobs) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Jobs = Jobs;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListJobTypes", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListJobTypesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public ListJobTypesRequest() {
+        }
+        
+        public ListJobTypesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListJobTypesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListJobTypesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string[] ListJobTypesResult;
+        
+        public ListJobTypesResponse() {
+        }
+        
+        public ListJobTypesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] ListJobTypesResult) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ListJobTypesResult = ListJobTypesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListJobActions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListJobActionsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public ListJobActionsRequest() {
+        }
+        
+        public ListJobActionsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListJobActionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListJobActionsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string[] ListJobActionsResult;
+        
+        public ListJobActionsResponse() {
+        }
+        
+        public ListJobActionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] ListJobActionsResult) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ListJobActionsResult = ListJobActionsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListJobStates", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListJobStatesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public ListJobStatesRequest() {
+        }
+        
+        public ListJobStatesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListJobStatesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListJobStatesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string[] ListJobStatesResult;
+        
+        public ListJobStatesResponse() {
+        }
+        
+        public ListJobStatesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] ListJobStatesResult) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ListJobStatesResult = ListJobStatesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CancelJob", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CancelJobRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string JobID;
+        
+        public CancelJobRequest() {
+        }
+        
+        public CancelJobRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string JobID) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.JobID = JobID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CancelJobResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CancelJobResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public bool CancelJobResult;
+        
+        public CancelJobResponse() {
+        }
+        
+        public CancelJobResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, bool CancelJobResult) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.CancelJobResult = CancelJobResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateCacheRefreshPlan", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateCacheRefreshPlanRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string Description;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public string EventType;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
+        public string MatchData;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=4)]
+        public CrissCrossLib.ReportWebService.ParameterValue[] Parameters;
+        
+        public CreateCacheRefreshPlanRequest() {
+        }
+        
+        public CreateCacheRefreshPlanRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath, string Description, string EventType, string MatchData, CrissCrossLib.ReportWebService.ParameterValue[] Parameters) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+            this.Description = Description;
+            this.EventType = EventType;
+            this.MatchData = MatchData;
+            this.Parameters = Parameters;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateCacheRefreshPlanResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class CreateCacheRefreshPlanResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string CacheRefreshPlanID;
+        
+        public CreateCacheRefreshPlanResponse() {
+        }
+        
+        public CreateCacheRefreshPlanResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string CacheRefreshPlanID) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.CacheRefreshPlanID = CacheRefreshPlanID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetCacheRefreshPlanProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetCacheRefreshPlanPropertiesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string CacheRefreshPlanID;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string Description;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public string EventType;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
+        public string MatchData;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=4)]
+        public CrissCrossLib.ReportWebService.ParameterValue[] Parameters;
+        
+        public SetCacheRefreshPlanPropertiesRequest() {
+        }
+        
+        public SetCacheRefreshPlanPropertiesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string CacheRefreshPlanID, string Description, string EventType, string MatchData, CrissCrossLib.ReportWebService.ParameterValue[] Parameters) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.CacheRefreshPlanID = CacheRefreshPlanID;
+            this.Description = Description;
+            this.EventType = EventType;
+            this.MatchData = MatchData;
+            this.Parameters = Parameters;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetCacheRefreshPlanPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class SetCacheRefreshPlanPropertiesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public SetCacheRefreshPlanPropertiesResponse() {
+        }
+        
+        public SetCacheRefreshPlanPropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCacheRefreshPlanProperties", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetCacheRefreshPlanPropertiesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string CacheRefreshPlanID;
+        
+        public GetCacheRefreshPlanPropertiesRequest() {
+        }
+        
+        public GetCacheRefreshPlanPropertiesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string CacheRefreshPlanID) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.CacheRefreshPlanID = CacheRefreshPlanID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCacheRefreshPlanPropertiesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetCacheRefreshPlanPropertiesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string Description;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string LastRunStatus;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public CrissCrossLib.ReportWebService.CacheRefreshPlanState State;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=3)]
+        public string EventType;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=4)]
+        public string MatchData;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=5)]
+        public CrissCrossLib.ReportWebService.ParameterValue[] Parameters;
+        
+        public GetCacheRefreshPlanPropertiesResponse() {
+        }
+        
+        public GetCacheRefreshPlanPropertiesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string Description, string LastRunStatus, CrissCrossLib.ReportWebService.CacheRefreshPlanState State, string EventType, string MatchData, CrissCrossLib.ReportWebService.ParameterValue[] Parameters) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Description = Description;
+            this.LastRunStatus = LastRunStatus;
+            this.State = State;
+            this.EventType = EventType;
+            this.MatchData = MatchData;
+            this.Parameters = Parameters;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteCacheRefreshPlan", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class DeleteCacheRefreshPlanRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string CacheRefreshPlanID;
+        
+        public DeleteCacheRefreshPlanRequest() {
+        }
+        
+        public DeleteCacheRefreshPlanRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string CacheRefreshPlanID) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.CacheRefreshPlanID = CacheRefreshPlanID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteCacheRefreshPlanResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class DeleteCacheRefreshPlanResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public DeleteCacheRefreshPlanResponse() {
+        }
+        
+        public DeleteCacheRefreshPlanResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListCacheRefreshPlans", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListCacheRefreshPlansRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        public ListCacheRefreshPlansRequest() {
+        }
+        
+        public ListCacheRefreshPlansRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListCacheRefreshPlansResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListCacheRefreshPlansResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public CrissCrossLib.ReportWebService.CacheRefreshPlan[] CacheRefreshPlans;
+        
+        public ListCacheRefreshPlansResponse() {
+        }
+        
+        public ListCacheRefreshPlansResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, CrissCrossLib.ReportWebService.CacheRefreshPlan[] CacheRefreshPlans) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.CacheRefreshPlans = CacheRefreshPlans;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LogonUser", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class LogonUserRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string userName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=1)]
+        public string password;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=2)]
+        public string authority;
+        
+        public LogonUserRequest() {
+        }
+        
+        public LogonUserRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string userName, string password, string authority) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.userName = userName;
+            this.password = password;
+            this.authority = authority;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LogonUserResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class LogonUserResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public LogonUserResponse() {
+        }
+        
+        public LogonUserResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Logoff", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class LogoffRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public LogoffRequest() {
+        }
+        
+        public LogoffRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LogoffResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class LogoffResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        public LogoffResponse() {
+        }
+        
+        public LogoffResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader) {
+            this.ServerInfoHeader = ServerInfoHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPermissions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetPermissionsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string ItemPath;
+        
+        public GetPermissionsRequest() {
+        }
+        
+        public GetPermissionsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader, string ItemPath) {
+            this.TrustedUserHeader = TrustedUserHeader;
+            this.ItemPath = ItemPath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPermissionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetPermissionsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("Operation")]
+        public string[] Permissions;
+        
+        public GetPermissionsResponse() {
+        }
+        
+        public GetPermissionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] Permissions) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Permissions = Permissions;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSystemPermissions", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetSystemPermissionsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public GetSystemPermissionsRequest() {
+        }
+        
+        public GetSystemPermissionsRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSystemPermissionsResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class GetSystemPermissionsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("Operation")]
+        public string[] Permissions;
+        
+        public GetSystemPermissionsResponse() {
+        }
+        
+        public GetSystemPermissionsResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] Permissions) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.Permissions = Permissions;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSecurityScopes", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListSecurityScopesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader;
+        
+        public ListSecurityScopesRequest() {
+        }
+        
+        public ListSecurityScopesRequest(CrissCrossLib.ReportWebService.TrustedUserHeader TrustedUserHeader) {
+            this.TrustedUserHeader = TrustedUserHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListSecurityScopesResponse", WrapperNamespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", IsWrapped=true)]
+    public partial class ListSecurityScopesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
+        public CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order=0)]
+        public string[] ListSecurityScopesResult;
+        
+        public ListSecurityScopesResponse() {
+        }
+        
+        public ListSecurityScopesResponse(CrissCrossLib.ReportWebService.ServerInfoHeader ServerInfoHeader, string[] ListSecurityScopesResult) {
+            this.ServerInfoHeader = ServerInfoHeader;
+            this.ListSecurityScopesResult = ListSecurityScopesResult;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ReportingService2010SoapChannel : CrissCrossLib.ReportWebService.ReportingService2010Soap, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ReportingService2010SoapClient : System.ServiceModel.ClientBase<CrissCrossLib.ReportWebService.ReportingService2010Soap>, CrissCrossLib.ReportWebService.ReportingService2010Soap {
+        
+        public ReportingService2010SoapClient() {
+        }
+        
+        public ReportingService2010SoapClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public ReportingService2005SoapClient(string endpointConfigurationName, string remoteAddress) : 
+        public ReportingService2010SoapClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ReportingService2005SoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ReportingService2010SoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ReportingService2005SoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ReportingService2010SoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public CrissCrossLib.ReportWebService.ListSecureMethodsResponse ListSecureMethods(CrissCrossLib.ReportWebService.ListSecureMethodsRequest request) {
-            return base.Channel.ListSecureMethods(request);
+        public CrissCrossLib.ReportWebService.CreateCatalogItemResponse CreateCatalogItem(CrissCrossLib.ReportWebService.CreateCatalogItemRequest request) {
+            return base.Channel.CreateCatalogItem(request);
         }
         
-        public CrissCrossLib.ReportWebService.CreateBatchResponse CreateBatch(CrissCrossLib.ReportWebService.CreateBatchRequest request) {
-            return base.Channel.CreateBatch(request);
+        public CrissCrossLib.ReportWebService.SetItemDefinitionResponse SetItemDefinition(CrissCrossLib.ReportWebService.SetItemDefinitionRequest request) {
+            return base.Channel.SetItemDefinition(request);
         }
         
-        public CrissCrossLib.ReportWebService.CancelBatchResponse CancelBatch(CrissCrossLib.ReportWebService.CancelBatchRequest request) {
-            return base.Channel.CancelBatch(request);
+        public CrissCrossLib.ReportWebService.GetItemDefinitionResponse GetItemDefinition(CrissCrossLib.ReportWebService.GetItemDefinitionRequest request) {
+            return base.Channel.GetItemDefinition(request);
         }
         
-        public CrissCrossLib.ReportWebService.ExecuteBatchResponse ExecuteBatch(CrissCrossLib.ReportWebService.ExecuteBatchRequest request) {
-            return base.Channel.ExecuteBatch(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetSystemPropertiesResponse GetSystemProperties(CrissCrossLib.ReportWebService.GetSystemPropertiesRequest request) {
-            return base.Channel.GetSystemProperties(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.SetSystemPropertiesResponse SetSystemProperties(CrissCrossLib.ReportWebService.SetSystemPropertiesRequest request) {
-            return base.Channel.SetSystemProperties(request);
+        public CrissCrossLib.ReportWebService.GetItemTypeResponse GetItemType(CrissCrossLib.ReportWebService.GetItemTypeRequest request) {
+            return base.Channel.GetItemType(request);
         }
         
         public CrissCrossLib.ReportWebService.DeleteItemResponse DeleteItem(CrissCrossLib.ReportWebService.DeleteItemRequest request) {
@@ -9699,6 +11084,14 @@ namespace CrissCrossLib.ReportWebService {
             return base.Channel.MoveItem(request);
         }
         
+        public CrissCrossLib.ReportWebService.InheritParentSecurityResponse InheritParentSecurity(CrissCrossLib.ReportWebService.InheritParentSecurityRequest request) {
+            return base.Channel.InheritParentSecurity(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListItemHistoryResponse ListItemHistory(CrissCrossLib.ReportWebService.ListItemHistoryRequest request) {
+            return base.Channel.ListItemHistory(request);
+        }
+        
         public CrissCrossLib.ReportWebService.ListChildrenResponse ListChildren(CrissCrossLib.ReportWebService.ListChildrenRequest request) {
             return base.Channel.ListChildren(request);
         }
@@ -9707,216 +11100,48 @@ namespace CrissCrossLib.ReportWebService {
             return base.Channel.ListDependentItems(request);
         }
         
-        public CrissCrossLib.ReportWebService.GetPropertiesResponse GetProperties(CrissCrossLib.ReportWebService.GetPropertiesRequest request) {
-            return base.Channel.GetProperties(request);
+        public CrissCrossLib.ReportWebService.FindItemsResponse FindItems(CrissCrossLib.ReportWebService.FindItemsRequest request) {
+            return base.Channel.FindItems(request);
         }
         
-        public CrissCrossLib.ReportWebService.SetPropertiesResponse SetProperties(CrissCrossLib.ReportWebService.SetPropertiesRequest request) {
-            return base.Channel.SetProperties(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetItemTypeResponse GetItemType(CrissCrossLib.ReportWebService.GetItemTypeRequest request) {
-            return base.Channel.GetItemType(request);
+        public CrissCrossLib.ReportWebService.ListParentsResponse ListParents(CrissCrossLib.ReportWebService.ListParentsRequest request) {
+            return base.Channel.ListParents(request);
         }
         
         public CrissCrossLib.ReportWebService.CreateFolderResponse CreateFolder(CrissCrossLib.ReportWebService.CreateFolderRequest request) {
             return base.Channel.CreateFolder(request);
         }
         
-        public CrissCrossLib.ReportWebService.CreateReportResponse CreateReport(CrissCrossLib.ReportWebService.CreateReportRequest request) {
-            return base.Channel.CreateReport(request);
+        public CrissCrossLib.ReportWebService.SetPropertiesResponse SetProperties(CrissCrossLib.ReportWebService.SetPropertiesRequest request) {
+            return base.Channel.SetProperties(request);
         }
         
-        public CrissCrossLib.ReportWebService.GetReportDefinitionResponse GetReportDefinition(CrissCrossLib.ReportWebService.GetReportDefinitionRequest request) {
-            return base.Channel.GetReportDefinition(request);
+        public CrissCrossLib.ReportWebService.GetPropertiesResponse GetProperties(CrissCrossLib.ReportWebService.GetPropertiesRequest request) {
+            return base.Channel.GetProperties(request);
         }
         
-        public CrissCrossLib.ReportWebService.SetReportDefinitionResponse SetReportDefinition(CrissCrossLib.ReportWebService.SetReportDefinitionRequest request) {
-            return base.Channel.SetReportDefinition(request);
+        public CrissCrossLib.ReportWebService.SetItemReferencesResponse SetItemReferences(CrissCrossLib.ReportWebService.SetItemReferencesRequest request) {
+            return base.Channel.SetItemReferences(request);
         }
         
-        public CrissCrossLib.ReportWebService.CreateResourceResponse CreateResource(CrissCrossLib.ReportWebService.CreateResourceRequest request) {
-            return base.Channel.CreateResource(request);
+        public CrissCrossLib.ReportWebService.GetItemReferencesResponse GetItemReferences(CrissCrossLib.ReportWebService.GetItemReferencesRequest request) {
+            return base.Channel.GetItemReferences(request);
         }
         
-        public CrissCrossLib.ReportWebService.SetResourceContentsResponse SetResourceContents(CrissCrossLib.ReportWebService.SetResourceContentsRequest request) {
-            return base.Channel.SetResourceContents(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetResourceContentsResponse GetResourceContents(CrissCrossLib.ReportWebService.GetResourceContentsRequest request) {
-            return base.Channel.GetResourceContents(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetReportParametersResponse GetReportParameters(CrissCrossLib.ReportWebService.GetReportParametersRequest request) {
-            return base.Channel.GetReportParameters(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.SetReportParametersResponse SetReportParameters(CrissCrossLib.ReportWebService.SetReportParametersRequest request) {
-            return base.Channel.SetReportParameters(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.CreateLinkedReportResponse CreateLinkedReport(CrissCrossLib.ReportWebService.CreateLinkedReportRequest request) {
-            return base.Channel.CreateLinkedReport(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetReportLinkResponse GetReportLink(CrissCrossLib.ReportWebService.GetReportLinkRequest request) {
-            return base.Channel.GetReportLink(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.SetReportLinkResponse SetReportLink(CrissCrossLib.ReportWebService.SetReportLinkRequest request) {
-            return base.Channel.SetReportLink(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetRenderResourceResponse GetRenderResource(CrissCrossLib.ReportWebService.GetRenderResourceRequest request) {
-            return base.Channel.GetRenderResource(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.SetExecutionOptionsResponse SetExecutionOptions(CrissCrossLib.ReportWebService.SetExecutionOptionsRequest request) {
-            return base.Channel.SetExecutionOptions(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetExecutionOptionsResponse GetExecutionOptions(CrissCrossLib.ReportWebService.GetExecutionOptionsRequest request) {
-            return base.Channel.GetExecutionOptions(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.SetCacheOptionsResponse SetCacheOptions(CrissCrossLib.ReportWebService.SetCacheOptionsRequest request) {
-            return base.Channel.SetCacheOptions(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetCacheOptionsResponse GetCacheOptions(CrissCrossLib.ReportWebService.GetCacheOptionsRequest request) {
-            return base.Channel.GetCacheOptions(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.UpdateReportExecutionSnapshotResponse UpdateReportExecutionSnapshot(CrissCrossLib.ReportWebService.UpdateReportExecutionSnapshotRequest request) {
-            return base.Channel.UpdateReportExecutionSnapshot(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.FlushCacheResponse FlushCache(CrissCrossLib.ReportWebService.FlushCacheRequest request) {
-            return base.Channel.FlushCache(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.ListJobsResponse ListJobs(CrissCrossLib.ReportWebService.ListJobsRequest request) {
-            return base.Channel.ListJobs(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.CancelJobResponse CancelJob(CrissCrossLib.ReportWebService.CancelJobRequest request) {
-            return base.Channel.CancelJob(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.CreateDataSourceResponse CreateDataSource(CrissCrossLib.ReportWebService.CreateDataSourceRequest request) {
-            return base.Channel.CreateDataSource(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetDataSourceContentsResponse GetDataSourceContents(CrissCrossLib.ReportWebService.GetDataSourceContentsRequest request) {
-            return base.Channel.GetDataSourceContents(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.SetDataSourceContentsResponse SetDataSourceContents(CrissCrossLib.ReportWebService.SetDataSourceContentsRequest request) {
-            return base.Channel.SetDataSourceContents(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.EnableDataSourceResponse EnableDataSource(CrissCrossLib.ReportWebService.EnableDataSourceRequest request) {
-            return base.Channel.EnableDataSource(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.DisableDataSourceResponse DisableDataSource(CrissCrossLib.ReportWebService.DisableDataSourceRequest request) {
-            return base.Channel.DisableDataSource(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.SetItemDataSourcesResponse SetItemDataSources(CrissCrossLib.ReportWebService.SetItemDataSourcesRequest request) {
-            return base.Channel.SetItemDataSources(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetItemDataSourcesResponse GetItemDataSources(CrissCrossLib.ReportWebService.GetItemDataSourcesRequest request) {
-            return base.Channel.GetItemDataSources(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetItemDataSourcePromptsResponse GetItemDataSourcePrompts(CrissCrossLib.ReportWebService.GetItemDataSourcePromptsRequest request) {
-            return base.Channel.GetItemDataSourcePrompts(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.CreateReportHistorySnapshotResponse CreateReportHistorySnapshot(CrissCrossLib.ReportWebService.CreateReportHistorySnapshotRequest request) {
-            return base.Channel.CreateReportHistorySnapshot(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.SetReportHistoryOptionsResponse SetReportHistoryOptions(CrissCrossLib.ReportWebService.SetReportHistoryOptionsRequest request) {
-            return base.Channel.SetReportHistoryOptions(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetReportHistoryOptionsResponse GetReportHistoryOptions(CrissCrossLib.ReportWebService.GetReportHistoryOptionsRequest request) {
-            return base.Channel.GetReportHistoryOptions(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.SetReportHistoryLimitResponse SetReportHistoryLimit(CrissCrossLib.ReportWebService.SetReportHistoryLimitRequest request) {
-            return base.Channel.SetReportHistoryLimit(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetReportHistoryLimitResponse GetReportHistoryLimit(CrissCrossLib.ReportWebService.GetReportHistoryLimitRequest request) {
-            return base.Channel.GetReportHistoryLimit(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.ListReportHistoryResponse ListReportHistory(CrissCrossLib.ReportWebService.ListReportHistoryRequest request) {
-            return base.Channel.ListReportHistory(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.DeleteReportHistorySnapshotResponse DeleteReportHistorySnapshot(CrissCrossLib.ReportWebService.DeleteReportHistorySnapshotRequest request) {
-            return base.Channel.DeleteReportHistorySnapshot(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.FindItemsResponse FindItems(CrissCrossLib.ReportWebService.FindItemsRequest request) {
-            return base.Channel.FindItems(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.CreateScheduleResponse CreateSchedule(CrissCrossLib.ReportWebService.CreateScheduleRequest request) {
-            return base.Channel.CreateSchedule(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.DeleteScheduleResponse DeleteSchedule(CrissCrossLib.ReportWebService.DeleteScheduleRequest request) {
-            return base.Channel.DeleteSchedule(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.SetSchedulePropertiesResponse SetScheduleProperties(CrissCrossLib.ReportWebService.SetSchedulePropertiesRequest request) {
-            return base.Channel.SetScheduleProperties(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetSchedulePropertiesResponse GetScheduleProperties(CrissCrossLib.ReportWebService.GetSchedulePropertiesRequest request) {
-            return base.Channel.GetScheduleProperties(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.ListScheduledReportsResponse ListScheduledReports(CrissCrossLib.ReportWebService.ListScheduledReportsRequest request) {
-            return base.Channel.ListScheduledReports(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.ListSchedulesResponse ListSchedules(CrissCrossLib.ReportWebService.ListSchedulesRequest request) {
-            return base.Channel.ListSchedules(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.PauseScheduleResponse PauseSchedule(CrissCrossLib.ReportWebService.PauseScheduleRequest request) {
-            return base.Channel.PauseSchedule(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.ResumeScheduleResponse ResumeSchedule(CrissCrossLib.ReportWebService.ResumeScheduleRequest request) {
-            return base.Channel.ResumeSchedule(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.CreateSubscriptionResponse CreateSubscription(CrissCrossLib.ReportWebService.CreateSubscriptionRequest request) {
-            return base.Channel.CreateSubscription(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.CreateDataDrivenSubscriptionResponse CreateDataDrivenSubscription(CrissCrossLib.ReportWebService.CreateDataDrivenSubscriptionRequest request) {
-            return base.Channel.CreateDataDrivenSubscription(request);
+        public CrissCrossLib.ReportWebService.ListItemTypesResponse ListItemTypes(CrissCrossLib.ReportWebService.ListItemTypesRequest request) {
+            return base.Channel.ListItemTypes(request);
         }
         
         public CrissCrossLib.ReportWebService.SetSubscriptionPropertiesResponse SetSubscriptionProperties(CrissCrossLib.ReportWebService.SetSubscriptionPropertiesRequest request) {
             return base.Channel.SetSubscriptionProperties(request);
         }
         
-        public CrissCrossLib.ReportWebService.SetDataDrivenSubscriptionPropertiesResponse SetDataDrivenSubscriptionProperties(CrissCrossLib.ReportWebService.SetDataDrivenSubscriptionPropertiesRequest request) {
-            return base.Channel.SetDataDrivenSubscriptionProperties(request);
-        }
-        
         public CrissCrossLib.ReportWebService.GetSubscriptionPropertiesResponse GetSubscriptionProperties(CrissCrossLib.ReportWebService.GetSubscriptionPropertiesRequest request) {
             return base.Channel.GetSubscriptionProperties(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.SetDataDrivenSubscriptionPropertiesResponse SetDataDrivenSubscriptionProperties(CrissCrossLib.ReportWebService.SetDataDrivenSubscriptionPropertiesRequest request) {
+            return base.Channel.SetDataDrivenSubscriptionProperties(request);
         }
         
         public CrissCrossLib.ReportWebService.GetDataDrivenSubscriptionPropertiesResponse GetDataDrivenSubscriptionProperties(CrissCrossLib.ReportWebService.GetDataDrivenSubscriptionPropertiesRequest request) {
@@ -9927,8 +11152,12 @@ namespace CrissCrossLib.ReportWebService {
             return base.Channel.DeleteSubscription(request);
         }
         
-        public CrissCrossLib.ReportWebService.PrepareQueryResponse PrepareQuery(CrissCrossLib.ReportWebService.PrepareQueryRequest request) {
-            return base.Channel.PrepareQuery(request);
+        public CrissCrossLib.ReportWebService.CreateSubscriptionResponse CreateSubscription(CrissCrossLib.ReportWebService.CreateSubscriptionRequest request) {
+            return base.Channel.CreateSubscription(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.CreateDataDrivenSubscriptionResponse CreateDataDrivenSubscription(CrissCrossLib.ReportWebService.CreateDataDrivenSubscriptionRequest request) {
+            return base.Channel.CreateDataDrivenSubscription(request);
         }
         
         public CrissCrossLib.ReportWebService.GetExtensionSettingsResponse GetExtensionSettings(CrissCrossLib.ReportWebService.GetExtensionSettingsRequest request) {
@@ -9943,124 +11172,120 @@ namespace CrissCrossLib.ReportWebService {
             return base.Channel.ListSubscriptions(request);
         }
         
+        public CrissCrossLib.ReportWebService.ListMySubscriptionsResponse ListMySubscriptions(CrissCrossLib.ReportWebService.ListMySubscriptionsRequest request) {
+            return base.Channel.ListMySubscriptions(request);
+        }
+        
         public CrissCrossLib.ReportWebService.ListSubscriptionsUsingDataSourceResponse ListSubscriptionsUsingDataSource(CrissCrossLib.ReportWebService.ListSubscriptionsUsingDataSourceRequest request) {
             return base.Channel.ListSubscriptionsUsingDataSource(request);
         }
         
-        public CrissCrossLib.ReportWebService.ListExtensionsResponse ListExtensions(CrissCrossLib.ReportWebService.ListExtensionsRequest request) {
-            return base.Channel.ListExtensions(request);
+        public CrissCrossLib.ReportWebService.ChangeSubscriptionOwnerResponse ChangeSubscriptionOwner(CrissCrossLib.ReportWebService.ChangeSubscriptionOwnerRequest request) {
+            return base.Channel.ChangeSubscriptionOwner(request);
         }
         
-        public CrissCrossLib.ReportWebService.ListEventsResponse ListEvents(CrissCrossLib.ReportWebService.ListEventsRequest request) {
-            return base.Channel.ListEvents(request);
+        public CrissCrossLib.ReportWebService.CreateDataSourceResponse CreateDataSource(CrissCrossLib.ReportWebService.CreateDataSourceRequest request) {
+            return base.Channel.CreateDataSource(request);
         }
         
-        public CrissCrossLib.ReportWebService.FireEventResponse FireEvent(CrissCrossLib.ReportWebService.FireEventRequest request) {
-            return base.Channel.FireEvent(request);
+        public CrissCrossLib.ReportWebService.PrepareQueryResponse PrepareQuery(CrissCrossLib.ReportWebService.PrepareQueryRequest request) {
+            return base.Channel.PrepareQuery(request);
         }
         
-        public CrissCrossLib.ReportWebService.ListTasksResponse ListTasks(CrissCrossLib.ReportWebService.ListTasksRequest request) {
-            return base.Channel.ListTasks(request);
+        public CrissCrossLib.ReportWebService.EnableDataSourceResponse EnableDataSource(CrissCrossLib.ReportWebService.EnableDataSourceRequest request) {
+            return base.Channel.EnableDataSource(request);
         }
         
-        public CrissCrossLib.ReportWebService.ListRolesResponse ListRoles(CrissCrossLib.ReportWebService.ListRolesRequest request) {
-            return base.Channel.ListRoles(request);
+        public CrissCrossLib.ReportWebService.DisableDataSourceResponse DisableDataSource(CrissCrossLib.ReportWebService.DisableDataSourceRequest request) {
+            return base.Channel.DisableDataSource(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.SetDataSourceContentsResponse SetDataSourceContents(CrissCrossLib.ReportWebService.SetDataSourceContentsRequest request) {
+            return base.Channel.SetDataSourceContents(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.GetDataSourceContentsResponse GetDataSourceContents(CrissCrossLib.ReportWebService.GetDataSourceContentsRequest request) {
+            return base.Channel.GetDataSourceContents(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListDatabaseCredentialRetrievalOptionsResponse ListDatabaseCredentialRetrievalOptions(CrissCrossLib.ReportWebService.ListDatabaseCredentialRetrievalOptionsRequest request) {
+            return base.Channel.ListDatabaseCredentialRetrievalOptions(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.SetItemDataSourcesResponse SetItemDataSources(CrissCrossLib.ReportWebService.SetItemDataSourcesRequest request) {
+            return base.Channel.SetItemDataSources(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.GetItemDataSourcesResponse GetItemDataSources(CrissCrossLib.ReportWebService.GetItemDataSourcesRequest request) {
+            return base.Channel.GetItemDataSources(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.TestConnectForDataSourceDefinitionResponse TestConnectForDataSourceDefinition(CrissCrossLib.ReportWebService.TestConnectForDataSourceDefinitionRequest request) {
+            return base.Channel.TestConnectForDataSourceDefinition(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.TestConnectForItemDataSourceResponse TestConnectForItemDataSource(CrissCrossLib.ReportWebService.TestConnectForItemDataSourceRequest request) {
+            return base.Channel.TestConnectForItemDataSource(request);
         }
         
         public CrissCrossLib.ReportWebService.CreateRoleResponse CreateRole(CrissCrossLib.ReportWebService.CreateRoleRequest request) {
             return base.Channel.CreateRole(request);
         }
         
-        public CrissCrossLib.ReportWebService.DeleteRoleResponse DeleteRole(CrissCrossLib.ReportWebService.DeleteRoleRequest request) {
-            return base.Channel.DeleteRole(request);
+        public CrissCrossLib.ReportWebService.SetRolePropertiesResponse SetRoleProperties(CrissCrossLib.ReportWebService.SetRolePropertiesRequest request) {
+            return base.Channel.SetRoleProperties(request);
         }
         
         public CrissCrossLib.ReportWebService.GetRolePropertiesResponse GetRoleProperties(CrissCrossLib.ReportWebService.GetRolePropertiesRequest request) {
             return base.Channel.GetRoleProperties(request);
         }
         
-        public CrissCrossLib.ReportWebService.SetRolePropertiesResponse SetRoleProperties(CrissCrossLib.ReportWebService.SetRolePropertiesRequest request) {
-            return base.Channel.SetRoleProperties(request);
+        public CrissCrossLib.ReportWebService.DeleteRoleResponse DeleteRole(CrissCrossLib.ReportWebService.DeleteRoleRequest request) {
+            return base.Channel.DeleteRole(request);
         }
         
-        public CrissCrossLib.ReportWebService.GetSystemPoliciesResponse GetSystemPolicies(CrissCrossLib.ReportWebService.GetSystemPoliciesRequest request) {
-            return base.Channel.GetSystemPolicies(request);
+        public CrissCrossLib.ReportWebService.ListRolesResponse ListRoles(CrissCrossLib.ReportWebService.ListRolesRequest request) {
+            return base.Channel.ListRoles(request);
         }
         
-        public CrissCrossLib.ReportWebService.SetSystemPoliciesResponse SetSystemPolicies(CrissCrossLib.ReportWebService.SetSystemPoliciesRequest request) {
-            return base.Channel.SetSystemPolicies(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetPoliciesResponse GetPolicies(CrissCrossLib.ReportWebService.GetPoliciesRequest request) {
-            return base.Channel.GetPolicies(request);
+        public CrissCrossLib.ReportWebService.ListTasksResponse ListTasks(CrissCrossLib.ReportWebService.ListTasksRequest request) {
+            return base.Channel.ListTasks(request);
         }
         
         public CrissCrossLib.ReportWebService.SetPoliciesResponse SetPolicies(CrissCrossLib.ReportWebService.SetPoliciesRequest request) {
             return base.Channel.SetPolicies(request);
         }
         
-        public CrissCrossLib.ReportWebService.InheritParentSecurityResponse InheritParentSecurity(CrissCrossLib.ReportWebService.InheritParentSecurityRequest request) {
-            return base.Channel.InheritParentSecurity(request);
+        public CrissCrossLib.ReportWebService.GetPoliciesResponse GetPolicies(CrissCrossLib.ReportWebService.GetPoliciesRequest request) {
+            return base.Channel.GetPolicies(request);
         }
         
-        public CrissCrossLib.ReportWebService.GetSystemPermissionsResponse GetSystemPermissions(CrissCrossLib.ReportWebService.GetSystemPermissionsRequest request) {
-            return base.Channel.GetSystemPermissions(request);
+        public CrissCrossLib.ReportWebService.GetItemDataSourcePromptsResponse GetItemDataSourcePrompts(CrissCrossLib.ReportWebService.GetItemDataSourcePromptsRequest request) {
+            return base.Channel.GetItemDataSourcePrompts(request);
         }
         
-        public CrissCrossLib.ReportWebService.GetPermissionsResponse GetPermissions(CrissCrossLib.ReportWebService.GetPermissionsRequest request) {
-            return base.Channel.GetPermissions(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.LogonUserResponse LogonUser(CrissCrossLib.ReportWebService.LogonUserRequest request) {
-            return base.Channel.LogonUser(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.LogoffResponse Logoff(CrissCrossLib.ReportWebService.LogoffRequest request) {
-            return base.Channel.Logoff(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.CreateModelResponse CreateModel(CrissCrossLib.ReportWebService.CreateModelRequest request) {
-            return base.Channel.CreateModel(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetModelDefinitionResponse GetModelDefinition(CrissCrossLib.ReportWebService.GetModelDefinitionRequest request) {
-            return base.Channel.GetModelDefinition(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.SetModelDefinitionResponse SetModelDefinition(CrissCrossLib.ReportWebService.SetModelDefinitionRequest request) {
-            return base.Channel.SetModelDefinition(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.ListModelPerspectivesResponse ListModelPerspectives(CrissCrossLib.ReportWebService.ListModelPerspectivesRequest request) {
-            return base.Channel.ListModelPerspectives(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.GetUserModelResponse GetUserModel(CrissCrossLib.ReportWebService.GetUserModelRequest request) {
-            return base.Channel.GetUserModel(request);
-        }
-        
-        public CrissCrossLib.ReportWebService.ListModelItemChildrenResponse ListModelItemChildren(CrissCrossLib.ReportWebService.ListModelItemChildrenRequest request) {
-            return base.Channel.ListModelItemChildren(request);
+        public CrissCrossLib.ReportWebService.GenerateModelResponse GenerateModel(CrissCrossLib.ReportWebService.GenerateModelRequest request) {
+            return base.Channel.GenerateModel(request);
         }
         
         public CrissCrossLib.ReportWebService.GetModelItemPermissionsResponse GetModelItemPermissions(CrissCrossLib.ReportWebService.GetModelItemPermissionsRequest request) {
             return base.Channel.GetModelItemPermissions(request);
         }
         
-        public CrissCrossLib.ReportWebService.GetModelItemPoliciesResponse GetModelItemPolicies(CrissCrossLib.ReportWebService.GetModelItemPoliciesRequest request) {
-            return base.Channel.GetModelItemPolicies(request);
-        }
-        
         public CrissCrossLib.ReportWebService.SetModelItemPoliciesResponse SetModelItemPolicies(CrissCrossLib.ReportWebService.SetModelItemPoliciesRequest request) {
             return base.Channel.SetModelItemPolicies(request);
         }
         
-        public CrissCrossLib.ReportWebService.InheritModelItemParentSecurityResponse InheritModelItemParentSecurity(CrissCrossLib.ReportWebService.InheritModelItemParentSecurityRequest request) {
-            return base.Channel.InheritModelItemParentSecurity(request);
+        public CrissCrossLib.ReportWebService.GetModelItemPoliciesResponse GetModelItemPolicies(CrissCrossLib.ReportWebService.GetModelItemPoliciesRequest request) {
+            return base.Channel.GetModelItemPolicies(request);
         }
         
-        public CrissCrossLib.ReportWebService.RemoveAllModelItemPoliciesResponse RemoveAllModelItemPolicies(CrissCrossLib.ReportWebService.RemoveAllModelItemPoliciesRequest request) {
-            return base.Channel.RemoveAllModelItemPolicies(request);
+        public CrissCrossLib.ReportWebService.GetUserModelResponse GetUserModel(CrissCrossLib.ReportWebService.GetUserModelRequest request) {
+            return base.Channel.GetUserModel(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.InheritModelItemParentSecurityResponse InheritModelItemParentSecurity(CrissCrossLib.ReportWebService.InheritModelItemParentSecurityRequest request) {
+            return base.Channel.InheritModelItemParentSecurity(request);
         }
         
         public CrissCrossLib.ReportWebService.SetModelDrillthroughReportsResponse SetModelDrillthroughReports(CrissCrossLib.ReportWebService.SetModelDrillthroughReportsRequest request) {
@@ -10071,12 +11296,244 @@ namespace CrissCrossLib.ReportWebService {
             return base.Channel.ListModelDrillthroughReports(request);
         }
         
-        public CrissCrossLib.ReportWebService.GenerateModelResponse GenerateModel(CrissCrossLib.ReportWebService.GenerateModelRequest request) {
-            return base.Channel.GenerateModel(request);
+        public CrissCrossLib.ReportWebService.ListModelItemChildrenResponse ListModelItemChildren(CrissCrossLib.ReportWebService.ListModelItemChildrenRequest request) {
+            return base.Channel.ListModelItemChildren(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListModelItemTypesResponse ListModelItemTypes(CrissCrossLib.ReportWebService.ListModelItemTypesRequest request) {
+            return base.Channel.ListModelItemTypes(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListModelPerspectivesResponse ListModelPerspectives(CrissCrossLib.ReportWebService.ListModelPerspectivesRequest request) {
+            return base.Channel.ListModelPerspectives(request);
         }
         
         public CrissCrossLib.ReportWebService.RegenerateModelResponse RegenerateModel(CrissCrossLib.ReportWebService.RegenerateModelRequest request) {
             return base.Channel.RegenerateModel(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.RemoveAllModelItemPoliciesResponse RemoveAllModelItemPolicies(CrissCrossLib.ReportWebService.RemoveAllModelItemPoliciesRequest request) {
+            return base.Channel.RemoveAllModelItemPolicies(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.CreateScheduleResponse CreateSchedule(CrissCrossLib.ReportWebService.CreateScheduleRequest request) {
+            return base.Channel.CreateSchedule(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.DeleteScheduleResponse DeleteSchedule(CrissCrossLib.ReportWebService.DeleteScheduleRequest request) {
+            return base.Channel.DeleteSchedule(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListSchedulesResponse ListSchedules(CrissCrossLib.ReportWebService.ListSchedulesRequest request) {
+            return base.Channel.ListSchedules(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.GetSchedulePropertiesResponse GetScheduleProperties(CrissCrossLib.ReportWebService.GetSchedulePropertiesRequest request) {
+            return base.Channel.GetScheduleProperties(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListScheduleStatesResponse ListScheduleStates(CrissCrossLib.ReportWebService.ListScheduleStatesRequest request) {
+            return base.Channel.ListScheduleStates(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.PauseScheduleResponse PauseSchedule(CrissCrossLib.ReportWebService.PauseScheduleRequest request) {
+            return base.Channel.PauseSchedule(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ResumeScheduleResponse ResumeSchedule(CrissCrossLib.ReportWebService.ResumeScheduleRequest request) {
+            return base.Channel.ResumeSchedule(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.SetSchedulePropertiesResponse SetScheduleProperties(CrissCrossLib.ReportWebService.SetSchedulePropertiesRequest request) {
+            return base.Channel.SetScheduleProperties(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListScheduledItemsResponse ListScheduledItems(CrissCrossLib.ReportWebService.ListScheduledItemsRequest request) {
+            return base.Channel.ListScheduledItems(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.SetItemParametersResponse SetItemParameters(CrissCrossLib.ReportWebService.SetItemParametersRequest request) {
+            return base.Channel.SetItemParameters(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.GetItemParametersResponse GetItemParameters(CrissCrossLib.ReportWebService.GetItemParametersRequest request) {
+            return base.Channel.GetItemParameters(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListParameterTypesResponse ListParameterTypes(CrissCrossLib.ReportWebService.ListParameterTypesRequest request) {
+            return base.Channel.ListParameterTypes(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListParameterStatesResponse ListParameterStates(CrissCrossLib.ReportWebService.ListParameterStatesRequest request) {
+            return base.Channel.ListParameterStates(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.CreateReportEditSessionResponse CreateReportEditSession(CrissCrossLib.ReportWebService.CreateReportEditSessionRequest request) {
+            return base.Channel.CreateReportEditSession(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.CreateLinkedItemResponse CreateLinkedItem(CrissCrossLib.ReportWebService.CreateLinkedItemRequest request) {
+            return base.Channel.CreateLinkedItem(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.SetItemLinkResponse SetItemLink(CrissCrossLib.ReportWebService.SetItemLinkRequest request) {
+            return base.Channel.SetItemLink(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.GetItemLinkResponse GetItemLink(CrissCrossLib.ReportWebService.GetItemLinkRequest request) {
+            return base.Channel.GetItemLink(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListExecutionSettingsResponse ListExecutionSettings(CrissCrossLib.ReportWebService.ListExecutionSettingsRequest request) {
+            return base.Channel.ListExecutionSettings(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.SetExecutionOptionsResponse SetExecutionOptions(CrissCrossLib.ReportWebService.SetExecutionOptionsRequest request) {
+            return base.Channel.SetExecutionOptions(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.GetExecutionOptionsResponse GetExecutionOptions(CrissCrossLib.ReportWebService.GetExecutionOptionsRequest request) {
+            return base.Channel.GetExecutionOptions(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.UpdateItemExecutionSnapshotResponse UpdateItemExecutionSnapshot(CrissCrossLib.ReportWebService.UpdateItemExecutionSnapshotRequest request) {
+            return base.Channel.UpdateItemExecutionSnapshot(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.SetCacheOptionsResponse SetCacheOptions(CrissCrossLib.ReportWebService.SetCacheOptionsRequest request) {
+            return base.Channel.SetCacheOptions(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.GetCacheOptionsResponse GetCacheOptions(CrissCrossLib.ReportWebService.GetCacheOptionsRequest request) {
+            return base.Channel.GetCacheOptions(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.FlushCacheResponse FlushCache(CrissCrossLib.ReportWebService.FlushCacheRequest request) {
+            return base.Channel.FlushCache(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.CreateItemHistorySnapshotResponse CreateItemHistorySnapshot(CrissCrossLib.ReportWebService.CreateItemHistorySnapshotRequest request) {
+            return base.Channel.CreateItemHistorySnapshot(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.DeleteItemHistorySnapshotResponse DeleteItemHistorySnapshot(CrissCrossLib.ReportWebService.DeleteItemHistorySnapshotRequest request) {
+            return base.Channel.DeleteItemHistorySnapshot(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.SetItemHistoryLimitResponse SetItemHistoryLimit(CrissCrossLib.ReportWebService.SetItemHistoryLimitRequest request) {
+            return base.Channel.SetItemHistoryLimit(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.GetItemHistoryLimitResponse GetItemHistoryLimit(CrissCrossLib.ReportWebService.GetItemHistoryLimitRequest request) {
+            return base.Channel.GetItemHistoryLimit(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.SetItemHistoryOptionsResponse SetItemHistoryOptions(CrissCrossLib.ReportWebService.SetItemHistoryOptionsRequest request) {
+            return base.Channel.SetItemHistoryOptions(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.GetItemHistoryOptionsResponse GetItemHistoryOptions(CrissCrossLib.ReportWebService.GetItemHistoryOptionsRequest request) {
+            return base.Channel.GetItemHistoryOptions(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.GetReportServerConfigInfoResponse GetReportServerConfigInfo(CrissCrossLib.ReportWebService.GetReportServerConfigInfoRequest request) {
+            return base.Channel.GetReportServerConfigInfo(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.IsSSLRequiredResponse IsSSLRequired(CrissCrossLib.ReportWebService.IsSSLRequiredRequest request) {
+            return base.Channel.IsSSLRequired(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.SetSystemPropertiesResponse SetSystemProperties(CrissCrossLib.ReportWebService.SetSystemPropertiesRequest request) {
+            return base.Channel.SetSystemProperties(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.GetSystemPropertiesResponse GetSystemProperties(CrissCrossLib.ReportWebService.GetSystemPropertiesRequest request) {
+            return base.Channel.GetSystemProperties(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.SetSystemPoliciesResponse SetSystemPolicies(CrissCrossLib.ReportWebService.SetSystemPoliciesRequest request) {
+            return base.Channel.SetSystemPolicies(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.GetSystemPoliciesResponse GetSystemPolicies(CrissCrossLib.ReportWebService.GetSystemPoliciesRequest request) {
+            return base.Channel.GetSystemPolicies(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListExtensionsResponse ListExtensions(CrissCrossLib.ReportWebService.ListExtensionsRequest request) {
+            return base.Channel.ListExtensions(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListExtensionTypesResponse ListExtensionTypes(CrissCrossLib.ReportWebService.ListExtensionTypesRequest request) {
+            return base.Channel.ListExtensionTypes(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListEventsResponse ListEvents(CrissCrossLib.ReportWebService.ListEventsRequest request) {
+            return base.Channel.ListEvents(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.FireEventResponse FireEvent(CrissCrossLib.ReportWebService.FireEventRequest request) {
+            return base.Channel.FireEvent(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListJobsResponse ListJobs(CrissCrossLib.ReportWebService.ListJobsRequest request) {
+            return base.Channel.ListJobs(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListJobTypesResponse ListJobTypes(CrissCrossLib.ReportWebService.ListJobTypesRequest request) {
+            return base.Channel.ListJobTypes(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListJobActionsResponse ListJobActions(CrissCrossLib.ReportWebService.ListJobActionsRequest request) {
+            return base.Channel.ListJobActions(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListJobStatesResponse ListJobStates(CrissCrossLib.ReportWebService.ListJobStatesRequest request) {
+            return base.Channel.ListJobStates(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.CancelJobResponse CancelJob(CrissCrossLib.ReportWebService.CancelJobRequest request) {
+            return base.Channel.CancelJob(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.CreateCacheRefreshPlanResponse CreateCacheRefreshPlan(CrissCrossLib.ReportWebService.CreateCacheRefreshPlanRequest request) {
+            return base.Channel.CreateCacheRefreshPlan(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.SetCacheRefreshPlanPropertiesResponse SetCacheRefreshPlanProperties(CrissCrossLib.ReportWebService.SetCacheRefreshPlanPropertiesRequest request) {
+            return base.Channel.SetCacheRefreshPlanProperties(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.GetCacheRefreshPlanPropertiesResponse GetCacheRefreshPlanProperties(CrissCrossLib.ReportWebService.GetCacheRefreshPlanPropertiesRequest request) {
+            return base.Channel.GetCacheRefreshPlanProperties(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.DeleteCacheRefreshPlanResponse DeleteCacheRefreshPlan(CrissCrossLib.ReportWebService.DeleteCacheRefreshPlanRequest request) {
+            return base.Channel.DeleteCacheRefreshPlan(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListCacheRefreshPlansResponse ListCacheRefreshPlans(CrissCrossLib.ReportWebService.ListCacheRefreshPlansRequest request) {
+            return base.Channel.ListCacheRefreshPlans(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.LogonUserResponse LogonUser(CrissCrossLib.ReportWebService.LogonUserRequest request) {
+            return base.Channel.LogonUser(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.LogoffResponse Logoff(CrissCrossLib.ReportWebService.LogoffRequest request) {
+            return base.Channel.Logoff(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.GetPermissionsResponse GetPermissions(CrissCrossLib.ReportWebService.GetPermissionsRequest request) {
+            return base.Channel.GetPermissions(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.GetSystemPermissionsResponse GetSystemPermissions(CrissCrossLib.ReportWebService.GetSystemPermissionsRequest request) {
+            return base.Channel.GetSystemPermissions(request);
+        }
+        
+        public CrissCrossLib.ReportWebService.ListSecurityScopesResponse ListSecurityScopes(CrissCrossLib.ReportWebService.ListSecurityScopesRequest request) {
+            return base.Channel.ListSecurityScopes(request);
         }
     }
 }

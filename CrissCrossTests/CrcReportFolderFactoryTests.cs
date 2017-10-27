@@ -87,7 +87,7 @@ namespace CrissCrossTests
             CatalogItem[] empty = new CatalogItem[0];
             
             var returnResponse = new ListChildrenResponse(null, empty);
-            serviceMock.Expect(s => s.ListChildren( Arg<ListChildrenRequest>.Matches(lcr => lcr.Item == @"/"))).Return(returnResponse);
+            serviceMock.Expect(s => s.ListChildren( Arg<ListChildrenRequest>.Matches(lcr => lcr.ItemPath == @"/"))).Return(returnResponse);
 
             var fac = new CrcReportFolderFactory();
             var ret = fac.Create(serviceMock);
@@ -108,17 +108,17 @@ namespace CrissCrossTests
             var item1 = new CatalogItem(){
                 Path = @"/Test1",
                 Name = @"Test1",
-                Type = ItemTypeEnum.Report
+                TypeName = CrcReportFolderFactory.ReportServiceItemTypes.Report
             };
             var item2 = new CatalogItem(){
                 Path = @"/Test2",
                 Name = @"Test2",
-                Type = ItemTypeEnum.Report
+                TypeName = CrcReportFolderFactory.ReportServiceItemTypes.Report
             };
             CatalogItem[] twoitems = new CatalogItem[] { item1, item2 };
             
             var returnResponse = new ListChildrenResponse(null, twoitems);
-            serviceMock.Expect(s => s.ListChildren( Arg<ListChildrenRequest>.Matches(lcr => lcr.Item == @"/")) ).Return(returnResponse);
+            serviceMock.Expect(s => s.ListChildren( Arg<ListChildrenRequest>.Matches(lcr => lcr.ItemPath == @"/")) ).Return(returnResponse);
             
             var fac = new CrcReportFolderFactory();
             var ret = fac.Create(serviceMock);
@@ -144,20 +144,20 @@ namespace CrissCrossTests
             {
                 Path = @"/Test1",
                 Name = @"Test1",
-                Type = ItemTypeEnum.Report,
+                TypeName = CrcReportFolderFactory.ReportServiceItemTypes.Report,
                 Description = "Test1 Description"
             };
             var item2 = new CatalogItem()
             {
                 Path = @"/Test2",
                 Name = @"Test2",
-                Type = ItemTypeEnum.Report,
+                TypeName = CrcReportFolderFactory.ReportServiceItemTypes.Report,
                 Description = "Test2 Description"
             };
             CatalogItem[] twoitems = new CatalogItem[] { item1, item2 };
 
             var returnResponse = new ListChildrenResponse(null, twoitems);
-            serviceMock.Expect(s => s.ListChildren(Arg<ListChildrenRequest>.Matches(lcr => lcr.Item == @"/"))).Return(returnResponse);
+            serviceMock.Expect(s => s.ListChildren(Arg<ListChildrenRequest>.Matches(lcr => lcr.ItemPath == @"/"))).Return(returnResponse);
 
             var fac = new CrcReportFolderFactory();
             var ret = fac.Create(serviceMock);
@@ -183,20 +183,20 @@ namespace CrissCrossTests
             {
                 Path = @"/Test1",
                 Name = @"Test1",
-                Type = ItemTypeEnum.Report,
+                TypeName = CrcReportFolderFactory.ReportServiceItemTypes.Report,
                 Hidden = true
             };
             var item2 = new CatalogItem()
             {
                 Path = @"/Test2",
                 Name = @"Test2",
-                Type = ItemTypeEnum.Report,
+                TypeName = CrcReportFolderFactory.ReportServiceItemTypes.Report,
                 Hidden = false
             };
             CatalogItem[] twoitems = new CatalogItem[] { item1, item2 };
 
             var returnResponse = new ListChildrenResponse(null, twoitems);
-            serviceMock.Expect(s => s.ListChildren(Arg<ListChildrenRequest>.Matches(lcr => lcr.Item == @"/"))).Return(returnResponse);
+            serviceMock.Expect(s => s.ListChildren(Arg<ListChildrenRequest>.Matches(lcr => lcr.ItemPath == @"/"))).Return(returnResponse);
 
             var fac = new CrcReportFolderFactory();
             var ret = fac.Create(serviceMock);
@@ -221,28 +221,28 @@ namespace CrissCrossTests
             {
                 Path = "/Foo",
                 Name = "Foo",
-                Type = ItemTypeEnum.Folder
+                TypeName = CrcReportFolderFactory.ReportServiceItemTypes.Folder,
             };
             CatalogItem[] onefolder = new CatalogItem[] { folder1 };
             var item1 = new CatalogItem()
             {
                 Path = @"/Foo/Test1",
                 Name = @"Test1",
-                Type = ItemTypeEnum.Report
+                TypeName = CrcReportFolderFactory.ReportServiceItemTypes.Report,
             };
             var item2 = new CatalogItem()
             {
                 Path = @"/Foo/Test2",
                 Name = @"Test2",
-                Type = ItemTypeEnum.Report
+                TypeName = CrcReportFolderFactory.ReportServiceItemTypes.Report,
             };
             CatalogItem[] twoitems = new CatalogItem[] { item1, item2 };
             
             var returnResponse1 = new ListChildrenResponse(null, onefolder);
-            serviceMock.Expect(s => s.ListChildren(Arg<ListChildrenRequest>.Matches(lcr => lcr.Item == @"/") )).Return(returnResponse1);
-            var expectedRequest2 = new ListChildrenRequest(@"/Foo", false);
+            serviceMock.Expect(s => s.ListChildren(Arg<ListChildrenRequest>.Matches(lcr => lcr.ItemPath == @"/") )).Return(returnResponse1);
+            var expectedRequest2 = new ListChildrenRequest(null, @"/Foo", false); // first param null?
             var returnResponse2 = new ListChildrenResponse(null, twoitems);
-            serviceMock.Expect(s => s.ListChildren(Arg<ListChildrenRequest>.Matches(lcr => lcr.Item == @"/Foo"))).Return(returnResponse2);
+            serviceMock.Expect(s => s.ListChildren(Arg<ListChildrenRequest>.Matches(lcr => lcr.ItemPath == @"/Foo"))).Return(returnResponse2);
             
             
             var fac = new CrcReportFolderFactory();
@@ -264,10 +264,10 @@ namespace CrissCrossTests
         }
 
 
-        private ReportingService2005Soap MakeMockSsrsService()
+        private ReportingService2010Soap MakeMockSsrsService()
         {
             
-            var serviceMock = MockRepository.GenerateStub<ReportingService2005Soap>();
+            var serviceMock = MockRepository.GenerateStub<ReportingService2010Soap>();
 
             return serviceMock;
         }
